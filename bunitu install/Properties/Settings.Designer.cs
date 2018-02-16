@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Messenger.Properties
+namespace bunitu_install.Properties
 {
 
 

@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Messenger
+namespace bunitu_install
 {
-    public partial class Messenger : Form
+    public partial class Sign_in : Form
     {
-        public Messenger()
+        public Sign_in()
         {
             InitializeComponent();
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
