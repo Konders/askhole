@@ -106,7 +106,7 @@
             this.Controls.Add(this.bunifuDatepicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "UserProfileEdit";
+            //this.Name = "UserProfileEdit";
             this.Size = new System.Drawing.Size(294, 237);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

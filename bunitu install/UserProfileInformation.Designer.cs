@@ -113,7 +113,7 @@
             this.Controls.Add(this.Name);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.offline);
-            this.Name = "UserProfileInformation";
+            //this.Name = "UserProfileInformation";
             this.Size = new System.Drawing.Size(283, 230);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

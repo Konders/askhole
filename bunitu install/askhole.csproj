@@ -33,15 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-<<<<<<< HEAD
-<<<<<<< HEAD
       <HintPath>E:\Developing\Bunifu_UI_v1.5.3.dll</HintPath>
-=======
-      <HintPath>I:\code\ms sql\Bunifu_UI_v1.5.3.dll</HintPath>
->>>>>>> 997824894ae711f8702343b8c90c6ebf4bdeda21
-=======
-      <HintPath>I:\code\ms sql\Bunifu_UI_v1.5.3.dll</HintPath>
->>>>>>> 997824894ae711f8702343b8c90c6ebf4bdeda21
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -119,10 +111,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AskgoleLib\AskholeLib.csproj">
-      <Project>{6d2b77a2-0d51-4d04-a05b-dfa433651334}</Project>
-      <Name>AskholeLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
