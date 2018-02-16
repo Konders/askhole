@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>I:\code\ms sql\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>E:\Developing\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -64,6 +64,18 @@
     <Compile Include="Sign_in.Designer.cs">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserProfileEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserProfileEdit.Designer.cs">
+      <DependentUpon>UserProfileEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserProfileInformation.Designer.cs">
+      <DependentUpon>UserProfileInformation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +91,12 @@
     <EmbeddedResource Include="Sign_in.resx">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserProfileEdit.resx">
+      <DependentUpon>UserProfileEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfileInformation.resx">
+      <DependentUpon>UserProfileInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,10 +111,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AskgoleLib\AskholeLib.csproj">
-      <Project>{6d2b77a2-0d51-4d04-a05b-dfa433651334}</Project>
-      <Name>AskholeLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

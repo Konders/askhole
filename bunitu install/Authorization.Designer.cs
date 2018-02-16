@@ -60,9 +60,10 @@
             // 
             this.autho.AutoSize = true;
             this.autho.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.autho.Location = new System.Drawing.Point(143, 2);
+            this.autho.Location = new System.Drawing.Point(107, 2);
+            this.autho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.autho.Name = "autho";
-            this.autho.Size = new System.Drawing.Size(136, 23);
+            this.autho.Size = new System.Drawing.Size(116, 21);
             this.autho.TabIndex = 1;
             this.autho.Tag = "";
             this.autho.Text = "Authorization";
@@ -82,8 +83,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(436, 30);
+            this.panel1.Size = new System.Drawing.Size(327, 24);
             this.panel1.TabIndex = 0;
             this.panel1.Tag = "";
            // 
@@ -91,9 +93,10 @@
             // 
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(406, 0);
+            this.panel2.Location = new System.Drawing.Point(305, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(30, 30);
+            this.panel2.Size = new System.Drawing.Size(22, 24);
             this.panel2.TabIndex = 2;
             // 
             // bunifuImageButton1
@@ -102,8 +105,9 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 30);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(22, 24);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.TabStop = false;
@@ -117,7 +121,7 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.Snow;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "I already have account";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -128,10 +132,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(50, 467);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(38, 379);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(281, 50);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(211, 41);
             this.bunifuThinButton21.TabIndex = 12;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -158,14 +162,14 @@
             this.Signup.IconVisible = false;
             this.Signup.IconZoom = 90D;
             this.Signup.IsTab = false;
-            this.Signup.Location = new System.Drawing.Point(126, 368);
-            this.Signup.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Signup.Location = new System.Drawing.Point(94, 299);
+            this.Signup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Signup.Name = "Signup";
             this.Signup.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Signup.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Signup.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Signup.selected = false;
-            this.Signup.Size = new System.Drawing.Size(173, 75);
+            this.Signup.Size = new System.Drawing.Size(130, 61);
             this.Signup.TabIndex = 11;
             this.Signup.Text = "Sign-up";
             this.Signup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,10 +182,9 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(14, 253);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(10, 206);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(116, 21);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(90, 17);
             this.bunifuCustomLabel1.TabIndex = 10;
             this.bunifuCustomLabel1.Text = "Date of birth";
             // 
@@ -192,10 +195,10 @@
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(14, 276);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(10, 224);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(404, 44);
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(303, 36);
             this.bunifuDatepicker1.TabIndex = 9;
             this.bunifuDatepicker1.Value = new System.DateTime(2018, 2, 16, 18, 53, 57, 792);
             // 
@@ -212,14 +215,15 @@
             this.Email.LineIdleColor = System.Drawing.Color.Gray;
             this.Email.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Email.LineThickness = 3;
-            this.Email.Location = new System.Drawing.Point(14, 190);
-            this.Email.Margin = new System.Windows.Forms.Padding(5);
+            this.Email.Location = new System.Drawing.Point(10, 154);
+            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(404, 41);
+            this.Email.Size = new System.Drawing.Size(303, 33);
             this.Email.TabIndex = 5;
             this.Email.Text = "Email";
             this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Email.Enter += new System.EventHandler(this.EnterChange);
+            this.Email.Leave += new System.EventHandler(this.LeaveChange);
             // 
             // Passconfirm
             // 
@@ -233,10 +237,10 @@
             this.Passconfirm.LineIdleColor = System.Drawing.Color.Gray;
             this.Passconfirm.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Passconfirm.LineThickness = 3;
-            this.Passconfirm.Location = new System.Drawing.Point(14, 139);
-            this.Passconfirm.Margin = new System.Windows.Forms.Padding(5);
+            this.Passconfirm.Location = new System.Drawing.Point(10, 113);
+            this.Passconfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Passconfirm.Name = "Passconfirm";
-            this.Passconfirm.Size = new System.Drawing.Size(404, 41);
+            this.Passconfirm.Size = new System.Drawing.Size(303, 33);
             this.Passconfirm.TabIndex = 6;
             this.Passconfirm.Text = "Password confirmation";
             this.Passconfirm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -255,10 +259,10 @@
             this.Password.LineIdleColor = System.Drawing.Color.Gray;
             this.Password.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Password.LineThickness = 3;
-            this.Password.Location = new System.Drawing.Point(14, 89);
-            this.Password.Margin = new System.Windows.Forms.Padding(5);
+            this.Password.Location = new System.Drawing.Point(10, 72);
+            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(404, 41);
+            this.Password.Size = new System.Drawing.Size(303, 33);
             this.Password.TabIndex = 7;
             this.Password.Text = "Password";
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -277,10 +281,10 @@
             this.Username.LineIdleColor = System.Drawing.Color.Gray;
             this.Username.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Username.LineThickness = 3;
-            this.Username.Location = new System.Drawing.Point(14, 38);
-            this.Username.Margin = new System.Windows.Forms.Padding(5);
+            this.Username.Location = new System.Drawing.Point(10, 31);
+            this.Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(404, 41);
+            this.Username.Size = new System.Drawing.Size(303, 33);
             this.Username.TabIndex = 8;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -290,10 +294,10 @@
             // Authorization
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(436, 527);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(327, 428);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.Signup);
@@ -304,6 +308,7 @@
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
