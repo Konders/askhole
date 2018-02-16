@@ -86,8 +86,7 @@
             this.panel1.Size = new System.Drawing.Size(436, 30);
             this.panel1.TabIndex = 0;
             this.panel1.Tag = "";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
+           // 
             // panel2
             // 
             this.panel2.Controls.Add(this.bunifuImageButton1);
