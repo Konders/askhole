@@ -15,11 +15,34 @@ namespace bunitu_install
         public Sign_in()
         {
             InitializeComponent();
+            Enter.Select();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Enter_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+    
+
+        private void EnterChange(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
+            string text = temp.Text;
+            if (text == temp.Name)
+                temp.Text = "";
+        }
+
+        private void LeaveChange(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
+            if (temp.Text == "")
+                temp.Text = temp.Name;
         }
     }
 }
