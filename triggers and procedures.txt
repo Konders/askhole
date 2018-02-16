@@ -1,0 +1,46 @@
+// додавання користувача
+create procedure AddUser
+@name varchar (50),
+@email varchar(50),
+@password varchar(50),
+@photo varbinary(Max),
+@birthDay date
+as begin
+ insert into [dbo].[Users] ([Name], [Email], [Password], [Photo], [Birth_date], [Online])
+	 values (@name, @email, @password, @photo, @birthDay, 1)
+end
+
+
+
+// перевірка довжини імені
+create trigger CheckNameLen
+on Users
+for update, insert
+as
+declare
+@name varchar(50)
+begin
+select @name = name from inserted
+if Len(@name) < 2 
+begin
+raiserror ('Name must be at least 2 characters longs', 0 ,1) 
+rollback tran
+end
+end
+
+//перевірка довжини пароля
+alter trigger CheckPassLen
+on Users
+for update, insert
+as
+declare
+	@password varchar(50)
+begin
+	select @password = Password from inserted
+	if Len(@password) < 6
+		begin
+			raiserror ('Password must be at least 6 characters longs', 0 ,1) 
+			rollback tran
+		end
+end
+

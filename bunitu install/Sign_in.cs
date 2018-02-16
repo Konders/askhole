@@ -12,11 +12,19 @@ namespace bunitu_install
 {
     public partial class Sign_in : Form
     {
+        #region Variables
+        private string password;
+        private string username;
+        #endregion
+
+        #region Constructor
         public Sign_in()
         {
             InitializeComponent();
             Enter.Select(); // керування фокусом
         }
+        #endregion
+
         // закривається вікно
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
@@ -25,9 +33,11 @@ namespace bunitu_install
 
         private void Enter_Click(object sender, EventArgs e)
         {
-            
+            username = Username.Text;
+            password = Password.Text;
         }
 
+        #region Work this text fields
         /// <summary>
         /// При наведені на текстове поле стирається початкова інформація
         /// </summary>
@@ -48,5 +58,6 @@ namespace bunitu_install
             if (temp.Text == "")
                 temp.Text = temp.Name;
         }
+        #endregion
     }
 }
