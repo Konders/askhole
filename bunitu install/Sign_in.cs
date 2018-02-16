@@ -15,9 +15,9 @@ namespace bunitu_install
         public Sign_in()
         {
             InitializeComponent();
-            Enter.Select();
+            Enter.Select(); // керування фокусом
         }
-
+        // закривається вікно
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,11 +25,12 @@ namespace bunitu_install
 
         private void Enter_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
-    
-
+        /// <summary>
+        /// При наведені на текстове поле стирається початкова інформація
+        /// </summary>
         private void EnterChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
@@ -38,6 +39,9 @@ namespace bunitu_install
                 temp.Text = "";
         }
 
+        /// <summary>
+        /// При відведені курсору з текстового поля вертається назва поля
+        /// </summary>
         private void LeaveChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;

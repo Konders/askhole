@@ -15,26 +15,27 @@ namespace bunitu_install
         public Authorization()
         {
             InitializeComponent();
-            Signup.Select();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            Signup.Select(); // керування фокусом
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
+            this.Close();          
         }
-
+   
+        /// <summary>
+        /// Активізація форми на реєстрацію
+        /// </summary>
         private void Signup_Click(object sender, EventArgs e)
         {
             Sign_in signIn = new Sign_in();
-            this.Hide();            
-            signIn.Show();
+            this.Hide();            // приховуємо початкову форму
+            signIn.Show();          // виводимо форму реєстрації
         }
+     
+        /// <summary>
+        /// При наведені на текстове поле стирається початкова інформація
+        /// </summary>
         private void EnterChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
@@ -42,6 +43,9 @@ namespace bunitu_install
                 temp.Text = "";
         }
 
+        /// <summary>
+        /// При відведені курсору з текстового поля вертається назва поля
+        /// </summary>
         private void LeaveChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
@@ -49,6 +53,9 @@ namespace bunitu_install
                 temp.Text = temp.Name;
         }
 
+        /// <summary>
+        /// При наведені на текстове поле стирається початкова інформація
+        /// </summary>
         private void Passconfirm_Enter(object sender, EventArgs e)
         {
             string text = "Password confirmation";
@@ -56,6 +63,9 @@ namespace bunitu_install
                 Passconfirm.Text = "";
         }
 
+        /// <summary>
+        /// При відведені курсору з текстового поля вертається назва поля
+        /// </summary>
         private void Passconfirm_Leave(object sender, EventArgs e)
         {
             if (Passconfirm.Text == "")
