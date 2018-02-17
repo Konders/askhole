@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AskholeLib;
 
 namespace bunitu_install
 {
@@ -16,6 +17,7 @@ namespace bunitu_install
         {
             InitializeComponent();
             bunifuFlatButton1.Select();
+            this.Activate();
         }
         #region Variables
         private int startWidth = 753;
@@ -26,7 +28,7 @@ namespace bunitu_install
         /// </summary>
         private void Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
         /// <summary>
         /// //Згортаємо вікно
@@ -40,21 +42,8 @@ namespace bunitu_install
         /// </summary>
         private void Resize_Click(object sender, EventArgs e)
         {
-            Size resolution = Screen.PrimaryScreen.Bounds.Size; // системні значення
-
             Control control = (Control)this;
-            // якщо вікно повністю розгорнуте повертаємо початкові розміри
-            if ((control.Width == resolution.Width) && (control.Height == resolution.Height))
-            {
-                control.Location = new Point((resolution.Width - startWidth) / 2,  // знаходимо центр
-                                             (resolution.Height - startHeight) / 2);
-                control.Size = new Size(startWidth, startHeight);
-            }
-            else // якщо вікно повністю маленького розміру
-            {
-                control.Location = new Point(0, 0);
-                control.Size = new Size(resolution.Width, resolution.Height);
-            }
+            Lib.Resize(control, startWidth, startHeight);           
         }
     }
 }
