@@ -34,9 +34,11 @@
             this.Emoji = new Bunifu.Framework.UI.BunifuImageButton();
             this.Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.messageBox1 = new bunitu_install.MessageBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Emoji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attach)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +74,7 @@
             this.Message.TabIndex = 1;
             this.Message.Text = "Write a message...";
             this.Message.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Message.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Message_KeyDown);
             // 
             // Emoji
             // 
@@ -102,12 +105,24 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.messageBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(681, 493);
             this.panel2.TabIndex = 1;
+            // 
+            // messageBox1
+            // 
+            this.messageBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.messageBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.messageBox1.Location = new System.Drawing.Point(4, 3);
+            this.messageBox1.Name = "messageBox1";
+            this.messageBox1.Size = new System.Drawing.Size(296, 58);
+            this.messageBox1.TabIndex = 0;
             // 
             // Chat
             // 
@@ -121,6 +136,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Emoji)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attach)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -132,5 +148,6 @@
         private Bunifu.Framework.UI.BunifuImageButton Attach;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Message;
         private Bunifu.Framework.UI.BunifuImageButton Emoji;
+        private MessageBox messageBox1;
     }
 }

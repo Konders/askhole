@@ -48,7 +48,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label2.Location = new System.Drawing.Point(371, 80);
+            this.label2.Location = new System.Drawing.Point(15, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 18);
             this.label2.TabIndex = 0;

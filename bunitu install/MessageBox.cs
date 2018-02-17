@@ -21,30 +21,29 @@ namespace bunitu_install
             In,
             Out
         }
-        public MessageBox(string text,MessageType mt)
+        public MessageBox(string text, string time,MessageType mt)
         {
             InitializeComponent();
             label1.Text = text;
+            label2.Text = time;
             AdjustHeight();
             if(mt == MessageType.In)
-            {
-                this.BackColor = Color.FromArgb(248, 248, 248);
-            }
+                this.BackColor = Color.FromArgb(240, 240, 240);
             else
-            {
                 this.BackColor = Color.FromArgb(147, 228, 241);
-            }
         }
 
         void AdjustHeight()
         {
-            Size maxSize = new Size(450, int.MaxValue);
+            Size maxSize = new Size(label1.Width, int.MaxValue);
             Graphics g = CreateGraphics();
             SizeF size = g.MeasureString(label1.Text, label1.Font, label1.Width);
 
             label1.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
-            label2.Top = label1.Bottom;
-            this.Height = label1.Bottom + 10;
+            label2.Top = label1.Bottom + 5;
+            label2.Left = label1.Width - int.Parse(Math.Round(g.MeasureString(label2.Text, label2.Font, label2.Width).Width + 2,0).ToString()) + 30;
+            label2.Width = int.Parse(Math.Round(g.MeasureString(label2.Text, label2.Font, label2.Width).Width + 2, 0).ToString());
+            this.Height = label2.Bottom + 5;
         }
 
         private void MessageBox_Resize(object sender, EventArgs e)
