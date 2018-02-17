@@ -8,21 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace bunitu_install
 {
-    public partial class StartWindow : Form
+    public partial class MainForm : Form
     {
-        #region Variables
-        private int startWidth = 825;
-        private int startHeight = 447;
-        #endregion
-
-        public StartWindow()
+        public MainForm()
         {
             InitializeComponent();
+            bunifuFlatButton1.Select();
         }
-
+        #region Variables
+        private int startWidth = 753;
+        private int startHeight = 570;
+        #endregion
         /// <summary>
         /// Закриваємо вікно
         /// </summary>
@@ -48,8 +46,8 @@ namespace bunitu_install
             // якщо вікно повністю розгорнуте повертаємо початкові розміри
             if ((control.Width == resolution.Width) && (control.Height == resolution.Height))
             {
-                control.Location = new Point((resolution.Width- startWidth)/2,  // знаходимо центр
-                                             (resolution.Height- startHeight)/2); 
+                control.Location = new Point((resolution.Width - startWidth) / 2,  // знаходимо центр
+                                             (resolution.Height - startHeight) / 2);
                 control.Size = new Size(startWidth, startHeight);
             }
             else // якщо вікно повністю маленького розміру
