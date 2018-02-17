@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "askhole", "bunitu install\askhole.csproj", "{727947A9-4275-4EC5-AE76-07C1798C64E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskholeLib", "AskgoleLib\AskholeLib.csproj", "{6D2B77A2-0D51-4D04-A05B-DFA433651334}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskholeLib", "AskholeLib\AskholeLib.csproj", "{AE76BC99-5558-48FE-904D-8C16A55F3A07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{727947A9-4275-4EC5-AE76-07C1798C64E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{727947A9-4275-4EC5-AE76-07C1798C64E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{727947A9-4275-4EC5-AE76-07C1798C64E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D2B77A2-0D51-4D04-A05B-DFA433651334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D2B77A2-0D51-4D04-A05B-DFA433651334}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D2B77A2-0D51-4D04-A05B-DFA433651334}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D2B77A2-0D51-4D04-A05B-DFA433651334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE76BC99-5558-48FE-904D-8C16A55F3A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE76BC99-5558-48FE-904D-8C16A55F3A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE76BC99-5558-48FE-904D-8C16A55F3A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE76BC99-5558-48FE-904D-8C16A55F3A07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

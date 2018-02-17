@@ -147,6 +147,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AskholeLib\AskholeLib.csproj">
+      <Project>{ae76bc99-5558-48fe-904d-8c16a55f3a07}</Project>
+      <Name>AskholeLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
