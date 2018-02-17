@@ -22,9 +22,16 @@ namespace bunitu_install
             In,
             Out
         }
+        /// <summary>
+        /// Конструктор повідомлення
+        /// </summary>
+        /// <param name="text">Вміст повідомлення</param>
+        /// <param name="time">Момент відправки повідомлення</param>
+        /// <param name="mt">In(Вхідне), Out(Вихідне)</param>
         public MessageBox(string text, string time,MessageType mt)
         {
             InitializeComponent();
+
             message.Text = text;
             this.time.Text = time;
             AdjustHeight();
@@ -33,7 +40,9 @@ namespace bunitu_install
             else
                 this.BackColor = Color.FromArgb(147, 228, 241);
         }
-
+        /// <summary>
+        /// Змінюємо розміри поля з повідомленням
+        /// </summary>
         void AdjustHeight()
         {
             Size maxSize = new Size(message.Width, int.MaxValue);
