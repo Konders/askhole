@@ -11,11 +11,14 @@ using System.Windows.Forms;
 
 namespace bunitu_install
 {
+
     public partial class Sign_in : Form
     {
         #region Variables
         private string password;
         private string username;
+        List<PictureBox> picture;
+        //   PictureBox[] picture = { pictureBox1, pictureBox2 };
         #endregion
 
         #region Constructor
@@ -23,6 +26,11 @@ namespace bunitu_install
         {
             InitializeComponent();
             Enter.Select(); // керування фокусом
+            picture = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9 };
+            for (int i = 0; i < picture.Count; i++)
+                picture[i].Image = (ImageList.Images[i]) as Bitmap;
+
+
         }
         #endregion
 

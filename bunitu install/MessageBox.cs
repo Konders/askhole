@@ -12,6 +12,7 @@ namespace bunitu_install
 {
     public partial class MessageBox : UserControl
     {
+        private int padding = 5;
         public MessageBox()
         {
             InitializeComponent();
@@ -24,8 +25,8 @@ namespace bunitu_install
         public MessageBox(string text, string time,MessageType mt)
         {
             InitializeComponent();
-            label1.Text = text;
-            label2.Text = time;
+            message.Text = text;
+            this.time.Text = time;
             AdjustHeight();
             if(mt == MessageType.In)
                 this.BackColor = Color.FromArgb(240, 240, 240);
@@ -35,15 +36,14 @@ namespace bunitu_install
 
         void AdjustHeight()
         {
-            Size maxSize = new Size(label1.Width, int.MaxValue);
+            Size maxSize = new Size(message.Width, int.MaxValue);
             Graphics g = CreateGraphics();
-            SizeF size = g.MeasureString(label1.Text, label1.Font, label1.Width);
-
-            label1.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
-            label2.Top = label1.Bottom + 5;
-            label2.Left = label1.Width - int.Parse(Math.Round(g.MeasureString(label2.Text, label2.Font, label2.Width).Width + 2,0).ToString()) + 30;
-            label2.Width = int.Parse(Math.Round(g.MeasureString(label2.Text, label2.Font, label2.Width).Width + 2, 0).ToString());
-            this.Height = label2.Bottom + 5;
+            SizeF size = g.MeasureString(message.Text, message.Font, message.Width);
+            message.Height = Convert.ToInt32(Math.Round(size.Height + 2, 0));
+            time.Top = message.Bottom + padding;
+            time.Left = message.Width - int.Parse(Math.Round(g.MeasureString(time.Text, time.Font, time.Width).Width + 2,0).ToString()) + 30;
+            time.Width = int.Parse(Math.Round(g.MeasureString(time.Text, time.Font, time.Width).Width + 2, 0).ToString());
+            this.Height = time.Bottom + padding;
         }
 
         private void MessageBox_Resize(object sender, EventArgs e)

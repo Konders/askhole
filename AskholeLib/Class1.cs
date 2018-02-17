@@ -11,6 +11,12 @@ namespace AskholeLib
 {
     public class Lib
     {
+        /// <summary>
+        /// Для керування розміром вікна (розгорнути на весь екран) згорнути
+        /// </summary>
+        /// <param name="control">активна форма</param>
+        /// <param name="startWidth">поточна ширина</param>
+        /// <param name="startHeight">поточна висота</param>
         public static void Resize(Control control, int startWidth, int startHeight)
         {
             System.Drawing.Size resolution = Screen.PrimaryScreen.Bounds.Size; // системні значення
@@ -28,27 +34,35 @@ namespace AskholeLib
             }
         }
 
+        /// <summary>
+        /// При редагуванні текстового поля перевірка чи було щось змінено
+        /// </summary>
+        /// <param name="temp">текстове поле на яке було натиснуто</param>
         public static void LeaveField(Bunifu.Framework.UI.BunifuMaterialTextbox temp)
         {
-            if (temp.Text == "")
+            if (temp.Text == "")  // перевірка чи щось було змінено
             {
                 temp.Text = temp.Name;
-                if (temp.Name == "Password")
-                    temp.isPassword = false;
+                if (temp.Name == "Password") 
+                    temp.isPassword = false; // відключення шифрування паролів
             }
             else
             {
-                if (temp.Name == "Password")
+                if (temp.Name == "Password") // шифрування пароля
                     temp.isPassword = true;
             }
         }
 
+        /// <summary>
+        /// зникнення тексту при наведені на текстове поле
+        /// </summary>
+        /// <param name="temp">текстове поле на яке було натиснуто</param>
         public static void EnterText(Bunifu.Framework.UI.BunifuMaterialTextbox temp)
         {
-            if (temp.Text == temp.Name)
+            if (temp.Text == temp.Name) // перевірка чи поле поміняло назву
             {
                 temp.Text = "";
-                if (temp.Name == "Password")
+                if (temp.Name == "Password") // для активізації властивості паролю
                     temp.isPassword = true;
             }
         }
