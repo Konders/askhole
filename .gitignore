@@ -1,4 +1,4 @@
 
-.vs/
-bunitu install\bin
-bunitu install\obj
+.vs\*
+bunitu install\bin\*
+bunitu install\obj\*
