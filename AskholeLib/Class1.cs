@@ -12,6 +12,18 @@ namespace AskholeLib
 {
     public class Lib
     {
+        public struct User
+        {
+            public int id;
+            public string username;
+            public Bitmap photo;
+            public User(int id, string username, Bitmap photo)
+            {
+                this.id = id;
+                this.username = username;
+                this.photo = photo;
+            }
+        }
         /// <summary>
         /// Для керування розміром вікна (розгорнути на весь екран) згорнути
         /// </summary>
