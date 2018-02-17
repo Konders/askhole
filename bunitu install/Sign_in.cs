@@ -15,6 +15,8 @@ namespace bunitu_install
     public partial class Sign_in : Form
     {
         #region Variables
+        private int startWidth = 753;
+        private int startHeight = 379;
         private string password;
         private string username;
         List<PictureBox> picture;
@@ -28,8 +30,7 @@ namespace bunitu_install
             Enter.Select(); // керування фокусом
             picture = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9 };
             for (int i = 0; i < picture.Count; i++)
-                picture[i].Image = (ImageList.Images[i]) as Bitmap;
-
+                picture[i].Image = ImageList.Images[i] as Bitmap; 
 
         }
         #endregion
@@ -70,6 +71,23 @@ namespace bunitu_install
         {
             Authorization.ActiveForm.Show();
             Sign_in.ActiveForm.Close();
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Resize_Click(object sender, EventArgs e)
+        {
+            Control control = (Control)this;
+            Lib.Resize(control, startWidth, startHeight);
+            ImageList.ImageSize = new Size(256, 256);
         }
     }
 }
