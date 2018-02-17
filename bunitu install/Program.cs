@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 namespace bunitu_install
 {
     static class Program
@@ -15,7 +17,7 @@ namespace bunitu_install
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Authorization());
+            Application.Run(new StartWindow());
         }
     }
 }
