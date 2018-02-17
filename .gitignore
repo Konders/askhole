@@ -10,3 +10,11 @@ bunitu install/bin/*
 
 bunitu install/obj/*
 
+
+AskholeLib/bin/*
+
+AskholeLib/obj/*
+
+AskholeLib\bin\*
+
+AskholeLib\obj\*
