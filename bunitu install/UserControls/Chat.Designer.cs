@@ -48,10 +48,9 @@
             this.panel1.Controls.Add(this.Emoji);
             this.panel1.Controls.Add(this.Attach);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 607);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 493);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(908, 95);
+            this.panel1.Size = new System.Drawing.Size(681, 77);
             this.panel1.TabIndex = 0;
             // 
             // Message
@@ -68,10 +67,10 @@
             this.Message.LineIdleColor = System.Drawing.Color.Gray;
             this.Message.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Message.LineThickness = 3;
-            this.Message.Location = new System.Drawing.Point(101, 9);
-            this.Message.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Message.Location = new System.Drawing.Point(76, 7);
+            this.Message.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Message.Name = "Message";
-            this.Message.Size = new System.Drawing.Size(707, 76);
+            this.Message.Size = new System.Drawing.Size(530, 62);
             this.Message.TabIndex = 1;
             this.Message.Text = "Write a message...";
             this.Message.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -83,10 +82,9 @@
             this.Emoji.BackColor = System.Drawing.Color.Transparent;
             this.Emoji.Image = ((System.Drawing.Image)(resources.GetObject("Emoji.Image")));
             this.Emoji.ImageActive = ((System.Drawing.Image)(resources.GetObject("Emoji.ImageActive")));
-            this.Emoji.Location = new System.Drawing.Point(817, 7);
-            this.Emoji.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Emoji.Location = new System.Drawing.Point(613, 6);
             this.Emoji.Name = "Emoji";
-            this.Emoji.Size = new System.Drawing.Size(87, 80);
+            this.Emoji.Size = new System.Drawing.Size(65, 65);
             this.Emoji.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Emoji.TabIndex = 0;
             this.Emoji.TabStop = false;
@@ -97,10 +95,9 @@
             this.Attach.BackColor = System.Drawing.Color.Transparent;
             this.Attach.Image = ((System.Drawing.Image)(resources.GetObject("Attach.Image")));
             this.Attach.ImageActive = ((System.Drawing.Image)(resources.GetObject("Attach.ImageActive")));
-            this.Attach.Location = new System.Drawing.Point(5, 9);
-            this.Attach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Attach.Location = new System.Drawing.Point(4, 7);
             this.Attach.Name = "Attach";
-            this.Attach.Size = new System.Drawing.Size(87, 80);
+            this.Attach.Size = new System.Drawing.Size(65, 65);
             this.Attach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Attach.TabIndex = 0;
             this.Attach.TabStop = false;
@@ -113,9 +110,8 @@
             this.panel2.Controls.Add(this.messageBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(908, 607);
+            this.panel2.Size = new System.Drawing.Size(681, 493);
             this.panel2.TabIndex = 1;
             // 
             // messageBox1
@@ -123,22 +119,21 @@
             this.messageBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.messageBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
-            this.messageBox1.Location = new System.Drawing.Point(5, 4);
-            this.messageBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.messageBox1.Location = new System.Drawing.Point(4, 3);
+            this.messageBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.messageBox1.Name = "messageBox1";
-            this.messageBox1.Size = new System.Drawing.Size(395, 69);
+            this.messageBox1.Size = new System.Drawing.Size(296, 58);
             this.messageBox1.TabIndex = 0;
-           // 
+            // 
             // Chat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Chat";
-            this.Size = new System.Drawing.Size(908, 702);
+            this.Size = new System.Drawing.Size(681, 570);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Emoji)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attach)).EndInit();
