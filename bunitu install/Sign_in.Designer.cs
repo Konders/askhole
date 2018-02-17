@@ -58,19 +58,18 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 24);
+            this.panel1.Size = new System.Drawing.Size(419, 30);
             this.panel1.TabIndex = 0;
             // 
             // autho
             // 
             this.autho.AutoSize = true;
             this.autho.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.autho.Location = new System.Drawing.Point(124, 2);
-            this.autho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.autho.Location = new System.Drawing.Point(165, 2);
             this.autho.Name = "autho";
-            this.autho.Size = new System.Drawing.Size(59, 21);
+            this.autho.Size = new System.Drawing.Size(69, 23);
             this.autho.TabIndex = 2;
             this.autho.Tag = "";
             this.autho.Text = "Sign in";
@@ -79,10 +78,10 @@
             // 
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(292, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(390, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(22, 24);
+            this.panel2.Size = new System.Drawing.Size(29, 30);
             this.panel2.TabIndex = 0;
             // 
             // bunifuImageButton1
@@ -91,9 +90,9 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(22, 24);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(29, 30);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 1;
             this.bunifuImageButton1.TabStop = false;
@@ -119,10 +118,10 @@
             this.Password.LineIdleColor = System.Drawing.Color.Gray;
             this.Password.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Password.LineThickness = 3;
-            this.Password.Location = new System.Drawing.Point(17, 81);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Location = new System.Drawing.Point(23, 100);
+            this.Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(280, 33);
+            this.Password.Size = new System.Drawing.Size(373, 41);
             this.Password.TabIndex = 9;
             this.Password.Text = "Password";
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -141,10 +140,10 @@
             this.Username.LineIdleColor = System.Drawing.Color.Gray;
             this.Username.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Username.LineThickness = 3;
-            this.Username.Location = new System.Drawing.Point(17, 40);
-            this.Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Username.Location = new System.Drawing.Point(23, 49);
+            this.Username.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(280, 33);
+            this.Username.Size = new System.Drawing.Size(373, 41);
             this.Username.TabIndex = 10;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -174,14 +173,14 @@
             this.Enter.IconVisible = false;
             this.Enter.IconZoom = 90D;
             this.Enter.IsTab = false;
-            this.Enter.Location = new System.Drawing.Point(86, 136);
-            this.Enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Enter.Location = new System.Drawing.Point(115, 167);
+            this.Enter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Enter.Name = "Enter";
             this.Enter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Enter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Enter.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Enter.selected = false;
-            this.Enter.Size = new System.Drawing.Size(130, 61);
+            this.Enter.Size = new System.Drawing.Size(173, 75);
             this.Enter.TabIndex = 12;
             this.Enter.Text = "Sign in";
             this.Enter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,14 +211,14 @@
             this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(17, 206);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(23, 254);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(200, 34);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(267, 42);
             this.bunifuFlatButton1.TabIndex = 13;
             this.bunifuFlatButton1.Text = "Sign up";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,14 +249,14 @@
             this.bunifuFlatButton2.IconVisible = false;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(16, 236);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(21, 290);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(200, 34);
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(267, 42);
             this.bunifuFlatButton2.TabIndex = 13;
             this.bunifuFlatButton2.Text = "Forgot password";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,10 +265,10 @@
             // 
             // Sign_in
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(314, 296);
+            this.ClientSize = new System.Drawing.Size(419, 364);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.Enter);
@@ -277,7 +276,7 @@
             this.Controls.Add(this.Username);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Sign_in";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign_in";
@@ -297,10 +296,10 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label autho;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox Password;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Username;
         private Bunifu.Framework.UI.BunifuFlatButton Enter;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox Password;
     }
 }
