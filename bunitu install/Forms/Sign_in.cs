@@ -29,15 +29,14 @@ namespace bunitu_install
 
         #region Constructor
         public Sign_in()
-        {        
+        {
             InitializeComponent();
             Enter.Select(); // керування фокусом
             picture = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3,
                                                pictureBox4, pictureBox5, pictureBox6,
                                                pictureBox7,pictureBox8, pictureBox9 };
             transitions = new List<BunifuAnimatorNS.BunifuTransition>() {
-                            bunifuTransition1,  bunifuTransition2, bunifuTransition3,
-                            bunifuTransition4, bunifuTransition5};
+                            bunifuTransition1,  bunifuTransition2};
             RandomPicture();
             timer.Interval = 2000;
             timer.Elapsed += ChangePictures;
@@ -109,41 +108,49 @@ namespace bunitu_install
         {
             for (int i = 0; i < picture.Count; i++) // кількість зображень
             {
-                while (true)
-                {
-                    bool check = false;
-                    int key = rand.Next(ImageList.Images.Count);
-                    foreach (var el in list) // перевірка чи не повторюються зображення
-                    {
-                        if (el == key)
-                        {
-                            check = true;
-                            break;
-                        }
-                    }
-                    if (!check) // якщо зображення унікальні додається до списку
-                    {
-                        list.Add(key);
-                        picture[i].Image = ImageList.Images[key] as Bitmap;
-                        break;
-                    }
-                }
+                int newRand = NewRand(); // нове число
+                picture[i].Image = ImageList.Images[newRand] as Bitmap;
+                list.Add(newRand);
             }
         }
 
+        /// <summary>
+        /// знаходимо унікальне число для фото якого ще немає в списку
+        /// </summary>
+        /// <returns></returns>
+        private int NewRand()
+        {
+            while (true)
+            {
+                bool check = false;
+                int key = rand.Next(ImageList.Images.Count);
+                foreach (var el in list) // перевірка чи не повторюються зображення
+                {
+                    if (el == key)
+                    {
+                        check = true;
+                        break;
+                    }
+                }
+                if (!check) // якщо зображення унікальні додається до списку              
+                    return key;
+            }
+        }
         /// <summary>
         /// зміна картинок
         /// </summary>
         private void ChangePictures(Object o, System.Timers.ElapsedEventArgs e)
         {
-            int randPic = rand.Next(picture.Count);
-            var curentPic = picture[randPic];
-            int animation = rand.Next(transitions.Count);
-            //  if (curentPic.Visible == false)
+            int randPic = rand.Next(picture.Count); // рандомне зображення
+            var curentPic = picture[randPic];            
+            int newRand = NewRand(); // нове зображення
+            list.Remove(randPic); // редагування списку
+            list.Add(newRand);
+            int animation = rand.Next(transitions.Count); // рандомна анімація
             transitions[animation].HideSync(curentPic);
+            curentPic.Image = ImageList.Images[newRand] as Bitmap; // міняємо зображення
             transitions[animation].ShowSync(curentPic);
-        //    else
-          //      transitions[animation].HideSync(curentPic);
+
         }
         #endregion
     }

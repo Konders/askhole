@@ -16,10 +16,6 @@ namespace bunitu_install
         public MainForm()
         {
             InitializeComponent();
-<<<<<<< HEAD
-=======
-            //bunifuFlatButton1.Select();
->>>>>>> 09a68d89d619a11c43aa64980fa64cbe4c13cd85
             this.Activate();
         }
         #region Variables
