@@ -83,7 +83,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 24);
             this.panel1.TabIndex = 0;
@@ -94,7 +94,7 @@
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(305, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(22, 24);
             this.panel2.TabIndex = 2;
@@ -105,7 +105,7 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(22, 24);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +133,7 @@
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
             this.bunifuThinButton21.Location = new System.Drawing.Point(38, 379);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(211, 41);
             this.bunifuThinButton21.TabIndex = 12;
@@ -197,7 +197,7 @@
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
             this.bunifuDatepicker1.Location = new System.Drawing.Point(10, 224);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(303, 36);
             this.bunifuDatepicker1.TabIndex = 9;
@@ -217,7 +217,7 @@
             this.Email.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Email.LineThickness = 3;
             this.Email.Location = new System.Drawing.Point(10, 154);
-            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email.Margin = new System.Windows.Forms.Padding(4);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(303, 33);
             this.Email.TabIndex = 5;
@@ -239,7 +239,7 @@
             this.Passconfirm.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Passconfirm.LineThickness = 3;
             this.Passconfirm.Location = new System.Drawing.Point(10, 113);
-            this.Passconfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Passconfirm.Margin = new System.Windows.Forms.Padding(4);
             this.Passconfirm.Name = "Passconfirm";
             this.Passconfirm.Size = new System.Drawing.Size(303, 33);
             this.Passconfirm.TabIndex = 6;
@@ -261,7 +261,7 @@
             this.Password.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Password.LineThickness = 3;
             this.Password.Location = new System.Drawing.Point(10, 72);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(303, 33);
             this.Password.TabIndex = 7;
@@ -283,7 +283,7 @@
             this.Username.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Username.LineThickness = 3;
             this.Username.Location = new System.Drawing.Point(10, 31);
-            this.Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Username.Margin = new System.Windows.Forms.Padding(4);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(303, 33);
             this.Username.TabIndex = 8;
@@ -309,7 +309,7 @@
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
