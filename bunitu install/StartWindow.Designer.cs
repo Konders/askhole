@@ -54,8 +54,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 30);
+            this.panel1.Size = new System.Drawing.Size(789, 24);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -64,9 +65,10 @@
             this.panel2.Controls.Add(this.Minimize);
             this.panel2.Controls.Add(this.Close);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1010, 0);
+            this.panel2.Location = new System.Drawing.Point(721, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(90, 30);
+            this.panel2.Size = new System.Drawing.Size(68, 24);
             this.panel2.TabIndex = 0;
             // 
             // Resize
@@ -74,10 +76,10 @@
             this.Resize.BackColor = System.Drawing.Color.Transparent;
             this.Resize.Image = ((System.Drawing.Image)(resources.GetObject("Resize.Image")));
             this.Resize.ImageActive = null;
-            this.Resize.Location = new System.Drawing.Point(31, 5);
-            this.Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Resize.Location = new System.Drawing.Point(23, 4);
+            this.Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Resize.Name = "Resize";
-            this.Resize.Size = new System.Drawing.Size(30, 20);
+            this.Resize.Size = new System.Drawing.Size(22, 16);
             this.Resize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Resize.TabIndex = 1;
             this.Resize.TabStop = false;
@@ -90,9 +92,9 @@
             this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
             this.Minimize.ImageActive = null;
             this.Minimize.Location = new System.Drawing.Point(1, -2);
-            this.Minimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(30, 30);
+            this.Minimize.Size = new System.Drawing.Size(22, 24);
             this.Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimize.TabIndex = 1;
             this.Minimize.TabStop = false;
@@ -104,10 +106,10 @@
             this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Image = ((System.Drawing.Image)(resources.GetObject("Close.Image")));
             this.Close.ImageActive = null;
-            this.Close.Location = new System.Drawing.Point(61, 0);
-            this.Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Close.Location = new System.Drawing.Point(46, 0);
+            this.Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(29, 30);
+            this.Close.Size = new System.Drawing.Size(22, 24);
             this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Close.TabIndex = 1;
             this.Close.TabStop = false;
@@ -116,11 +118,12 @@
             // 
             // StartWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 550);
+            this.ClientSize = new System.Drawing.Size(789, 447);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StartWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartWindow";

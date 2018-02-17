@@ -59,5 +59,11 @@ namespace bunitu_install
                 temp.Text = temp.Name;
         }
         #endregion
+        //Переходимо у форму реєстрації
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Authorization.ActiveForm.Show();
+            Sign_in.ActiveForm.Close();
+        }
     }
 }

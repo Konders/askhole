@@ -30,10 +30,10 @@ namespace bunitu_install
         {
             this.Close();
         }
-
+        //Згортаємо вікно
         private void Minimize_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
         /// <summary>
         /// Зміна розміру екрану
