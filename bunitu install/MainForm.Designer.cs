@@ -32,29 +32,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Header = new System.Windows.Forms.Panel();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Resize = new Bunifu.Framework.UI.BunifuImageButton();
             this.Minimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.Close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.UserHeader = new System.Windows.Forms.Panel();
-            this.UserList = new System.Windows.Forms.Panel();
             this.MenuSearch = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.UserList = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
+            this.chat1 = new bunitu_install.Chat();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.UserHeader.SuspendLayout();
-            this.UserList.SuspendLayout();
             this.MenuSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).BeginInit();
+            this.UserList.SuspendLayout();
+            this.Chat.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -71,11 +73,6 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(753, 24);
             this.Header.TabIndex = 0;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 5;
-            this.bunifuElipse2.TargetControl = this;
             // 
             // panel2
             // 
@@ -134,6 +131,11 @@
             this.Close.Zoom = 20;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 5;
+            this.bunifuElipse2.TargetControl = this;
+            // 
             // UserHeader
             // 
             this.UserHeader.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -143,18 +145,6 @@
             this.UserHeader.Name = "UserHeader";
             this.UserHeader.Size = new System.Drawing.Size(753, 46);
             this.UserHeader.TabIndex = 1;
-            // 
-            // UserList
-            // 
-            this.UserList.AutoScroll = true;
-            this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.UserList.Controls.Add(this.bunifuFlatButton2);
-            this.UserList.Controls.Add(this.bunifuFlatButton1);
-            this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.UserList.Location = new System.Drawing.Point(0, 70);
-            this.UserList.Name = "UserList";
-            this.UserList.Size = new System.Drawing.Size(253, 500);
-            this.UserList.TabIndex = 2;
             // 
             // MenuSearch
             // 
@@ -167,46 +157,18 @@
             this.MenuSearch.Size = new System.Drawing.Size(252, 46);
             this.MenuSearch.TabIndex = 0;
             // 
-            // bunifuDragControl1
+            // Hamburger
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.Header;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "User";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = false;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(253, 66);
-            this.bunifuFlatButton1.TabIndex = 0;
-            this.bunifuFlatButton1.Text = "User";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 12F);
+            this.Hamburger.BackColor = System.Drawing.Color.Transparent;
+            this.Hamburger.Image = ((System.Drawing.Image)(resources.GetObject("Hamburger.Image")));
+            this.Hamburger.ImageActive = ((System.Drawing.Image)(resources.GetObject("Hamburger.ImageActive")));
+            this.Hamburger.Location = new System.Drawing.Point(8, 5);
+            this.Hamburger.Name = "Hamburger";
+            this.Hamburger.Size = new System.Drawing.Size(40, 40);
+            this.Hamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Hamburger.TabIndex = 1;
+            this.Hamburger.TabStop = false;
+            this.Hamburger.Zoom = 10;
             // 
             // Search
             // 
@@ -227,6 +189,18 @@
             this.Search.TabIndex = 0;
             this.Search.Text = "Search";
             this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // UserList
+            // 
+            this.UserList.AutoScroll = true;
+            this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserList.Controls.Add(this.bunifuFlatButton2);
+            this.UserList.Controls.Add(this.bunifuFlatButton1);
+            this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.UserList.Location = new System.Drawing.Point(0, 70);
+            this.UserList.Name = "UserList";
+            this.UserList.Size = new System.Drawing.Size(253, 500);
+            this.UserList.TabIndex = 2;
             // 
             // bunifuFlatButton2
             // 
@@ -262,26 +236,64 @@
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 12F);
             // 
-            // Hamburger
+            // bunifuFlatButton1
             // 
-            this.Hamburger.BackColor = System.Drawing.Color.Transparent;
-            this.Hamburger.Image = ((System.Drawing.Image)(resources.GetObject("Hamburger.Image")));
-            this.Hamburger.ImageActive = ((System.Drawing.Image)(resources.GetObject("Hamburger.ImageActive")));
-            this.Hamburger.Location = new System.Drawing.Point(8, 5);
-            this.Hamburger.Name = "Hamburger";
-            this.Hamburger.Size = new System.Drawing.Size(40, 40);
-            this.Hamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Hamburger.TabIndex = 1;
-            this.Hamburger.TabStop = false;
-            this.Hamburger.Zoom = 10;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "User";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = false;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(253, 66);
+            this.bunifuFlatButton1.TabIndex = 0;
+            this.bunifuFlatButton1.Text = "User";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 12F);
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.Header;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Chat
             // 
+            this.Chat.Controls.Add(this.chat1);
             this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Chat.Location = new System.Drawing.Point(253, 70);
             this.Chat.Name = "Chat";
             this.Chat.Size = new System.Drawing.Size(500, 500);
             this.Chat.TabIndex = 3;
+            // 
+            // chat1
+            // 
+            this.chat1.AutoScroll = true;
+            this.chat1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chat1.Location = new System.Drawing.Point(0, 0);
+            this.chat1.Name = "chat1";
+            this.chat1.Size = new System.Drawing.Size(500, 500);
+            this.chat1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -303,9 +315,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             this.UserHeader.ResumeLayout(false);
-            this.UserList.ResumeLayout(false);
             this.MenuSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).EndInit();
+            this.UserList.ResumeLayout(false);
+            this.Chat.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -328,5 +341,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuImageButton Hamburger;
         private System.Windows.Forms.Panel Chat;
+        private Chat chat1;
     }
 }
