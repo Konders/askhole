@@ -50,69 +50,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authorization.cs">
+    <Compile Include="Forms\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authorization.Designer.cs">
+    <Compile Include="Forms\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chat.cs">
+    <Compile Include="UserControls\Chat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Chat.Designer.cs">
+    <Compile Include="UserControls\Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MessageBox.cs">
+    <Compile Include="UserControls\ContactList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MessageBox.Designer.cs">
+    <Compile Include="UserControls\ContactList.Designer.cs">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MessageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MessageBox.Designer.cs">
       <DependentUpon>MessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sign_in.cs">
+    <Compile Include="Forms\Sign_in.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sign_in.Designer.cs">
+    <Compile Include="Forms\Sign_in.Designer.cs">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserProfileEdit.cs">
+    <Compile Include="Forms\StartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartWindow.Designer.cs">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserProfileEdit.Designer.cs">
+    <Compile Include="UserControls\UserButton.Designer.cs">
+      <DependentUpon>UserButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserProfileEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserProfileEdit.Designer.cs">
       <DependentUpon>UserProfileEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserProfileInformation.cs">
+    <Compile Include="UserControls\UserProfileInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserProfileInformation.Designer.cs">
+    <Compile Include="UserControls\UserProfileInformation.Designer.cs">
       <DependentUpon>UserProfileInformation.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Authorization.resx">
+    <EmbeddedResource Include="Forms\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chat.resx">
+    <EmbeddedResource Include="UserControls\Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\ContactList.resx">
+      <DependentUpon>ContactList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageBox.resx">
+    <EmbeddedResource Include="UserControls\MessageBox.resx">
       <DependentUpon>MessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -124,13 +136,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Sign_in.resx">
+    <EmbeddedResource Include="Forms\Sign_in.resx">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserProfileEdit.resx">
+    <EmbeddedResource Include="Forms\StartWindow.resx">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserButton.resx">
+      <DependentUpon>UserButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserProfileEdit.resx">
       <DependentUpon>UserProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserProfileInformation.resx">
+    <EmbeddedResource Include="UserControls\UserProfileInformation.resx">
       <DependentUpon>UserProfileInformation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
