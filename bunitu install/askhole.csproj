@@ -88,12 +88,6 @@
     <Compile Include="Forms\Sign_in.Designer.cs">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StartWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\StartWindow.Designer.cs">
-      <DependentUpon>StartWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UserButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,9 +132,6 @@
     </Compile>
     <EmbeddedResource Include="Forms\Sign_in.resx">
       <DependentUpon>Sign_in.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StartWindow.resx">
-      <DependentUpon>StartWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserButton.resx">
       <DependentUpon>UserButton.cs</DependentUpon>

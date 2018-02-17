@@ -52,7 +52,5 @@ namespace bunitu_install
                 panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;//Добавляємо скроллінг
             }
         }
-
-     
     }
 }

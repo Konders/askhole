@@ -45,6 +45,7 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
             this.chat1 = new bunitu_install.Chat();
+            this.contactList1 = new bunitu_install.ContactList();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
@@ -53,6 +54,7 @@
             this.UserHeader.SuspendLayout();
             this.MenuSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).BeginInit();
+            this.UserList.SuspendLayout();
             this.Chat.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,6 +193,7 @@
             // 
             this.UserList.AutoScroll = true;
             this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserList.Controls.Add(this.contactList1);
             this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
             this.UserList.Location = new System.Drawing.Point(0, 70);
             this.UserList.Name = "UserList";
@@ -222,6 +225,14 @@
             this.chat1.Size = new System.Drawing.Size(500, 500);
             this.chat1.TabIndex = 0;
             // 
+            // contactList1
+            // 
+            this.contactList1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contactList1.Location = new System.Drawing.Point(0, 0);
+            this.contactList1.Name = "contactList1";
+            this.contactList1.Size = new System.Drawing.Size(247, 500);
+            this.contactList1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +255,7 @@
             this.UserHeader.ResumeLayout(false);
             this.MenuSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).EndInit();
+            this.UserList.ResumeLayout(false);
             this.Chat.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -266,5 +278,6 @@
         private Bunifu.Framework.UI.BunifuImageButton Hamburger;
         private System.Windows.Forms.Panel Chat;
         private Chat chat1;
+        private ContactList contactList1;
     }
 }
