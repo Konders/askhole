@@ -56,26 +56,28 @@
             this.UserName.IconZoom = 90D;
             this.UserName.IsTab = false;
             this.UserName.Location = new System.Drawing.Point(0, 0);
+            this.UserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.UserName.Name = "UserName";
             this.UserName.Normalcolor = System.Drawing.Color.Transparent;
             this.UserName.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UserName.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UserName.selected = false;
-            this.UserName.Size = new System.Drawing.Size(253, 63);
+            this.UserName.Size = new System.Drawing.Size(337, 78);
             this.UserName.TabIndex = 0;
             this.UserName.Text = "Username";
             this.UserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.UserName.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UserName.TextFont = new System.Drawing.Font("Century Gothic", 10F);
-            // 
+             // 
             // UserButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.UserName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserButton";
-            this.Size = new System.Drawing.Size(253, 66);
+            this.Size = new System.Drawing.Size(337, 81);
             this.ResumeLayout(false);
 
         }

@@ -20,18 +20,28 @@ namespace bunitu_install
         private string password;
         private string username;
         List<PictureBox> picture;
-        //   PictureBox[] picture = { pictureBox1, pictureBox2 };
+        List<int> list = new List<int>();
+        List<BunifuAnimatorNS.BunifuTransition> transitions;
+        Random rand = new Random();
+
+        System.Timers.Timer timer = new System.Timers.Timer();
         #endregion
 
         #region Constructor
         public Sign_in()
-        {
+        {        
             InitializeComponent();
             Enter.Select(); // керування фокусом
-            picture = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9 };
-            for (int i = 0; i < picture.Count; i++)
-                picture[i].Image = ImageList.Images[i] as Bitmap; 
-
+            picture = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3,
+                                               pictureBox4, pictureBox5, pictureBox6,
+                                               pictureBox7,pictureBox8, pictureBox9 };
+            transitions = new List<BunifuAnimatorNS.BunifuTransition>() {
+                            bunifuTransition1,  bunifuTransition2, bunifuTransition3,
+                            bunifuTransition4, bunifuTransition5};
+            RandomPicture();
+            timer.Interval = 2000;
+            timer.Elapsed += ChangePictures;
+            timer.Start();
         }
         #endregion
 
@@ -89,5 +99,52 @@ namespace bunitu_install
             Lib.Resize(control, startWidth, startHeight);
             ImageList.ImageSize = new Size(256, 256);
         }
+
+        #region Func
+
+        /// <summary>
+        /// Загрузка рандомних зображень для початкового вікна
+        /// </summary>
+        private void RandomPicture()
+        {
+            for (int i = 0; i < picture.Count; i++) // кількість зображень
+            {
+                while (true)
+                {
+                    bool check = false;
+                    int key = rand.Next(ImageList.Images.Count);
+                    foreach (var el in list) // перевірка чи не повторюються зображення
+                    {
+                        if (el == key)
+                        {
+                            check = true;
+                            break;
+                        }
+                    }
+                    if (!check) // якщо зображення унікальні додається до списку
+                    {
+                        list.Add(key);
+                        picture[i].Image = ImageList.Images[key] as Bitmap;
+                        break;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// зміна картинок
+        /// </summary>
+        private void ChangePictures(Object o, System.Timers.ElapsedEventArgs e)
+        {
+            int randPic = rand.Next(picture.Count);
+            var curentPic = picture[randPic];
+            int animation = rand.Next(transitions.Count);
+            //  if (curentPic.Visible == false)
+            transitions[animation].HideSync(curentPic);
+            transitions[animation].ShowSync(curentPic);
+        //    else
+          //      transitions[animation].HideSync(curentPic);
+        }
+        #endregion
     }
 }

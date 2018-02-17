@@ -38,5 +38,7 @@ namespace bunitu_install.UserControls
 
             UserName.Text = name;
         }
+
+      
     }
 }
