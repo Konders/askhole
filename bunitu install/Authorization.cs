@@ -71,5 +71,12 @@ namespace bunitu_install
             if (Passconfirm.Text == "")
                 Passconfirm.Text = "Password confirmation";
         }
+        //Переходимо у форму авторизації
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+            Sign_in.ActiveForm.Show();
+            Authorization.ActiveForm.Close();
+        }
     }
 }
