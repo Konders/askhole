@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AskholeLib;
 
 namespace bunitu_install
 {
@@ -39,8 +40,8 @@ namespace bunitu_install
         private void EnterChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
-            if (temp.Text == temp.Name)
-                temp.Text = "";
+            Lib.EnterText(temp);
+
         }
 
         /// <summary>
@@ -49,8 +50,7 @@ namespace bunitu_install
         private void LeaveChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
-            if (temp.Text == "")
-                temp.Text = temp.Name;
+            Lib.LeaveField(temp);               
         }
 
         /// <summary>
@@ -60,16 +60,21 @@ namespace bunitu_install
         {
             string text = "Password confirmation";
             if (text == Passconfirm.Text)
+            {
                 Passconfirm.Text = "";
+                Passconfirm.isPassword = true;
+            }
         }
-
         /// <summary>
         /// При відведені курсору з текстового поля вертається назва поля
         /// </summary>
         private void Passconfirm_Leave(object sender, EventArgs e)
         {
             if (Passconfirm.Text == "")
+            {
                 Passconfirm.Text = "Password confirmation";
+                Passconfirm.isPassword = false;
+            }
         }
         //Переходимо у форму авторизації
         private void bunifuThinButton21_Click(object sender, EventArgs e)

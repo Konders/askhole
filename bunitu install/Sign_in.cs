@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AskholeLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,9 +45,7 @@ namespace bunitu_install
         private void EnterChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
-            string text = temp.Text;
-            if (text == temp.Name)
-                temp.Text = "";
+            Lib.EnterText(temp);
         }
 
         /// <summary>
@@ -55,8 +54,7 @@ namespace bunitu_install
         private void LeaveChange(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
-            if (temp.Text == "")
-                temp.Text = temp.Name;
+            Lib.LeaveField(temp);
         }
         #endregion
         //Переходимо у форму реєстрації

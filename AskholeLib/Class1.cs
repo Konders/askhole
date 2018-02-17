@@ -27,5 +27,30 @@ namespace AskholeLib
                 control.Size = new Size(resolution.Width, resolution.Height);
             }
         }
+
+        public static void LeaveField(Bunifu.Framework.UI.BunifuMaterialTextbox temp)
+        {
+            if (temp.Text == "")
+            {
+                temp.Text = temp.Name;
+                if (temp.Name == "Password")
+                    temp.isPassword = false;
+            }
+            else
+            {
+                if (temp.Name == "Password")
+                    temp.isPassword = true;
+            }
+        }
+
+        public static void EnterText(Bunifu.Framework.UI.BunifuMaterialTextbox temp)
+        {
+            if (temp.Text == temp.Name)
+            {
+                temp.Text = "";
+                if (temp.Name == "Password")
+                    temp.isPassword = true;
+            }
+        }
     }
 }
