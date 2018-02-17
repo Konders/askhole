@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Policy;
+using System.IO;
 
 namespace AskholeLib
 {
@@ -64,6 +65,18 @@ namespace AskholeLib
                 temp.Text = "";
                 if (temp.Name == "Password") // для активізації властивості паролю
                     temp.isPassword = true;
+            }
+        }
+        /// <summary>
+        /// Перетворюємо массив байтів в картинку
+        /// </summary>
+        /// <param name="array">Картинка у вигляді массива байтів</param>
+        /// <returns></returns>
+        public static Bitmap ByteArrayToImage(byte[] array)
+        {
+            using (var ms = new MemoryStream(array))
+            {
+                return new Bitmap(ms);
             }
         }
     }
