@@ -141,7 +141,7 @@
             // 
             // Signup
             // 
-            this.Signup.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.Signup.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Signup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Signup.BorderRadius = 0;
