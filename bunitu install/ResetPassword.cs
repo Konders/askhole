@@ -45,7 +45,7 @@ namespace bunitu_install
 
         private void BackToSingIn_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
             signIn.Show();
         }
     }
