@@ -76,18 +76,18 @@ namespace bunitu_install
         }
         #endregion
         //Переходимо у форму реєстрації
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void SignUp_Click(object sender, EventArgs e)
         {
             //  Authorization.ActiveForm.Show();
             //  Sign_in.ActiveForm.Close();
             this.Hide();
-            Authorization authorization = new Authorization();
+            Authorization authorization = new Authorization(this);
             authorization.Show();
         }
 
         private void Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Minimize_Click(object sender, EventArgs e)
@@ -157,11 +157,11 @@ namespace bunitu_install
         }
         #endregion
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ResetPassword rpassword = new ResetPassword();
-            rpassword.Show();
+        private void ResetPassword_Click(object sender, EventArgs e)
+        {            
+            Hide();
+            ResetPassword rpassword = new ResetPassword(this);
+            rpassword.Show();         
         }
     }
 }

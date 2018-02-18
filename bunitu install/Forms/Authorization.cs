@@ -13,15 +13,22 @@ namespace bunitu_install
 {
     public partial class Authorization : Form
     {
+        private Sign_in signIn;
         public Authorization()
         {
             InitializeComponent();
             Signup.Select(); // керування фокусом
         }
+        public Authorization(Sign_in signIn)
+        {
+            InitializeComponent();
+            Signup.Select(); // керування фокусом
+            this.signIn = signIn;
+        }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Close();          
+            Application.Exit();
         }
    
         /// <summary>
@@ -29,7 +36,7 @@ namespace bunitu_install
         /// </summary>
         private void Signup_Click(object sender, EventArgs e)
         {
-            Sign_in signIn = new Sign_in();
+           // Sign_in signIn = new Sign_in();
             this.Hide();            // приховуємо початкову форму
             signIn.Show();          // виводимо форму реєстрації
         }
@@ -79,8 +86,8 @@ namespace bunitu_install
         //Переходимо у форму авторизації
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            Sign_in.ActiveForm.Show();
-            Authorization.ActiveForm.Close();
+            this.Close();
+            signIn.Show();
         }
     }
 }

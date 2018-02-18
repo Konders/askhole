@@ -13,12 +13,20 @@ namespace bunitu_install
 {
     public partial class ResetPassword : Form
     {
+        private Sign_in signIn;
         public ResetPassword()
         {
             InitializeComponent();
+            Confirm.Select(); // керування фокусом
+        }
+        public ResetPassword(Sign_in signIn)
+        {
+            InitializeComponent();
+            this.signIn = signIn;
+            Confirm.Select(); // керування фокусом
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -33,6 +41,12 @@ namespace bunitu_install
         {
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
             Lib.LeaveField(temp);
+        }
+
+        private void BackToSingIn_Click(object sender, EventArgs e)
+        {
+            Close();
+            signIn.Show();
         }
     }
 }
