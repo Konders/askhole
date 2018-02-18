@@ -17,7 +17,7 @@ namespace bunitu_install
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ResetPassword());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -64,7 +64,7 @@ namespace bunitu_install
                 Passconfirm.Text = "";
                 Passconfirm.isPassword = true;
             }
-        }
+         }
         /// <summary>
         /// При відведені курсору з текстового поля вертається назва поля
         /// </summary>

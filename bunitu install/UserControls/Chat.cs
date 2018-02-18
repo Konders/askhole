@@ -41,6 +41,23 @@ namespace bunitu_install
             Message_Old = msg;
         }
         /// <summary>
+        /// При наведені на текстове поле стирається початкова інформація
+        /// </summary>
+        private void Message_Enter(object sender, EventArgs e)
+        {
+            string text = "Write a message...";
+            if (text == Message.Text)
+                Message.Text = "";
+        }
+        /// <summary>
+         /// При відведені курсору з текстового поля вертається назва поля
+         /// </summary>
+        private void Message_Leave(object sender, EventArgs e)
+        {
+            if (Message.Text == "")
+                Message.Text = "Write a message...";
+        }
+        /// <summary>
         /// Відправка повідомлення на Key Enter
         /// </summary>
         private void Message_KeyDown(object sender, KeyEventArgs e)

@@ -68,13 +68,15 @@
             this.Message.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Message.LineThickness = 3;
             this.Message.Location = new System.Drawing.Point(76, 7);
-            this.Message.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Message.Margin = new System.Windows.Forms.Padding(4);
             this.Message.Name = "Message";
             this.Message.Size = new System.Drawing.Size(530, 62);
             this.Message.TabIndex = 1;
             this.Message.Text = "Write a message...";
             this.Message.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Message.Enter += new System.EventHandler(this.Message_Enter);
             this.Message.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Message_KeyDown);
+            this.Message.Leave += new System.EventHandler(this.Message_Leave);
             // 
             // Emoji
             // 
@@ -120,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.messageBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.messageBox1.Location = new System.Drawing.Point(4, 3);
-            this.messageBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.messageBox1.Margin = new System.Windows.Forms.Padding(4);
             this.messageBox1.Name = "messageBox1";
             this.messageBox1.Size = new System.Drawing.Size(296, 58);
             this.messageBox1.TabIndex = 0;

@@ -42,10 +42,10 @@
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
             this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
+            this.contactList1 = new bunitu_install.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
             this.chat1 = new bunitu_install.Chat();
-            this.contactList1 = new bunitu_install.ContactList();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
@@ -153,7 +153,7 @@
             this.MenuSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuSearch.Location = new System.Drawing.Point(0, 0);
             this.MenuSearch.Name = "MenuSearch";
-            this.MenuSearch.Size = new System.Drawing.Size(252, 46);
+            this.MenuSearch.Size = new System.Drawing.Size(253, 46);
             this.MenuSearch.TabIndex = 0;
             // 
             // Hamburger
@@ -200,6 +200,15 @@
             this.UserList.Size = new System.Drawing.Size(253, 500);
             this.UserList.TabIndex = 2;
             // 
+            // contactList1
+            // 
+            this.contactList1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contactList1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.contactList1.Location = new System.Drawing.Point(0, 0);
+            this.contactList1.Name = "contactList1";
+            this.contactList1.Size = new System.Drawing.Size(253, 500);
+            this.contactList1.TabIndex = 0;
+            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -224,14 +233,6 @@
             this.chat1.Name = "chat1";
             this.chat1.Size = new System.Drawing.Size(500, 500);
             this.chat1.TabIndex = 0;
-            // 
-            // contactList1
-            // 
-            this.contactList1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.contactList1.Location = new System.Drawing.Point(0, 0);
-            this.contactList1.Name = "contactList1";
-            this.contactList1.Size = new System.Drawing.Size(247, 500);
-            this.contactList1.TabIndex = 0;
             // 
             // MainForm
             // 
