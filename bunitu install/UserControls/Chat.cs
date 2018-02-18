@@ -33,9 +33,9 @@ namespace bunitu_install
             msg.Size = messageBox1.Size;
             msg.Anchor = messageBox1.Anchor;
             msg.Top = Message_Old.Bottom + 10;
-            //Якщо це твоє повідомлення, то зміщуємо його на 20 пікселів
+            //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
             if (mt == MessageBox.MessageType.Out)
-                msg.Left += 20;
+                msg.Left = (Size.Width - msg.MessageWidth) - 40; 
 
             panel2.Controls.Add(msg);
             Message_Old = msg;
@@ -67,6 +67,15 @@ namespace bunitu_install
                 AddMessage(Message.Text, "7:09 PM", MessageBox.MessageType.Out);
                 AddMessage(Message.Text, "7:09 PM", MessageBox.MessageType.In);
                 panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;//Добавляємо скроллінг
+            }
+        }
+
+        private void Attach_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = openFileDialog1.FileName;
+                Bitmap bitmap = new Bitmap(openFileDialog1.FileName);
             }
         }
     }

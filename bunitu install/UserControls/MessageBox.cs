@@ -13,6 +13,7 @@ namespace bunitu_install
     public partial class MessageBox : UserControl
     {
         private int padding = 5;
+        public int MessageWidth => message.Width;
         public MessageBox()
         {
             InitializeComponent();
@@ -59,5 +60,7 @@ namespace bunitu_install
         {
             AdjustHeight();
         }
+       
+        
     }
 }

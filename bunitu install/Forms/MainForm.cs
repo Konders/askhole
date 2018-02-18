@@ -17,6 +17,7 @@ namespace bunitu_install
         {
             InitializeComponent();
             this.Activate();
+            Hamburger.Select();
         }
         #region Variables
         private int startWidth = 753;
@@ -27,7 +28,7 @@ namespace bunitu_install
         /// </summary>
         private void Close_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
         }
         /// <summary>
         /// //Згортаємо вікно
@@ -42,7 +43,20 @@ namespace bunitu_install
         private void Resize_Click(object sender, EventArgs e)
         {
             Control control = (Control)this;
-            Lib.Resize(control, startWidth, startHeight);           
+            Lib.Resize(control, startWidth, startHeight);
         }
+
+        private void Search_Enter(object sender, EventArgs e)
+        {
+            if (Search.Text == "Search") // перевірка чи поле поміняло назву
+                Search.Text = "";
+        }
+
+        private void Search_Leave(object sender, EventArgs e)
+        {
+            if (Search.Text.Length == 0) Search.Text = "Search";
+        }
+
+     
     }
 }
