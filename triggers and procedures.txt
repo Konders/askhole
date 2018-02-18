@@ -44,3 +44,23 @@ begin
 		end
 end
 
+
+// перевірка входу
+alter procedure SignIn 
+@name varchar(50),
+@password varchar(50)
+as begin
+declare 
+@pass varchar(50)
+begin
+select @pass = Password from Users where Name = @name
+if @pass <> @password 
+	--set @enter = 1
+	raiserror ('Counld not sign in', 0 ,1)  
+--else 
+	--set @enter = 2
+end
+end
+
+// тимчасовий шаблон
+exec SignIn '', ''

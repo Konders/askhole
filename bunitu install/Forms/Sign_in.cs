@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,10 +26,21 @@ namespace bunitu_install
         Random rand = new Random();
 
         System.Timers.Timer timer = new System.Timers.Timer();
+        SqlConnection cn;
+        SqlCommand cmd;
         #endregion
 
-        #region Constructor
-        public Sign_in()
+        #region Constructors
+        public Sign_in(SqlConnection cn, SqlCommand cmd)
+        {
+            InitializeComponent();
+            Enter.Select();
+
+
+            this.cn = cn; // з'єднання з ЬД
+            this.cmd = cmd;
+        }
+            public Sign_in()
         {
             InitializeComponent();
             Enter.Select(); // керування фокусом
@@ -38,9 +50,11 @@ namespace bunitu_install
             transitions = new List<BunifuAnimatorNS.BunifuTransition>() {
                             bunifuTransition1,  bunifuTransition2};
             RandomPicture();
-            timer.Interval = 2000;
+
+            timer.Interval = 2000; // таймер для зображень
             timer.Elapsed += ChangePictures;
             timer.Start();
+
         }
         #endregion
 
@@ -53,7 +67,15 @@ namespace bunitu_install
         private void Enter_Click(object sender, EventArgs e)
         {
             username = Username.Text;
+            if (username.Length < 2) ErrorName.ForeColor = Color.Red;
+            else ErrorName.ForeColor =Color.FromArgb(248,248, 248);
+
             password = Password.Text;
+            if (username.Length < 6) ErrorPassword.ForeColor = Color.Red;
+            else ErrorPassword.ForeColor = Color.FromArgb(248, 248, 248);
+            // перевірка на правильність паролю
+            //   cmd.CommandText = "exec SignIn '"+ username + "', '"+ password + "'"; 
+
         }
 
         #region Work this text fields
@@ -151,7 +173,7 @@ namespace bunitu_install
             list.Add(newRand);
             int animation = rand.Next(transitions.Count); // рандомна анімація
             transitions[animation].HideSync(curentPic);
-            curentPic.Image = ImageList.Images[newRand] as Bitmap; // міняємо зображення
+            //curentPic.Image = ImageList.Images[newRand] as Bitmap; // міняємо зображення
             transitions[animation].ShowSync(curentPic);
 
         }

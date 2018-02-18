@@ -40,6 +40,7 @@
             this.Confirm = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Email = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.BackToSingIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -47,7 +48,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.BackToSingIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -223,6 +223,46 @@
             this.Username.Enter += new System.EventHandler(this.EnterChange);
             this.Username.Leave += new System.EventHandler(this.LeaveChange);
             // 
+            // BackToSingIn
+            // 
+            this.BackToSingIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.BackToSingIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BackToSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackToSingIn.BorderRadius = 0;
+            this.BackToSingIn.ButtonText = "Back To Sing In";
+            this.BackToSingIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.BackToSingIn, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.BackToSingIn, BunifuAnimatorNS.DecorationType.None);
+            this.BackToSingIn.DisabledColor = System.Drawing.Color.Gray;
+            this.BackToSingIn.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BackToSingIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.BackToSingIn.Iconcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BackToSingIn.Iconimage = ((System.Drawing.Image)(resources.GetObject("BackToSingIn.Iconimage")));
+            this.BackToSingIn.Iconimage_right = null;
+            this.BackToSingIn.Iconimage_right_Selected = null;
+            this.BackToSingIn.Iconimage_Selected = null;
+            this.BackToSingIn.IconMarginLeft = 0;
+            this.BackToSingIn.IconMarginRight = 0;
+            this.BackToSingIn.IconRightVisible = false;
+            this.BackToSingIn.IconRightZoom = 0D;
+            this.BackToSingIn.IconVisible = false;
+            this.BackToSingIn.IconZoom = 90D;
+            this.BackToSingIn.IsTab = false;
+            this.BackToSingIn.Location = new System.Drawing.Point(40, 153);
+            this.BackToSingIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BackToSingIn.Name = "BackToSingIn";
+            this.BackToSingIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.BackToSingIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.BackToSingIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackToSingIn.selected = false;
+            this.BackToSingIn.Size = new System.Drawing.Size(134, 75);
+            this.BackToSingIn.TabIndex = 20;
+            this.BackToSingIn.Text = "Back To Sing In";
+            this.BackToSingIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BackToSingIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackToSingIn.TextFont = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.BackToSingIn.Click += new System.EventHandler(this.BackToSingIn_Click);
+            // 
             // bunifuTransition1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
@@ -303,46 +343,6 @@
             this.bunifuElipse2.ElipseRadius = 5;
             this.bunifuElipse2.TargetControl = this;
             // 
-            // BackToSingIn
-            // 
-            this.BackToSingIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
-            this.BackToSingIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.BackToSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackToSingIn.BorderRadius = 0;
-            this.BackToSingIn.ButtonText = "Back To Sing In";
-            this.BackToSingIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.BackToSingIn, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.BackToSingIn, BunifuAnimatorNS.DecorationType.None);
-            this.BackToSingIn.DisabledColor = System.Drawing.Color.Gray;
-            this.BackToSingIn.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BackToSingIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
-            this.BackToSingIn.Iconcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.BackToSingIn.Iconimage = ((System.Drawing.Image)(resources.GetObject("BackToSingIn.Iconimage")));
-            this.BackToSingIn.Iconimage_right = null;
-            this.BackToSingIn.Iconimage_right_Selected = null;
-            this.BackToSingIn.Iconimage_Selected = null;
-            this.BackToSingIn.IconMarginLeft = 0;
-            this.BackToSingIn.IconMarginRight = 0;
-            this.BackToSingIn.IconRightVisible = false;
-            this.BackToSingIn.IconRightZoom = 0D;
-            this.BackToSingIn.IconVisible = false;
-            this.BackToSingIn.IconZoom = 90D;
-            this.BackToSingIn.IsTab = false;
-            this.BackToSingIn.Location = new System.Drawing.Point(40, 153);
-            this.BackToSingIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.BackToSingIn.Name = "BackToSingIn";
-            this.BackToSingIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.BackToSingIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
-            this.BackToSingIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BackToSingIn.selected = false;
-            this.BackToSingIn.Size = new System.Drawing.Size(134, 75);
-            this.BackToSingIn.TabIndex = 20;
-            this.BackToSingIn.Text = "Back To Sing In";
-            this.BackToSingIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BackToSingIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BackToSingIn.TextFont = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.BackToSingIn.Click += new System.EventHandler(this.BackToSingIn_Click);
-            // 
             // ResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -358,6 +358,7 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ResetPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResetPassword";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
