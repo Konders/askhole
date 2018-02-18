@@ -64,8 +64,10 @@ namespace bunitu_install
         {
             if (e.KeyCode == Keys.Enter)
             {
-                AddMessage(Message.Text, "7:09 PM", MessageBox.MessageType.Out);
-                AddMessage(Message.Text, "7:09 PM", MessageBox.MessageType.In);
+                // поточний час
+                string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute +".");
+                AddMessage(Message.Text, time, MessageBox.MessageType.Out);
+                AddMessage(Message.Text, time, MessageBox.MessageType.In);
                 panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;//Добавляємо скроллінг
             }
         }
