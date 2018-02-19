@@ -10,6 +10,7 @@ using System.Resources;
 using System.IO;
 using Bunifu.Framework.UI;
 
+
 namespace AskholeLib
 {
     public class Lib
@@ -42,7 +43,9 @@ namespace AskholeLib
                 control.Location = new Point((resolution.Width - startWidth) / 2,  // знаходимо центр
                                              (resolution.Height - startHeight) / 2);
                 control.Size = new Size(startWidth, startHeight);
-             //   square.Image = bunitu_install.Properties.Resources.Square;
+              //  square.Image = Properties.Resources.Square;
+            
+                
             }
             else // якщо вікно повністю маленького розміру
             {

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
 
 namespace bunitu_install
 {
@@ -31,16 +32,16 @@ namespace bunitu_install
         #endregion
 
         #region Constructors
-        public Sign_in(SqlConnection cn, SqlCommand cmd)
+        public Sign_in()
         {
             InitializeComponent();
             Enter.Select();
 
 
-            this.cn = cn; // з'єднання з ЬД
-            this.cmd = cmd;
+            //this.cn = cn; // з'єднання з ЬД
+            //this.cmd = cmd;
         }
-            public Sign_in()
+        public Sign_in(SqlConnection cn, SqlCommand cmd)
         {
             InitializeComponent();
             Enter.Select(); // керування фокусом
@@ -55,6 +56,8 @@ namespace bunitu_install
             timer.Elapsed += ChangePictures;
             timer.Start();
 
+            this.cn = cn; // з'єднання з ЬД
+            this.cmd = cmd;
         }
         #endregion
 
@@ -67,19 +70,46 @@ namespace bunitu_install
         private void Enter_Click(object sender, EventArgs e)
         {
             username = Username.Text;
-            if (username.Length < 2) ErrorName.ForeColor = Color.Red;
-            else ErrorName.ForeColor =Color.FromArgb(248,248, 248);
-
             password = Password.Text;
-            if (username.Length < 6) ErrorPassword.ForeColor = Color.Red;
-            else ErrorPassword.ForeColor = Color.FromArgb(248, 248, 248);
+            if (!Spelling(username, password)) return;
+            
             // перевірка на правильність паролю
-            //   cmd.CommandText = "exec SignIn '"+ username + "', '"+ password + "'"; 
+            try
+            {
+                cn.Open();
+                StringBuilder str = new StringBuilder("exec SignIn '" + username + "', '" + password + "'");
+                cmd.CommandText = Convert.ToString(str);
+                //SqlDataReader reader = cmd.ExecuteReader();
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                Username.Text = Convert.ToString(ex.Message);
+            }
+
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.Show();
         }
+        private bool Spelling(string username, string password)
+        {
+            bool spelling = true;
+            if (username.Length < 2)
+            {
+                ErrorName.ForeColor = Color.Red;
+                spelling = false;
+            }
+            else ErrorName.ForeColor = Color.FromArgb(248, 248, 248);
 
+
+            if (username.Length < 6)
+            {
+                ErrorPassword.ForeColor = Color.Red;
+                spelling = false;
+            }
+            else ErrorPassword.ForeColor = Color.FromArgb(248, 248, 248);
+            return spelling;
+        }
         #region Work this text fields
         /// <summary>
         /// При наведені на текстове поле стирається початкова інформація
@@ -108,18 +138,18 @@ namespace bunitu_install
             Authorization authorization = new Authorization(this);
             authorization.Show();
         }
-
+        // Закривається поточне вікно
         private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        // згорнення вікна
         private void Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-      
+
         #region Func
 
         /// <summary>
@@ -163,7 +193,7 @@ namespace bunitu_install
         private void ChangePictures(Object o, System.Timers.ElapsedEventArgs e)
         {
             int randPic = rand.Next(picture.Count); // рандомне зображення
-            var curentPic = picture[randPic];            
+            var curentPic = picture[randPic];
             int newRand = NewRand(); // нове зображення
             list.Remove(randPic); // редагування списку
             list.Add(newRand);
@@ -176,10 +206,10 @@ namespace bunitu_install
         #endregion
 
         private void ResetPassword_Click(object sender, EventArgs e)
-        {            
+        {
             Hide();
             ResetPassword rpassword = new ResetPassword(this);
-            rpassword.Show();         
+            rpassword.Show();
         }
     }
 }

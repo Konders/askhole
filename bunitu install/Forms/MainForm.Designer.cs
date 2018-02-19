@@ -90,7 +90,6 @@
             // Resize
             // 
             this.Resize.BackColor = System.Drawing.Color.Transparent;
-            this.Resize.Image = global::bunitu_install.Properties.Resources.Square;
             this.Resize.ImageActive = null;
             this.Resize.Location = new System.Drawing.Point(31, 5);
             this.Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -175,10 +175,10 @@
     <None Include="Resources\ImageSquare.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\windows.png" />
+    <None Include="Resources\sq.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sq.png" />
+    <None Include="Resources\windows.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

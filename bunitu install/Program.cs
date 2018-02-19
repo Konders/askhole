@@ -18,13 +18,13 @@ namespace bunitu_install
         [STAThread]
         static void Main()
         {
-            cn = new SqlConnection();
+            cn = new SqlConnection("Data Source=DESKTOP-75CHCH4;Initial Catalog=Chat;Integrated Security=True");
             cmd = new SqlCommand();
             cmd.Connection = cn;
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sign_in());
+            Application.Run(new Sign_in(cn, cmd));
         }
     }
 }

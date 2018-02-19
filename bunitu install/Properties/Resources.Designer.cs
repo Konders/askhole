@@ -63,9 +63,9 @@ namespace bunitu_install.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap SmallSquare {
+        public static System.Drawing.Bitmap sq {
             get {
-                object obj = ResourceManager.GetObject("SmallSquare", resourceCulture);
+                object obj = ResourceManager.GetObject("sq", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace bunitu_install.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Square {
+        public static System.Drawing.Bitmap windows {
             get {
-                object obj = ResourceManager.GetObject("Square", resourceCulture);
+                object obj = ResourceManager.GetObject("windows", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
