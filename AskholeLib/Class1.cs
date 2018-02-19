@@ -10,7 +10,6 @@ using System.Resources;
 using System.IO;
 using Bunifu.Framework.UI;
 
-
 namespace AskholeLib
 {
     public class Lib
@@ -33,7 +32,7 @@ namespace AskholeLib
         /// <param name="control">активна форма</param>
         /// <param name="startWidth">поточна ширина</param>
         /// <param name="startHeight">поточна висота</param>
-        public static void Resize(BunifuImageButton square, Control control, int startWidth, int startHeight)
+        public static bool Resize(BunifuImageButton square, Control control, int startWidth, int startHeight)
         {
             
             System.Drawing.Size resolution = Screen.PrimaryScreen.Bounds.Size; // системні значення
@@ -43,14 +42,15 @@ namespace AskholeLib
                 control.Location = new Point((resolution.Width - startWidth) / 2,  // знаходимо центр
                                              (resolution.Height - startHeight) / 2);
                 control.Size = new Size(startWidth, startHeight);
-              //  square.Image = Properties.Resources.Square;
-            
-                
+                //  square.Image = Properties.Resources.Square;
+                return true;
+
             }
             else // якщо вікно повністю маленького розміру
             {
                 control.Location = new Point(0, 0);
                 control.Size = new Size(resolution.Width, resolution.Height);
+                return false;
                 //    square.Image = bunitu_install.Properties.Resources.Square;
             }
         }

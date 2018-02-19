@@ -46,7 +46,10 @@ namespace bunitu_install
         {
             var square = Resize;
             Control control = (Control)this;
-            Lib.Resize(square, control, startWidth, startHeight);
+            if(Lib.Resize(square, control, startWidth, startHeight))
+                Resize.Image = Properties.Resources.sq;
+            else
+                Resize.Image = Properties.Resources.windows;
         }
 
         private void Search_Enter(object sender, EventArgs e)

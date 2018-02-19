@@ -31,11 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactList));
             this.List_Panel = new System.Windows.Forms.Panel();
             this.AddContactButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.List_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // List_Panel
             // 
+            this.List_Panel.Controls.Add(this.vScrollBar1);
             this.List_Panel.Controls.Add(this.AddContactButton);
             this.List_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.List_Panel.Location = new System.Drawing.Point(0, 0);
@@ -81,6 +83,14 @@
             this.AddContactButton.Visible = false;
             this.AddContactButton.Click += new System.EventHandler(this.AddContactButton_Click);
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.vScrollBar1.Location = new System.Drawing.Point(333, 0);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(10, 613);
+            this.vScrollBar1.TabIndex = 2;
+            // 
             // ContactList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,5 +109,6 @@
 
         private System.Windows.Forms.Panel List_Panel;
         public Bunifu.Framework.UI.BunifuFlatButton AddContactButton;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

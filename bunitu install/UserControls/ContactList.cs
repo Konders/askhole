@@ -26,7 +26,9 @@ namespace bunitu_install
                 idk -= Buttons[0].Height;
                 List_Panel.Controls.Add(Buttons[i]);
             }
-            List_Panel.VerticalScroll.Value = List_Panel.VerticalScroll.Maximum;
+            //vScrollBar1.Scroll += (sender,e) =>{ List_Panel.VerticalScroll.Value = vScrollBar1.Value};
+            List_Panel.VerticalScroll.Value = vScrollBar1.Value;
+            //List_Panel.VerticalScroll.Value = List_Panel.VerticalScroll.Maximum;
         }
         public ContactList()
         {
@@ -65,7 +67,6 @@ namespace bunitu_install
         {
             AddContact(0, "Illya");
             AddContact(1, "Olya");
-            
         }
     }
 }
