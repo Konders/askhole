@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AskholeLib;
+using Bunifu.Framework.UI;
 
 namespace bunitu_install
 {
@@ -42,8 +43,9 @@ namespace bunitu_install
         /// </summary>
         private void Resize_Click(object sender, EventArgs e)
         {
+            var square = Resize;
             Control control = (Control)this;
-            Lib.Resize(control, startWidth, startHeight);
+            Lib.Resize(square, control, startWidth, startHeight);
         }
 
         private void Search_Enter(object sender, EventArgs e)
