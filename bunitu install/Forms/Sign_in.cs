@@ -81,11 +81,11 @@ namespace bunitu_install
                 MainForm mainForm = new MainForm(); // форма з повідомленнями
                 mainForm.Show();
                 cn.Close();
-                Error.ForeColor = Color.FromArgb(248, 248, 248); // вертаємо колір помилки
+                Error.Hide(); // вертаємо колір помилки
             }
             catch (SqlException ex)
-            {               
-                Error.ForeColor = Color.Red; // вертаємо колір помилки
+            {
+                Error.Show(); // вертаємо колір помилки
                 cn.Close();
             }
         }      
