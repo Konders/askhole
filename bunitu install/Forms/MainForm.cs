@@ -29,7 +29,7 @@ namespace bunitu_install
         /// </summary>
         private void Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
         /// <summary>
         /// //Згортаємо вікно
