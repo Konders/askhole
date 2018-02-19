@@ -48,5 +48,23 @@ namespace bunitu_install
             Hide();
             signIn.Show();
         }
+
+        private void Confirm_Click(object sender, EventArgs e)
+        {
+            // чи співпадають паролі
+            if (!Lib.ConfirmPassword(Password.Text, Passconfirm.Text, Confirmation)) return;
+        }
+        // для перевірки пароля
+        private void LeaveConfirm(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
+            Lib.LeaveConfirm(temp);
+        }
+        // Перевірка пароля
+        private void EnterConfirm(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
+            Lib.EnterConfirm(temp);
+        }
     }
 }

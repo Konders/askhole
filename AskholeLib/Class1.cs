@@ -59,7 +59,7 @@ namespace AskholeLib
         /// При редагуванні текстового поля перевірка чи було щось змінено
         /// </summary>
         /// <param name="temp">текстове поле на яке було натиснуто</param>
-        public static void LeaveField(Bunifu.Framework.UI.BunifuMaterialTextbox temp)
+        public static void LeaveField(BunifuMaterialTextbox temp)
         {
             if (temp.Text == "")  // перевірка чи щось було змінено
             {
@@ -71,6 +71,25 @@ namespace AskholeLib
             {
                 if (temp.Name == "Password") // шифрування пароля
                     temp.isPassword = true;
+            }
+        }
+        public static void LeaveConfirm(BunifuMaterialTextbox temp)
+        {
+            if (temp.Text == "")
+            {
+                temp.Text = "Password confirmation";
+                temp.isPassword = false;
+            }
+        }
+
+        public static void EnterConfirm(BunifuMaterialTextbox temp)
+        {
+           
+            string text = "Password confirmation";
+            if (text == temp.Text)
+            {
+                temp.Text = "";
+                temp.isPassword = true;
             }
         }
 
@@ -129,6 +148,17 @@ namespace AskholeLib
             }
             else ErPassword.ForeColor = Color.FromArgb(248, 248, 248);
             return spell;
+        }
+
+        static public bool ConfirmPassword(string password, string passwordConfirm, BunifuCustomLabel Confirmation)
+        {
+            if (password != passwordConfirm)// чи співдалають паролі
+            {
+                Confirmation.ForeColor = Color.Red;
+                return false;
+            }
+            Confirmation.ForeColor = Color.FromArgb(248, 248, 248);
+            return true;
         }
     }
 }

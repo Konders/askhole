@@ -43,15 +43,10 @@ namespace bunitu_install
         private void Signup_Click(object sender, EventArgs e)
         {
             // неправильний формат вхідних данних
-            if (!Lib.Spelling(Username.Text, Password.Text, ErrorName,ErrorPassword))
-                return;
+            if (!Lib.Spelling(Username.Text, Password.Text, ErrorName,ErrorPassword)) return;
+            // чи співпадають паролі
+            if (!Lib.ConfirmPassword(Password.Text, Passconfirm.Text, Confirmation))  return;
             
-            if (Password.Text != Passconfirm.Text)// чи співдалають паролі
-            {
-                Confirmation.ForeColor = Color.Red;
-                return;             
-            }
-            else Confirmation.ForeColor = Color.FromArgb(248, 248, 248);
             NewUser();                  // приховуємо початкову форму
            
         }
@@ -64,7 +59,12 @@ namespace bunitu_install
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
             Lib.EnterText(temp);
         }
-
+        // Перевірка пароля
+        private void Passconfirm_Enter(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
+            Lib.EnterConfirm(temp);
+        }
         /// <summary>
         /// При відведені курсору з текстового поля вертається назва поля
         /// </summary>
@@ -73,30 +73,14 @@ namespace bunitu_install
             Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
             Lib.LeaveField(temp);
         }
-
-        /// <summary>
-        /// При наведені на текстове поле стирається початкова інформація
-        /// </summary>
-        private void Passconfirm_Enter(object sender, EventArgs e)
-        {
-            string text = "Password confirmation";
-            if (text == Passconfirm.Text)
-            {
-                Passconfirm.Text = "";
-                Passconfirm.isPassword = true;
-            }
-        }
-        /// <summary>
-        /// При відведені курсору з текстового поля вертається назва поля
-        /// </summary>
+        // для перевірки пароля
         private void Passconfirm_Leave(object sender, EventArgs e)
         {
-            if (Passconfirm.Text == "")
-            {
-                Passconfirm.Text = "Password confirmation";
-                Passconfirm.isPassword = false;
-            }
+            Bunifu.Framework.UI.BunifuMaterialTextbox temp = sender as Bunifu.Framework.UI.BunifuMaterialTextbox;
+            Lib.LeaveConfirm(temp);
         }
+
+
         //Переходимо у форму авторизації
         private void BackToSignIn_Click(object sender, EventArgs e)
         {

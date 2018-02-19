@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation13 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPassword));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation14 = new BunifuAnimatorNS.Animation();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,6 +48,10 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Confirmation = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ErrorPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Passconfirm = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -57,22 +61,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.bunifuTransition2.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation1;
+            animation13.AnimateOnlyDifferences = true;
+            animation13.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation13.BlindCoeff")));
+            animation13.LeafCoeff = 0F;
+            animation13.MaxTime = 1F;
+            animation13.MinTime = 0F;
+            animation13.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation13.MosaicCoeff")));
+            animation13.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation13.MosaicShift")));
+            animation13.MosaicSize = 1;
+            animation13.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation13.RotateCoeff = 0F;
+            animation13.RotateLimit = 0F;
+            animation13.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation13.ScaleCoeff")));
+            animation13.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation13.SlideCoeff")));
+            animation13.TimeCoeff = 2F;
+            animation13.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation13;
             this.bunifuTransition2.MaxAnimationTime = 2000;
             this.bunifuTransition2.TimeStep = 0.001F;
             // 
@@ -90,7 +94,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 30);
+            this.panel1.Size = new System.Drawing.Size(425, 30);
             this.panel1.TabIndex = 13;
             this.panel1.Tag = "";
             // 
@@ -100,7 +104,7 @@
             this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(397, 0);
+            this.panel2.Location = new System.Drawing.Point(396, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(29, 30);
@@ -161,7 +165,7 @@
             this.Confirm.IconVisible = false;
             this.Confirm.IconZoom = 90D;
             this.Confirm.IsTab = false;
-            this.Confirm.Location = new System.Drawing.Point(250, 153);
+            this.Confirm.Location = new System.Drawing.Point(250, 297);
             this.Confirm.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Confirm.Name = "Confirm";
             this.Confirm.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -174,6 +178,7 @@
             this.Confirm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Confirm.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Confirm.TextFont = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Confirm.Click += new System.EventHandler(this.Confirm_Click);
             // 
             // Email
             // 
@@ -189,7 +194,7 @@
             this.Email.LineIdleColor = System.Drawing.Color.Gray;
             this.Email.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Email.LineThickness = 3;
-            this.Email.Location = new System.Drawing.Point(40, 88);
+            this.Email.Location = new System.Drawing.Point(40, 98);
             this.Email.Margin = new System.Windows.Forms.Padding(5);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(344, 41);
@@ -248,7 +253,7 @@
             this.BackToSingIn.IconVisible = false;
             this.BackToSingIn.IconZoom = 90D;
             this.BackToSingIn.IsTab = false;
-            this.BackToSingIn.Location = new System.Drawing.Point(40, 153);
+            this.BackToSingIn.Location = new System.Drawing.Point(40, 297);
             this.BackToSingIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.BackToSingIn.Name = "BackToSingIn";
             this.BackToSingIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -267,22 +272,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.bunifuTransition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 20;
-            animation2.Padding = new System.Windows.Forms.Padding(30);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation2;
+            animation14.AnimateOnlyDifferences = true;
+            animation14.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.BlindCoeff")));
+            animation14.LeafCoeff = 0F;
+            animation14.MaxTime = 1F;
+            animation14.MinTime = 0F;
+            animation14.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.MosaicCoeff")));
+            animation14.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation14.MosaicShift")));
+            animation14.MosaicSize = 20;
+            animation14.Padding = new System.Windows.Forms.Padding(30);
+            animation14.RotateCoeff = 0F;
+            animation14.RotateLimit = 0F;
+            animation14.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.ScaleCoeff")));
+            animation14.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation14.SlideCoeff")));
+            animation14.TimeCoeff = 0F;
+            animation14.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation14;
             this.bunifuTransition1.MaxAnimationTime = 2000;
             this.bunifuTransition1.TimeStep = 0.001F;
             // 
@@ -343,12 +348,88 @@
             this.bunifuElipse2.ElipseRadius = 5;
             this.bunifuElipse2.TargetControl = this;
             // 
+            // Confirmation
+            // 
+            this.Confirmation.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.Confirmation, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.Confirmation, BunifuAnimatorNS.DecorationType.None);
+            this.Confirmation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.Confirmation.Location = new System.Drawing.Point(41, 272);
+            this.Confirmation.Name = "Confirmation";
+            this.Confirmation.Size = new System.Drawing.Size(169, 17);
+            this.Confirmation.TabIndex = 23;
+            this.Confirmation.Text = "Passwords are not similar";
+            // 
+            // ErrorPassword
+            // 
+            this.ErrorPassword.AutoSize = true;
+            this.bunifuTransition2.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
+            this.ErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ErrorPassword.Location = new System.Drawing.Point(41, 210);
+            this.ErrorPassword.Name = "ErrorPassword";
+            this.ErrorPassword.Size = new System.Drawing.Size(129, 17);
+            this.ErrorPassword.TabIndex = 24;
+            this.ErrorPassword.Text = "Password too short";
+            // 
+            // Passconfirm
+            // 
+            this.Passconfirm.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.Passconfirm, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.Passconfirm, BunifuAnimatorNS.DecorationType.None);
+            this.Passconfirm.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Passconfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Passconfirm.HintForeColor = System.Drawing.Color.Empty;
+            this.Passconfirm.HintText = "";
+            this.Passconfirm.isPassword = false;
+            this.Passconfirm.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.Passconfirm.LineIdleColor = System.Drawing.Color.Gray;
+            this.Passconfirm.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.Passconfirm.LineThickness = 3;
+            this.Passconfirm.Location = new System.Drawing.Point(40, 226);
+            this.Passconfirm.Margin = new System.Windows.Forms.Padding(5);
+            this.Passconfirm.Name = "Passconfirm";
+            this.Passconfirm.Size = new System.Drawing.Size(344, 41);
+            this.Passconfirm.TabIndex = 21;
+            this.Passconfirm.Text = "Password confirmation";
+            this.Passconfirm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Passconfirm.Enter += new System.EventHandler(this.EnterConfirm);
+            this.Passconfirm.Leave += new System.EventHandler(this.LeaveConfirm);
+            // 
+            // Password
+            // 
+            this.Password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTransition1.SetDecoration(this.Password, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.Password, BunifuAnimatorNS.DecorationType.None);
+            this.Password.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Password.HintForeColor = System.Drawing.Color.Empty;
+            this.Password.HintText = "";
+            this.Password.isPassword = false;
+            this.Password.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.Password.LineIdleColor = System.Drawing.Color.Gray;
+            this.Password.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.Password.LineThickness = 3;
+            this.Password.Location = new System.Drawing.Point(40, 164);
+            this.Password.Margin = new System.Windows.Forms.Padding(5);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(344, 41);
+            this.Password.TabIndex = 22;
+            this.Password.Text = "Password";
+            this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Password.Enter += new System.EventHandler(this.EnterChange);
+            this.Password.Leave += new System.EventHandler(this.LeaveChange);
+            // 
             // ResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(426, 259);
+            this.ClientSize = new System.Drawing.Size(425, 400);
+            this.Controls.Add(this.Confirmation);
+            this.Controls.Add(this.ErrorPassword);
+            this.Controls.Add(this.Passconfirm);
+            this.Controls.Add(this.Password);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BackToSingIn);
             this.Controls.Add(this.Confirm);
@@ -365,6 +446,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -386,5 +468,9 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuFlatButton BackToSingIn;
+        private Bunifu.Framework.UI.BunifuCustomLabel Confirmation;
+        private Bunifu.Framework.UI.BunifuCustomLabel ErrorPassword;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Passconfirm;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Password;
     }
 }
