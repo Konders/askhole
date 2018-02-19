@@ -78,6 +78,7 @@
             this.AddContactButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddContactButton.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddContactButton.TextFont = new System.Drawing.Font("Century Gothic", 10F);
+            this.AddContactButton.Visible = false;
             this.AddContactButton.Click += new System.EventHandler(this.AddContactButton_Click);
             // 
             // ContactList
@@ -97,6 +98,6 @@
         #endregion
 
         private System.Windows.Forms.Panel List_Panel;
-        private Bunifu.Framework.UI.BunifuFlatButton AddContactButton;
+        public Bunifu.Framework.UI.BunifuFlatButton AddContactButton;
     }
 }

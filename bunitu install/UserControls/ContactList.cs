@@ -14,22 +14,46 @@ namespace bunitu_install
     {
         Dictionary<int, Lib.User> Contacts = new Dictionary<int, Lib.User>();
         Dictionary<int, bunitu_install.UserControls.UserButton> Buttons = new Dictionary<int, bunitu_install.UserControls.UserButton>();
+        public void RefreshButtons()
+        {
+            if (Buttons.Count == 0)
+                return;
+            List_Panel.Controls.Clear();
+            int idk = Buttons.Count * Buttons[0].Height - Buttons[0].Height;
+            for(int i = 0;i<Buttons.Count;i++)
+            {
+                Buttons[i].Location = new Point(Buttons[i].Location.X,idk);
+                idk -= Buttons[0].Height;
+                List_Panel.Controls.Add(Buttons[i]);
+            }
+            List_Panel.VerticalScroll.Value = List_Panel.VerticalScroll.Maximum;
+        }
         public ContactList()
         {
             InitializeComponent();
             //Contacts.Add(0, new Lib.User(123,"Illya",null));
             //Contacts.Add(1, new Lib.User(512, "Olya", null));
+            Buttons.Add(0, new bunitu_install.UserControls.UserButton());
+            Buttons[0].Location = AddContactButton.Location;
+            Buttons[0].Size = AddContactButton.Size;
+            Buttons[0].Anchor = AddContactButton.Anchor;
+            Buttons[0].UserName.Iconimage = AddContactButton.Iconimage;
+            Buttons[0].UserName.Text = AddContactButton.Text;
+            Buttons[0].UserName.Click += AddContactButton_Click;
+            List_Panel.Controls.Add(Buttons[0]);
+            //Buttons[0].
         }
         public void AddContact(int id,string name)
         {
             //select * from users where id = @id
             Contacts.Add(Contacts.Count, new Lib.User(id, name, null));
-            Buttons.Add(Contacts.Count-1 , new bunitu_install.UserControls.UserButton(Contacts[Contacts.Count-1]));
+            Buttons.Add(Contacts.Count , new bunitu_install.UserControls.UserButton(Contacts[Contacts.Count-1]));
             Buttons[Contacts.Count - 1].Location = AddContactButton.Location;
             Buttons[Contacts.Count - 1].Size = AddContactButton.Size;
             Buttons[Contacts.Count - 1].Anchor = AddContactButton.Anchor;
-            List_Panel.Controls.Add(Buttons[Contacts.Count - 1]);
-            AddContactButton.Top += Buttons[0].Height;
+            RefreshButtons();
+            //List_Panel.Controls.Add(Buttons[Contacts.Count - 1]);
+            //AddContactButton.Top += Buttons[0].Height;
 
         }
         private void ContactList_MouseEnter(object sender, EventArgs e)
@@ -41,7 +65,7 @@ namespace bunitu_install
         {
             AddContact(0, "Illya");
             AddContact(1, "Olya");
-            List_Panel.VerticalScroll.Value = List_Panel.VerticalScroll.Maximum;
+            
         }
     }
 }

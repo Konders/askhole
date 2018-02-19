@@ -84,6 +84,6 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton UserName;
+        public Bunifu.Framework.UI.BunifuFlatButton UserName;
     }
 }
