@@ -99,5 +99,35 @@ namespace AskholeLib
                 return new Bitmap(ms);
             }
         }
+
+        /// <summary>
+        /// перевірка чи пароль з іменем відповідають умовам
+        /// </summary>
+        /// <param name="username">ім'я користувача</param>
+        /// <param name="password">пароль</param>
+        /// <returns></returns>
+        /// <param name="ErName">текст для помилки</param>
+        /// <param name="ErPassword">текст для помилки</param>
+        /// <returns></returns>
+        static public bool Spelling(string username, string password,
+                              BunifuCustomLabel ErName, BunifuCustomLabel ErPassword)
+        {
+            // перевірка чи не початкові дані
+            if ((username == "Username") && (password == "Password")) return false;
+            if (username.Length < 2) // перевірка імені
+            {
+                ErName.ForeColor = Color.Red; // попередження
+                return false;
+            }
+            else ErName.ForeColor = Color.FromArgb(248, 248, 248);
+
+            if (password.Length < 6)  // перевірка паролю
+            {
+                ErPassword.ForeColor = Color.Red; // попередження
+                return false;
+            }
+            else ErPassword.ForeColor = Color.FromArgb(248, 248, 248);
+            return true;
+        }
     }
 }

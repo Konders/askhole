@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
+using Bunifu.Framework.UI;
 
 namespace bunitu_install
 {
@@ -71,45 +72,30 @@ namespace bunitu_install
         {
             username = Username.Text;
             password = Password.Text;
-            if (!Spelling(username, password)) return;
-            
-            // перевірка на правильність паролю
+            // якщо паролі не відповідають вимогам нічого не міняється
+            if (!Lib.Spelling(username, password, ErrorName, ErrorPassword)) return; 
+           
             try
             {
                 cn.Open();
-                StringBuilder str = new StringBuilder("exec SignIn '" + username + "', '" + password + "'");
+                StringBuilder str = new StringBuilder("exec SignIn '" + username + "', '" + 
+                                                        password + "'");
                 cmd.CommandText = Convert.ToString(str);
                 //SqlDataReader reader = cmd.ExecuteReader();
                 cmd.ExecuteNonQuery();
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
             }
             catch (SqlException ex)
             {
                 Username.Text = Convert.ToString(ex.Message);
             }
 
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+           
         }
-        private bool Spelling(string username, string password)
-        {
-            bool spelling = true;
-            if (username.Length < 2)
-            {
-                ErrorName.ForeColor = Color.Red;
-                spelling = false;
-            }
-            else ErrorName.ForeColor = Color.FromArgb(248, 248, 248);
+        
 
-
-            if (username.Length < 6)
-            {
-                ErrorPassword.ForeColor = Color.Red;
-                spelling = false;
-            }
-            else ErrorPassword.ForeColor = Color.FromArgb(248, 248, 248);
-            return spelling;
-        }
         #region Work this text fields
         /// <summary>
         /// При наведені на текстове поле стирається початкова інформація
