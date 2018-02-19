@@ -103,14 +103,16 @@ namespace bunitu_install
             this.Close();
             signIn.Show();
         }
-
+        /// <summary>
+        /// Створення новго користувача
+        /// </summary>
         private void NewUser()
         {
             try
             {
                 cn.Open();
                 var email = (Email.Text == Email.Name) ? null : Email.Text;
-                                
+                   // команда з бд             
                  StringBuilder comand = new StringBuilder("exec AddUser '" + Username.Text + "', '" +
                                Password.Text + "', '"+ email + "', '"+ birthDay.Value + "'");
                 cmd.CommandText = Convert.ToString(comand);
