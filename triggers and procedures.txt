@@ -1,13 +1,12 @@
 // додавання користувача
-create procedure AddUser
+alter procedure AddUser
 @name varchar (50),
 @email varchar(50),
 @password varchar(50),
-@photo varbinary(Max),
 @birthDay date
 as begin
- insert into [dbo].[Users] ([Name], [Email], [Password], [Photo], [Birth_date], [Online])
-	 values (@name, @email, @password, @photo, @birthDay, 1)
+ insert into [dbo].[Users] ([Name], [Email], [Password], [Birth_date], [Online])
+	 values (@name, @email, @password, @birthDay, 1)
 end
 
 

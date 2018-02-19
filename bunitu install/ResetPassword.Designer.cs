@@ -229,7 +229,7 @@
             this.BackToSingIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.BackToSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackToSingIn.BorderRadius = 0;
-            this.BackToSingIn.ButtonText = "Back To Sing In";
+            this.BackToSingIn.ButtonText = "Back To Sign In";
             this.BackToSingIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.BackToSingIn, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.BackToSingIn, BunifuAnimatorNS.DecorationType.None);
@@ -257,7 +257,7 @@
             this.BackToSingIn.selected = false;
             this.BackToSingIn.Size = new System.Drawing.Size(134, 75);
             this.BackToSingIn.TabIndex = 20;
-            this.BackToSingIn.Text = "Back To Sing In";
+            this.BackToSingIn.Text = "Back To Sign In";
             this.BackToSingIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BackToSingIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackToSingIn.TextFont = new System.Drawing.Font("Century Gothic", 9.75F);

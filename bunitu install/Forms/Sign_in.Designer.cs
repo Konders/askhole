@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_in));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -47,6 +47,9 @@
             this.SignUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ForgotPassword = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Error = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ErrorPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ErrorName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
@@ -63,8 +66,6 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.ErrorName = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.ErrorPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
@@ -275,7 +276,7 @@
             this.Enter.IconVisible = false;
             this.Enter.IconZoom = 90D;
             this.Enter.IsTab = false;
-            this.Enter.Location = new System.Drawing.Point(82, 168);
+            this.Enter.Location = new System.Drawing.Point(85, 212);
             this.Enter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Enter.Name = "Enter";
             this.Enter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -315,7 +316,7 @@
             this.SignUp.IconVisible = false;
             this.SignUp.IconZoom = 90D;
             this.SignUp.IsTab = false;
-            this.SignUp.Location = new System.Drawing.Point(27, 254);
+            this.SignUp.Location = new System.Drawing.Point(34, 312);
             this.SignUp.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SignUp.Name = "SignUp";
             this.SignUp.Normalcolor = System.Drawing.Color.Transparent;
@@ -355,7 +356,7 @@
             this.ForgotPassword.IconVisible = false;
             this.ForgotPassword.IconZoom = 90D;
             this.ForgotPassword.IsTab = false;
-            this.ForgotPassword.Location = new System.Drawing.Point(27, 308);
+            this.ForgotPassword.Location = new System.Drawing.Point(37, 366);
             this.ForgotPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ForgotPassword.Name = "ForgotPassword";
             this.ForgotPassword.Normalcolor = System.Drawing.Color.Transparent;
@@ -373,6 +374,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.panel3.Controls.Add(this.Error);
             this.panel3.Controls.Add(this.ErrorPassword);
             this.panel3.Controls.Add(this.ErrorName);
             this.panel3.Controls.Add(this.Username);
@@ -388,26 +390,62 @@
             this.panel3.Size = new System.Drawing.Size(330, 437);
             this.panel3.TabIndex = 14;
             // 
+            // Error
+            // 
+            this.Error.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.Error, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.Error, BunifuAnimatorNS.DecorationType.None);
+            this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.Error.Location = new System.Drawing.Point(72, 172);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(198, 17);
+            this.Error.TabIndex = 14;
+            this.Error.Text = "Not correct password or name";
+            // 
+            // ErrorPassword
+            // 
+            this.ErrorPassword.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
+            this.ErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ErrorPassword.Location = new System.Drawing.Point(34, 136);
+            this.ErrorPassword.Name = "ErrorPassword";
+            this.ErrorPassword.Size = new System.Drawing.Size(129, 17);
+            this.ErrorPassword.TabIndex = 14;
+            this.ErrorPassword.Text = "Password too short";
+            // 
+            // ErrorName
+            // 
+            this.ErrorName.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.ErrorName, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.ErrorName, BunifuAnimatorNS.DecorationType.None);
+            this.ErrorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ErrorName.Location = new System.Drawing.Point(34, 65);
+            this.ErrorName.Name = "ErrorName";
+            this.ErrorName.Size = new System.Drawing.Size(105, 17);
+            this.ErrorName.TabIndex = 14;
+            this.ErrorName.Text = "Name too short";
+            // 
             // bunifuTransition1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.bunifuTransition1.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 20;
-            animation4.Padding = new System.Windows.Forms.Padding(30);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 20;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             this.bunifuTransition1.MaxAnimationTime = 2000;
             this.bunifuTransition1.TimeStep = 0.001F;
             // 
@@ -587,48 +625,24 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.bunifuTransition2.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 1;
-            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 2F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 1;
+            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 2F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation2;
             this.bunifuTransition2.MaxAnimationTime = 2000;
             this.bunifuTransition2.TimeStep = 0.001F;
-            // 
-            // ErrorName
-            // 
-            this.ErrorName.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.ErrorName, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.ErrorName, BunifuAnimatorNS.DecorationType.None);
-            this.ErrorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ErrorName.Location = new System.Drawing.Point(34, 65);
-            this.ErrorName.Name = "ErrorName";
-            this.ErrorName.Size = new System.Drawing.Size(105, 17);
-            this.ErrorName.TabIndex = 14;
-            this.ErrorName.Text = "Name too short";
-            // 
-            // ErrorPassword
-            // 
-            this.ErrorPassword.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
-            this.ErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ErrorPassword.Location = new System.Drawing.Point(34, 136);
-            this.ErrorPassword.Name = "ErrorPassword";
-            this.ErrorPassword.Size = new System.Drawing.Size(129, 17);
-            this.ErrorPassword.TabIndex = 14;
-            this.ErrorPassword.Text = "Password too short";
             // 
             // Sign_in
             // 
@@ -704,5 +718,6 @@
         private BunifuAnimatorNS.BunifuTransition bunifuTransition2;
         private Bunifu.Framework.UI.BunifuCustomLabel ErrorPassword;
         private Bunifu.Framework.UI.BunifuCustomLabel ErrorName;
+        private Bunifu.Framework.UI.BunifuCustomLabel Error;
     }
 }

@@ -18,8 +18,6 @@ namespace bunitu_install
     public partial class Sign_in : Form
     {
         #region Variables
-        private int startWidth = 753;
-        private int startHeight = 379;
         private string password;
         private string username;
         List<PictureBox> picture;
@@ -37,10 +35,6 @@ namespace bunitu_install
         {
             InitializeComponent();
             Enter.Select();
-
-
-            //this.cn = cn; // з'єднання з ЬД
-            //this.cmd = cmd;
         }
         public Sign_in(SqlConnection cn, SqlCommand cmd)
         {
@@ -65,7 +59,7 @@ namespace bunitu_install
         // закривається вікно
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+           Application.Exit();
         }
 
         private void Enter_Click(object sender, EventArgs e)
@@ -84,17 +78,17 @@ namespace bunitu_install
                 //SqlDataReader reader = cmd.ExecuteReader();
                 cmd.ExecuteNonQuery();
                 this.Hide();
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(); // форма з повідомленнями
                 mainForm.Show();
+                cn.Close();
+                Error.ForeColor = Color.FromArgb(248, 248, 248); // вертаємо колір помилки
             }
             catch (SqlException ex)
-            {
-                Username.Text = Convert.ToString(ex.Message);
+            {               
+                Error.ForeColor = Color.Red; // вертаємо колір помилки
+                cn.Close();
             }
-
-           
-        }
-        
+        }      
 
         #region Work this text fields
         /// <summary>
@@ -121,7 +115,7 @@ namespace bunitu_install
             //  Authorization.ActiveForm.Show();
             //  Sign_in.ActiveForm.Close();
             this.Hide();
-            Authorization authorization = new Authorization(this);
+            Authorization authorization = new Authorization(this, cn, cmd);
             authorization.Show();
         }
         // Закривається поточне вікно
@@ -135,9 +129,7 @@ namespace bunitu_install
             this.WindowState = FormWindowState.Minimized;
         }
 
-
         #region Func
-
         /// <summary>
         /// Загрузка рандомних зображень для початкового вікна
         /// </summary>
@@ -187,7 +179,6 @@ namespace bunitu_install
             transitions[animation].HideSync(curentPic);
             //curentPic.Image = ImageList.Images[newRand] as Bitmap; // міняємо зображення
             transitions[animation].ShowSync(curentPic);
-
         }
         #endregion
 
