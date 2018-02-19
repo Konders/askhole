@@ -75,7 +75,9 @@ namespace bunitu_install
             else ErrorPassword.ForeColor = Color.FromArgb(248, 248, 248);
             // перевірка на правильність паролю
             //   cmd.CommandText = "exec SignIn '"+ username + "', '"+ password + "'"; 
-
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
 
         #region Work this text fields
@@ -117,13 +119,7 @@ namespace bunitu_install
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Resize_Click(object sender, EventArgs e)
-        {
-            Control control = (Control)this;
-            Lib.Resize(control, startWidth, startHeight);
-            ImageList.ImageSize = new Size(256, 256);
-        }
-
+      
         #region Func
 
         /// <summary>

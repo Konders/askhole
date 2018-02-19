@@ -90,7 +90,7 @@
             // Resize
             // 
             this.Resize.BackColor = System.Drawing.Color.Transparent;
-            this.Resize.Image = ((System.Drawing.Image)(resources.GetObject("Resize.Image")));
+            this.Resize.Image = global::bunitu_install.Properties.Resources.Square;
             this.Resize.ImageActive = null;
             this.Resize.Location = new System.Drawing.Point(31, 5);
             this.Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -244,7 +244,7 @@
             this.chat1.Name = "chat1";
             this.chat1.Size = new System.Drawing.Size(667, 615);
             this.chat1.TabIndex = 0;
-           // 
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
