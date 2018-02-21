@@ -46,14 +46,15 @@ namespace bunitu_install
         /// </summary>
         void AdjustHeight()
         {
-            Size maxSize = new Size(message.Width, int.MaxValue);
             Graphics g = CreateGraphics();
+            time.Width = Convert.ToInt32(Math.Round(g.MeasureString(time.Text,
+                                            time.Font, time.Width).Width + 2, 0));
+            Size maxSize = new Size(message.Width, int.MaxValue);
             SizeF size = g.MeasureString(message.Text, message.Font, message.Width);
             message.Height = Convert.ToInt32(Math.Round(size.Height + 2, 0));
             time.Top = message.Bottom + padding;
-            time.Left = message.Width - int.Parse(Math.Round(g.MeasureString(time.Text, time.Font, time.Width).Width + 2,0).ToString()) + 30;
-            time.Width = int.Parse(Math.Round(g.MeasureString(time.Text, time.Font, time.Width).Width + 2, 0).ToString());
-            this.Height = time.Bottom + padding;
+            time.Left = message.Width - time.Width + 25;
+            Height = time.Bottom + padding;
         }
 
         private void MessageBox_Resize(object sender, EventArgs e)
