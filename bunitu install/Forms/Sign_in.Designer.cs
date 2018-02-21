@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_in));
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,9 +101,9 @@
             this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 24);
+            this.panel1.Size = new System.Drawing.Size(1024, 30);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -113,13 +113,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.bunifuTransition1.SetDecoration(this.tableLayoutPanel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.tableLayoutPanel1, BunifuAnimatorNS.DecorationType.None);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 30);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(522, 338);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 416);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel1
@@ -132,11 +132,11 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Azure;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(526, 24);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(701, 30);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(243, 337);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(324, 415);
             this.bunifuGradientPanel1.TabIndex = 15;
             // 
             // panel2
@@ -146,10 +146,10 @@
             this.bunifuTransition2.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(723, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(964, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(45, 24);
+            this.panel2.Size = new System.Drawing.Size(60, 30);
             this.panel2.TabIndex = 3;
             // 
             // Minimize
@@ -159,10 +159,10 @@
             this.bunifuTransition1.SetDecoration(this.Minimize, BunifuAnimatorNS.DecorationType.None);
             this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
             this.Minimize.ImageActive = null;
-            this.Minimize.Location = new System.Drawing.Point(2, -2);
-            this.Minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Minimize.Location = new System.Drawing.Point(3, -2);
+            this.Minimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(22, 24);
+            this.Minimize.Size = new System.Drawing.Size(29, 30);
             this.Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimize.TabIndex = 1;
             this.Minimize.TabStop = false;
@@ -176,10 +176,10 @@
             this.bunifuTransition1.SetDecoration(this.Close, BunifuAnimatorNS.DecorationType.None);
             this.Close.Image = ((System.Drawing.Image)(resources.GetObject("Close.Image")));
             this.Close.ImageActive = null;
-            this.Close.Location = new System.Drawing.Point(21, 0);
-            this.Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Close.Location = new System.Drawing.Point(28, 0);
+            this.Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(22, 24);
+            this.Close.Size = new System.Drawing.Size(29, 30);
             this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Close.TabIndex = 1;
             this.Close.TabStop = false;
@@ -192,10 +192,9 @@
             this.bunifuTransition1.SetDecoration(this.autho, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.autho, BunifuAnimatorNS.DecorationType.None);
             this.autho.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.autho.Location = new System.Drawing.Point(338, 3);
-            this.autho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.autho.Location = new System.Drawing.Point(451, 4);
             this.autho.Name = "autho";
-            this.autho.Size = new System.Drawing.Size(59, 21);
+            this.autho.Size = new System.Drawing.Size(69, 23);
             this.autho.TabIndex = 2;
             this.autho.Tag = "";
             this.autho.Text = "Sign in";
@@ -221,10 +220,10 @@
             this.Password.LineIdleColor = System.Drawing.Color.Gray;
             this.Password.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Password.LineThickness = 3;
-            this.Password.Location = new System.Drawing.Point(26, 73);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Location = new System.Drawing.Point(35, 90);
+            this.Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(200, 33);
+            this.Password.Size = new System.Drawing.Size(267, 41);
             this.Password.TabIndex = 9;
             this.Password.Text = "Password";
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -245,10 +244,10 @@
             this.Username.LineIdleColor = System.Drawing.Color.Gray;
             this.Username.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
             this.Username.LineThickness = 3;
-            this.Username.Location = new System.Drawing.Point(26, 17);
-            this.Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Username.Location = new System.Drawing.Point(35, 21);
+            this.Username.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(200, 33);
+            this.Username.Size = new System.Drawing.Size(267, 41);
             this.Username.TabIndex = 10;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -280,14 +279,14 @@
             this.Enter.IconVisible = false;
             this.Enter.IconZoom = 90D;
             this.Enter.IsTab = false;
-            this.Enter.Location = new System.Drawing.Point(64, 172);
-            this.Enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Enter.Location = new System.Drawing.Point(85, 212);
+            this.Enter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Enter.Name = "Enter";
             this.Enter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Enter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Enter.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Enter.selected = false;
-            this.Enter.Size = new System.Drawing.Size(130, 61);
+            this.Enter.Size = new System.Drawing.Size(173, 75);
             this.Enter.TabIndex = 12;
             this.Enter.Text = "Sign in";
             this.Enter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -320,14 +319,14 @@
             this.SignUp.IconVisible = false;
             this.SignUp.IconZoom = 90D;
             this.SignUp.IsTab = false;
-            this.SignUp.Location = new System.Drawing.Point(26, 254);
-            this.SignUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SignUp.Location = new System.Drawing.Point(35, 313);
+            this.SignUp.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SignUp.Name = "SignUp";
             this.SignUp.Normalcolor = System.Drawing.Color.Transparent;
             this.SignUp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.SignUp.OnHoverTextColor = System.Drawing.Color.Transparent;
             this.SignUp.selected = false;
-            this.SignUp.Size = new System.Drawing.Size(200, 34);
+            this.SignUp.Size = new System.Drawing.Size(267, 42);
             this.SignUp.TabIndex = 13;
             this.SignUp.Text = "Sign up";
             this.SignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -360,14 +359,14 @@
             this.ForgotPassword.IconVisible = false;
             this.ForgotPassword.IconZoom = 90D;
             this.ForgotPassword.IsTab = false;
-            this.ForgotPassword.Location = new System.Drawing.Point(28, 297);
-            this.ForgotPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ForgotPassword.Location = new System.Drawing.Point(37, 366);
+            this.ForgotPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ForgotPassword.Name = "ForgotPassword";
             this.ForgotPassword.Normalcolor = System.Drawing.Color.Transparent;
             this.ForgotPassword.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.ForgotPassword.OnHoverTextColor = System.Drawing.Color.Transparent;
             this.ForgotPassword.selected = false;
-            this.ForgotPassword.Size = new System.Drawing.Size(200, 34);
+            this.ForgotPassword.Size = new System.Drawing.Size(267, 42);
             this.ForgotPassword.TabIndex = 13;
             this.ForgotPassword.Text = "Forgot password";
             this.ForgotPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -389,10 +388,10 @@
             this.bunifuTransition2.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(520, 24);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(693, 30);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(248, 355);
+            this.panel3.Size = new System.Drawing.Size(331, 436);
             this.panel3.TabIndex = 14;
             // 
             // Error
@@ -402,10 +401,9 @@
             this.bunifuTransition2.SetDecoration(this.Error, BunifuAnimatorNS.DecorationType.None);
             this.Error.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.Error.ForeColor = System.Drawing.Color.Red;
-            this.Error.Location = new System.Drawing.Point(54, 140);
-            this.Error.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Error.Location = new System.Drawing.Point(67, 179);
             this.Error.Name = "Error";
-            this.Error.Size = new System.Drawing.Size(159, 16);
+            this.Error.Size = new System.Drawing.Size(201, 19);
             this.Error.TabIndex = 14;
             this.Error.Text = "Incorrect password or name";
             this.Error.Visible = false;
@@ -415,47 +413,49 @@
             this.ErrorPassword.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.ErrorPassword, BunifuAnimatorNS.DecorationType.None);
-            this.ErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ErrorPassword.Location = new System.Drawing.Point(26, 110);
-            this.ErrorPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ErrorPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.ErrorPassword.ForeColor = System.Drawing.Color.Red;
+            this.ErrorPassword.Location = new System.Drawing.Point(35, 135);
             this.ErrorPassword.Name = "ErrorPassword";
-            this.ErrorPassword.Size = new System.Drawing.Size(97, 13);
+            this.ErrorPassword.Size = new System.Drawing.Size(135, 19);
             this.ErrorPassword.TabIndex = 14;
             this.ErrorPassword.Text = "Password too short";
+            this.ErrorPassword.Visible = false;
             // 
             // ErrorName
             // 
             this.ErrorName.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.ErrorName, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.ErrorName, BunifuAnimatorNS.DecorationType.None);
-            this.ErrorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ErrorName.Location = new System.Drawing.Point(26, 53);
-            this.ErrorName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ErrorName.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.ErrorName.ForeColor = System.Drawing.Color.Red;
+            this.ErrorName.Location = new System.Drawing.Point(35, 65);
             this.ErrorName.Name = "ErrorName";
-            this.ErrorName.Size = new System.Drawing.Size(79, 13);
+            this.ErrorName.Size = new System.Drawing.Size(114, 19);
             this.ErrorName.TabIndex = 14;
             this.ErrorName.Text = "Name too short";
+            this.ErrorName.Visible = false;
             // 
             // bunifuTransition1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.bunifuTransition1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 20;
-            animation5.Padding = new System.Windows.Forms.Padding(30);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation5;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 0F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 20;
+            animation7.Padding = new System.Windows.Forms.Padding(30);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation7;
             this.bunifuTransition1.MaxAnimationTime = 2000;
             this.bunifuTransition1.TimeStep = 0.001F;
             // 
@@ -465,10 +465,10 @@
             this.bunifuTransition2.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 24);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(0, 30);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(522, 355);
+            this.panel4.Size = new System.Drawing.Size(696, 436);
             this.panel4.TabIndex = 15;
             // 
             // panel5
@@ -478,9 +478,9 @@
             this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(522, 355);
+            this.panel5.Size = new System.Drawing.Size(696, 436);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -502,23 +502,23 @@
             this.bunifuTransition2.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(522, 355);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(696, 436);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 139);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -526,10 +526,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox2.Location = new System.Drawing.Point(2, 120);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 147);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox2.Size = new System.Drawing.Size(225, 139);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -537,10 +537,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Location = new System.Drawing.Point(2, 238);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 292);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox3.Size = new System.Drawing.Size(225, 139);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
@@ -548,10 +548,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox4.Location = new System.Drawing.Point(176, 120);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(235, 147);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox4.Size = new System.Drawing.Size(225, 139);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
@@ -559,10 +559,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox5.Location = new System.Drawing.Point(176, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(235, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox5.Size = new System.Drawing.Size(225, 139);
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
@@ -570,10 +570,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox6.Location = new System.Drawing.Point(350, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(467, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox6.Size = new System.Drawing.Size(225, 139);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
@@ -581,10 +581,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox7, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox7.Location = new System.Drawing.Point(350, 120);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(467, 147);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox7.Size = new System.Drawing.Size(225, 139);
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
@@ -592,10 +592,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox8.Location = new System.Drawing.Point(350, 238);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Location = new System.Drawing.Point(467, 292);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox8.Size = new System.Drawing.Size(225, 139);
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
             // 
@@ -603,10 +603,10 @@
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox9.Location = new System.Drawing.Point(176, 238);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Location = new System.Drawing.Point(235, 292);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(169, 113);
+            this.pictureBox9.Size = new System.Drawing.Size(225, 139);
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
             // 
@@ -647,38 +647,38 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.bunifuTransition2.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 1;
-            animation6.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 2F;
-            animation6.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation6;
+            animation8.AnimateOnlyDifferences = true;
+            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
+            animation8.LeafCoeff = 0F;
+            animation8.MaxTime = 1F;
+            animation8.MinTime = 0F;
+            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
+            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
+            animation8.MosaicSize = 1;
+            animation8.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation8.RotateCoeff = 0F;
+            animation8.RotateLimit = 0F;
+            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
+            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
+            animation8.TimeCoeff = 2F;
+            animation8.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation8;
             this.bunifuTransition2.MaxAnimationTime = 2000;
             this.bunifuTransition2.TimeStep = 0.001F;
             // 
             // Sign_in
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(768, 379);
+            this.ClientSize = new System.Drawing.Size(1024, 466);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Sign_in";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign_in";

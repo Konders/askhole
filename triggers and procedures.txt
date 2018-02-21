@@ -1,15 +1,17 @@
 // додавання користувача
-alter procedure AddUser
+ALTER procedure [dbo].[AddUser]
 @name varchar (50),
-@email varchar(50),
 @password varchar(50),
+@email varchar(50),
 @birthDay date
 as begin
+if (select Password from Users where Name = @name) is null
  insert into [dbo].[Users] ([Name], [Email], [Password], [Birth_date], [Online])
-	 values (@name, @email, @password, @birthDay, 1)
+		values (@name, @email, @password, @birthDay, 1)
+else raiserror ('Error there is such username', 16 ,5)
 end
 
-
+AddUser 'user', 'password', 'email', null
 
 // перевірка довжини імені
 create trigger CheckNameLen
@@ -45,21 +47,44 @@ end
 
 
 // перевірка входу
-alter procedure SignIn 
+ALTER procedure [dbo].[SignIn] 
 @name varchar(50),
-@password varchar(50)
+@password varchar(50) = null
 as begin
 declare 
 @pass varchar(50)
 begin
 select @pass = Password from Users where Name = @name
+if @pass is null 
+	raiserror ('Could not sign in', 16 ,5)  
 if @pass <> @password 
-	--set @enter = 1
-	raiserror ('Counld not sign in', 0 ,1)  
---else 
-	--set @enter = 2
+	raiserror ('Could not sign in', 16 ,5)  
+else update Users set Online = 1 where Name = @name
 end
 end
 
 // тимчасовий шаблон
 exec SignIn '', ''
+
+
+//перевірка наявності користувача та емейлу
+alter procedure ToResetPassword
+@name varchar(50),
+@email varchar(50),
+@newPassword varchar(50)
+as begin
+declare 
+@em varchar(50) = null
+begin
+select @em = Email from Users where Name = @name
+if @em is null 
+	raiserror ('There is no such user', 16 ,5)  
+if @em <> @email 
+	raiserror ('There is no such user', 16 ,5)  
+else 
+begin
+update Users set Online = 1 where Name = @name
+update Users set Password = @newPassword where Name = @name
+end
+end
+end

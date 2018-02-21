@@ -46,6 +46,8 @@ namespace bunitu_install
             if (!Lib.Spelling(Username.Text, Password.Text, ErrorName,ErrorPassword)) return;
             // чи співпадають паролі
             if (!Lib.ConfirmPassword(Password.Text, Passconfirm.Text, Confirmation))  return;
+            // чи є емейл
+            if (!Lib.CheckEmail(Email.Text, ErrorEmail))  return;
             
             NewUser();                  // приховуємо початкову форму
            

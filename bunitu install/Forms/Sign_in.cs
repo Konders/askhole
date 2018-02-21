@@ -80,6 +80,7 @@ namespace bunitu_install
                 this.Hide();
                 MainForm mainForm = new MainForm(); // форма з повідомленнями
                 mainForm.Show();
+                timer.Stop();
                 cn.Close();
                 Error.Hide(); // вертаємо колір помилки
             }
@@ -185,7 +186,7 @@ namespace bunitu_install
         private void ResetPassword_Click(object sender, EventArgs e)
         {
             Hide();
-            ResetPassword rpassword = new ResetPassword(this);
+            ResetPassword rpassword = new ResetPassword(this, cn, cmd);
             rpassword.Show();
         }
     }

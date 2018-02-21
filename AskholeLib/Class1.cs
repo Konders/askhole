@@ -133,32 +133,51 @@ namespace AskholeLib
         {
             bool spell = true;
             // перевірка чи не початкові дані
-            if ((username == "Username") && (password == "Password")) return false;
-            if (username.Length < 2) // перевірка імені
-            {
-                ErName.ForeColor = Color.Red; // попередження
-                spell = false;
-            }
-            else ErName.ForeColor = Color.FromArgb(248, 248, 248);
+                if ((username == "Username") && (password == "Password")) return false;
+                if (username.Length < 2) // перевірка імені
+                {
+                    ErName.Show(); // попередження
+                    spell = false;
+                }
+                else ErName.Hide();
 
-            if (password.Length < 6)  // перевірка паролю
-            {
-                ErPassword.ForeColor = Color.Red; // попередження
-                spell = false;
-            }
-            else ErPassword.ForeColor = Color.FromArgb(248, 248, 248);
+                if (password.Length < 6)  // перевірка паролю
+                {
+                    ErPassword.Show(); // попередження
+                    spell = false;
+                }
+                else ErPassword.Hide();           
             return spell;
         }
 
-        static public bool ConfirmPassword(string password, string passwordConfirm, BunifuCustomLabel Confirmation)
+        /// <summary>
+        /// Пілтвердження паролю
+        /// </summary>
+        /// <param name="password">пароль</param>
+        /// <param name="passwordConfirm">підтвердження</param>
+        /// <param name="Confirmation">Lable з підтвердженням при помилковому паролі</param>
+        /// <returns></returns>
+        static public bool ConfirmPassword(string password, string passwordConfirm, 
+                                            BunifuCustomLabel Confirmation)
         {
             if (password != passwordConfirm)// чи співдалають паролі
             {
-                Confirmation.ForeColor = Color.Red;
+                Confirmation.Show();
                 return false;
             }
-            Confirmation.ForeColor = Color.FromArgb(248, 248, 248);
+            Confirmation.Hide();
             return true;
+        }
+
+        static public bool CheckEmail(string email, BunifuCustomLabel ErrorEmail)
+        {
+            if (email == "Email")
+            {
+                ErrorEmail.Show();
+                return true;
+            }
+            ErrorEmail.Hide();
+            return false;
         }
     }
 }

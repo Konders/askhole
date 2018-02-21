@@ -48,6 +48,7 @@
             this.ErrorPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Confirmation = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Error = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ErrorEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -239,7 +240,7 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Window;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "I already have account";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -299,51 +300,77 @@
             // ErrorName
             // 
             this.ErrorName.AutoSize = true;
-            this.ErrorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ErrorName.BackColor = System.Drawing.SystemColors.Window;
+            this.ErrorName.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.ErrorName.ForeColor = System.Drawing.Color.Red;
             this.ErrorName.Location = new System.Drawing.Point(12, 84);
             this.ErrorName.Name = "ErrorName";
-            this.ErrorName.Size = new System.Drawing.Size(105, 17);
+            this.ErrorName.Size = new System.Drawing.Size(114, 19);
             this.ErrorName.TabIndex = 15;
             this.ErrorName.Text = "Name too short";
+            this.ErrorName.Visible = false;
             // 
             // ErrorPassword
             // 
             this.ErrorPassword.AutoSize = true;
-            this.ErrorPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ErrorPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.ErrorPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.ErrorPassword.ForeColor = System.Drawing.Color.Red;
             this.ErrorPassword.Location = new System.Drawing.Point(13, 149);
             this.ErrorPassword.Name = "ErrorPassword";
-            this.ErrorPassword.Size = new System.Drawing.Size(129, 17);
+            this.ErrorPassword.Size = new System.Drawing.Size(135, 19);
             this.ErrorPassword.TabIndex = 16;
             this.ErrorPassword.Text = "Password too short";
+            this.ErrorPassword.Visible = false;
             // 
             // Confirmation
             // 
             this.Confirmation.AutoSize = true;
-            this.Confirmation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.Confirmation.BackColor = System.Drawing.SystemColors.Window;
+            this.Confirmation.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.Confirmation.ForeColor = System.Drawing.Color.Red;
             this.Confirmation.Location = new System.Drawing.Point(13, 217);
             this.Confirmation.Name = "Confirmation";
-            this.Confirmation.Size = new System.Drawing.Size(169, 17);
+            this.Confirmation.Size = new System.Drawing.Size(176, 19);
             this.Confirmation.TabIndex = 16;
             this.Confirmation.Text = "Passwords are not similar";
+            this.Confirmation.Visible = false;
             // 
             // Error
             // 
             this.Error.AutoSize = true;
-            this.Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.Error.BackColor = System.Drawing.SystemColors.Window;
+            this.Error.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.Error.ForeColor = System.Drawing.Color.Red;
             this.Error.Location = new System.Drawing.Point(111, 398);
             this.Error.Name = "Error";
-            this.Error.Size = new System.Drawing.Size(192, 17);
+            this.Error.Size = new System.Drawing.Size(198, 19);
             this.Error.TabIndex = 17;
             this.Error.Text = "Error there is such username";
+            this.Error.Visible = false;
+            // 
+            // ErrorEmail
+            // 
+            this.ErrorEmail.AutoSize = true;
+            this.ErrorEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.ErrorEmail.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.ErrorEmail.ForeColor = System.Drawing.Color.Red;
+            this.ErrorEmail.Location = new System.Drawing.Point(13, 285);
+            this.ErrorEmail.Name = "ErrorEmail";
+            this.ErrorEmail.Size = new System.Drawing.Size(207, 19);
+            this.ErrorEmail.TabIndex = 16;
+            this.ErrorEmail.Text = "You need to fill in your e-mail";
+            this.ErrorEmail.Visible = false;
             // 
             // Authorization
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(428, 589);
             this.Controls.Add(this.Error);
+            this.Controls.Add(this.ErrorEmail);
             this.Controls.Add(this.Confirmation);
             this.Controls.Add(this.ErrorPassword);
             this.Controls.Add(this.ErrorName);
@@ -390,6 +417,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel Confirmation;
         private Bunifu.Framework.UI.BunifuCustomLabel ErrorPassword;
         private Bunifu.Framework.UI.BunifuCustomLabel Error;
+        private Bunifu.Framework.UI.BunifuCustomLabel ErrorEmail;
     }
 }
 
