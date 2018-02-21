@@ -38,6 +38,7 @@ namespace bunitu_install
         }
         public Sign_in(SqlConnection cn, SqlCommand cmd)
         {
+            
             InitializeComponent();
             Enter.Select(); // керування фокусом
             picture = new List<PictureBox>() { pictureBox1, pictureBox2, pictureBox3,

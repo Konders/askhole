@@ -80,5 +80,7 @@ namespace bunitu_install
                 Bitmap bitmap = new Bitmap(openFileDialog1.FileName);
             }
         }
+
+      
     }
 }

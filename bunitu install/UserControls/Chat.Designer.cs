@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.Attach);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 607);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 95);
             this.panel1.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.Emoji.Image = ((System.Drawing.Image)(resources.GetObject("Emoji.Image")));
             this.Emoji.ImageActive = ((System.Drawing.Image)(resources.GetObject("Emoji.ImageActive")));
             this.Emoji.Location = new System.Drawing.Point(817, 7);
-            this.Emoji.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Emoji.Margin = new System.Windows.Forms.Padding(4);
             this.Emoji.Name = "Emoji";
             this.Emoji.Size = new System.Drawing.Size(87, 80);
             this.Emoji.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +101,7 @@
             this.Attach.Image = ((System.Drawing.Image)(resources.GetObject("Attach.Image")));
             this.Attach.ImageActive = ((System.Drawing.Image)(resources.GetObject("Attach.ImageActive")));
             this.Attach.Location = new System.Drawing.Point(5, 9);
-            this.Attach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Attach.Margin = new System.Windows.Forms.Padding(4);
             this.Attach.Name = "Attach";
             this.Attach.Size = new System.Drawing.Size(87, 80);
             this.Attach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +117,7 @@
             this.panel2.Controls.Add(this.messageBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(908, 607);
             this.panel2.TabIndex = 1;
@@ -144,7 +144,7 @@
             this.AutoScroll = true;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Chat";
             this.Size = new System.Drawing.Size(908, 702);
             this.panel1.ResumeLayout(false);
