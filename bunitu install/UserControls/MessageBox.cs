@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace bunitu_install
 {
@@ -18,6 +19,7 @@ namespace bunitu_install
         {
             InitializeComponent();
         }
+       
         public enum MessageType
         {
             In,
@@ -39,7 +41,7 @@ namespace bunitu_install
             if(mt == MessageType.In)
                 this.BackColor = Color.FromArgb(240, 240, 240);
             else
-                this.BackColor = Color.FromArgb(147, 228, 241);
+                this.BackColor = Color.FromArgb(147, 228, 241);        
         }
         /// <summary>
         /// Змінюємо розміри поля з повідомленням

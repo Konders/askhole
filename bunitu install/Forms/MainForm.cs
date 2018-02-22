@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,23 +19,30 @@ namespace bunitu_install
         {
             InitializeComponent();
             this.Activate();
+        }
+
+        public MainForm(SqlConnection cn, SqlCommand cmd, string userName)
+        {
+            InitializeComponent(cn, cmd);
+            this.Activate();
             Hamburger.Select();
         }
         #region Variables
         private int startWidth = 753;
         private int startHeight = 570;
         #endregion
+
+        
         /// <summary>
         /// Закриваємо вікно
         /// </summary>
         private void Close_Click(object sender, EventArgs e)
-        {
-            
+        {           
             Application.Exit();
             //Environment.Exit(0);
         }
         /// <summary>
-        /// //Згортаємо вікно
+        /// Згортаємо вікно
         /// </summary>
         private void Minimize_Click(object sender, EventArgs e)
         {
@@ -62,8 +70,6 @@ namespace bunitu_install
         private void Search_Leave(object sender, EventArgs e)
         {
             if (Search.Text.Length == 0) Search.Text = "Search";
-        }
-
-     
+        }   
     }
 }

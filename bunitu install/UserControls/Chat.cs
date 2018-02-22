@@ -7,19 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace bunitu_install
 {
     public partial class Chat : UserControl
     {
+        SqlConnection cn;
+        SqlCommand cmd;
+        string userName;
+
         public Chat()
+        {
+            if (!this.DesignMode)
+                InitializeComponent();
+        }
+            public Chat(SqlConnection cn, SqlCommand cmd, string userName)
         {
             if(!this.DesignMode)
             InitializeComponent();
             messageBox1.Hide();
             Message_Old = messageBox1;
+            this.cn = cn; // з'єднання з БД
+            this.cmd = cmd;
+            this.userName = userName;
         }
         MessageBox Message_Old = new MessageBox();
+
         /// <summary>
         /// Додаємо повідомлення
         /// </summary>
@@ -40,6 +54,7 @@ namespace bunitu_install
             panel2.Controls.Add(msg);
             Message_Old = msg;
         }
+
         /// <summary>
         /// При наведені на текстове поле стирається початкова інформація
         /// </summary>

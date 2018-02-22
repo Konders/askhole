@@ -72,14 +72,13 @@ namespace bunitu_install
            
             try
             {
-                cn.Open();
+                cn.Open(); // запит до бд
                 StringBuilder str = new StringBuilder("exec SignIn '" + username + "', '" + 
                                                         password + "'");
                 cmd.CommandText = Convert.ToString(str);
-                //SqlDataReader reader = cmd.ExecuteReader();
                 cmd.ExecuteNonQuery();
-                this.Hide();
-                MainForm mainForm = new MainForm(); // форма з повідомленнями
+                Hide();
+                MainForm mainForm = new MainForm(cn, cmd, username); // форма з повідомленнями
                 mainForm.Show();
                 timer.Stop();
                 cn.Close();

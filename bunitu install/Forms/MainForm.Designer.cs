@@ -1,4 +1,6 @@
-﻿namespace bunitu_install
+﻿using System.Data.SqlClient;
+
+namespace bunitu_install
 {
     partial class MainForm
     {
@@ -26,7 +28,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(SqlConnection cn = null, SqlCommand cmd = null, string userName = null)
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
@@ -45,7 +47,10 @@
             this.contactList1 = new bunitu_install.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
-            this.chat1 = new bunitu_install.Chat();
+            if ((cn != null) && (cmd != null))
+                this.chat1 = new bunitu_install.Chat(cn, cmd, userName);
+            else
+                this.chat1 = new bunitu_install.Chat();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
