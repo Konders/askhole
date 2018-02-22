@@ -88,3 +88,28 @@ update Users set Password = @newPassword where Name = @name
 end
 end
 end
+
+
+// добавлення повідомлень
+
+alter procedure AddingMessage
+@sender varchar(50),
+@receiver varchar(50),
+@text varchar(MAX),
+@time time
+as 
+declare
+@id_Sender int,
+@id_Receiver int
+begin
+select @id_Sender = id from Users u where u.Name = @sender
+select @id_Receiver = id from Users u where u.Name = @receiver
+
+insert into Messages (id_sender, id_receiver, Message, Data) 
+values (@id_Sender, @id_Receiver, @text, @time)
+
+end
+
+
+// приклад
+exec AddingMessage 'user', 'Ivan', 'Hello world', '13:07:30'
