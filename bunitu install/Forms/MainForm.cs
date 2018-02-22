@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using AskholeLib;
 using Bunifu.Framework.UI;
 
-namespace bunitu_install
+namespace Askhole
 {
     public partial class MainForm : Form
     {
@@ -19,13 +19,8 @@ namespace bunitu_install
         {
             InitializeComponent();
             this.Activate();
-        }
-
-        public MainForm(SqlConnection cn, SqlCommand cmd, string userName)
-        {
-            InitializeComponent(cn, cmd);
-            this.Activate();
             Hamburger.Select();
+            var k = DB.cmd;
         }
         #region Variables
         private int startWidth = 753;

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bunitu_install.Properties
+namespace Askhole.Properties
 {
 
 

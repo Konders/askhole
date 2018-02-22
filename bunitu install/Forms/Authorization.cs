@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AskholeLib;
 
-namespace bunitu_install
+namespace Askhole
 {
     public partial class Authorization : Form
     {

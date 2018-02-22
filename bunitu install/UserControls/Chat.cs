@@ -9,28 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace bunitu_install
+namespace Askhole
 {
     public partial class Chat : UserControl
     {
-        SqlConnection cn;
-        SqlCommand cmd;
-        string userName;
-
-        public Chat()
-        {
-            if (!this.DesignMode)
-                InitializeComponent();
-        }
-            public Chat(SqlConnection cn, SqlCommand cmd, string userName)
+       
+            public Chat()
         {
             if(!this.DesignMode)
             InitializeComponent();
             messageBox1.Hide();
-            Message_Old = messageBox1;
-            this.cn = cn; // з'єднання з БД
-            this.cmd = cmd;
-            this.userName = userName;
+            Message_Old = messageBox1;          
         }
         MessageBox Message_Old = new MessageBox();
 

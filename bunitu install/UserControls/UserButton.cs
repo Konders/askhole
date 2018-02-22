@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bunitu_install.UserControls
+namespace Askhole.UserControls
 {
     public partial class UserButton : UserControl
     {

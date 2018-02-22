@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using Bunifu.Framework.UI;
 
-namespace bunitu_install
+namespace Askhole
 {
 
     public partial class Sign_in : Form
@@ -78,7 +78,7 @@ namespace bunitu_install
                 cmd.CommandText = Convert.ToString(str);
                 cmd.ExecuteNonQuery();
                 Hide();
-                MainForm mainForm = new MainForm(cn, cmd, username); // форма з повідомленнями
+                MainForm mainForm = new MainForm(); // форма з повідомленнями
                 mainForm.Show();
                 timer.Stop();
                 cn.Close();

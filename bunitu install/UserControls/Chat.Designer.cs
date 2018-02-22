@@ -1,4 +1,4 @@
-﻿namespace bunitu_install
+﻿namespace Askhole
 {
     partial class Chat
     {
@@ -34,7 +34,7 @@
             this.Emoji = new Bunifu.Framework.UI.BunifuImageButton();
             this.Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.messageBox1 = new bunitu_install.MessageBox();
+            this.messageBox1 = new Askhole.MessageBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Emoji)).BeginInit();

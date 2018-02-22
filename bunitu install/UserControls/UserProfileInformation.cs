@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bunitu_install
+namespace Askhole
 {
     public partial class UserProfileInformation : UserControl
     {

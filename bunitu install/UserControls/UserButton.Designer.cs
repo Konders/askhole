@@ -1,4 +1,4 @@
-﻿namespace bunitu_install.UserControls
+﻿namespace Askhole.UserControls
 {
     partial class UserButton
     {

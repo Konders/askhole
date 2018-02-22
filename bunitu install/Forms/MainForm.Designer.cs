@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace bunitu_install
+namespace Askhole
 {
     partial class MainForm
     {
@@ -28,7 +28,7 @@ namespace bunitu_install
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(SqlConnection cn = null, SqlCommand cmd = null, string userName = null)
+        private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
@@ -44,13 +44,10 @@ namespace bunitu_install
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
             this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
-            this.contactList1 = new bunitu_install.ContactList();
+            this.contactList1 = new Askhole.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
-            if ((cn != null) && (cmd != null))
-                this.chat1 = new bunitu_install.Chat(cn, cmd, userName);
-            else
-                this.chat1 = new bunitu_install.Chat();
+            this.chat1 = new Askhole.Chat();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -94,7 +91,7 @@ namespace bunitu_install
             // Resize
             // 
             this.Resize.BackColor = System.Drawing.Color.Transparent;
-            this.Resize.Image = global::bunitu_install.Properties.Resources.sq;
+            this.Resize.Image = global::Askhole.Properties.Resources.sq;
             this.Resize.ImageActive = null;
             this.Resize.Location = new System.Drawing.Point(23, 4);
             this.Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);

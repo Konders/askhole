@@ -1,4 +1,4 @@
-﻿namespace bunitu_install
+﻿namespace Askhole
 {
     partial class ContactList
     {

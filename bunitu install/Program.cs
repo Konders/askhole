@@ -6,29 +6,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace bunitu_install
+namespace Askhole
 {
-    static class Program
+    class DB
     {
-        static SqlConnection cn;
-        static SqlCommand cmd;
+         static public SqlConnection cn;
+        static public  SqlCommand cmd;
+        static public string UserName { get; set; }
+        static public string RecieverName { get; set; }
+        public DB()
+        {
+            if (Environment.UserName == "olyal")
+                cn = new SqlConnection($"Data Source={Environment.MachineName};Initial Catalog=Chat;Integrated Security=True");
+            else
+                cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
+
+            cmd = new SqlCommand();
+            cmd.Connection = cn;
+        }
+    }
+    static class Program
+    {      
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            if(Environment.UserName == "olyal")
-            cn = new SqlConnection($"Data Source={Environment.MachineName};Initial Catalog=Chat;Integrated Security=True");
-            else
-                cn = new SqlConnection($"Data Source={Environment.MachineName+@"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
-
-            cmd = new SqlCommand();
-            cmd.Connection = cn;
-
+            DB db = new DB();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(/*new Sign_in(cn, cmd)*/new MainForm(cn, cmd, "user"));
+            Application.Run(/*new Sign_in(cn, cmd)*/new MainForm());
         }
     }
 }
