@@ -1,14 +1,14 @@
 
 .vs\*
 
-bunitu install\bin\*
+askhole\bin\*
 
-bunitu install\obj\*
+askhole\obj\*
 
 .vs/*
-bunitu install/bin/*
+askhole/bin/*
 
-bunitu install/obj/*
+askhole/obj/*
 
 
 AskholeLib/bin/*

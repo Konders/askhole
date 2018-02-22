@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "askhole", "bunitu install\askhole.csproj", "{727947A9-4275-4EC5-AE76-07C1798C64E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "askhole", "askhole\askhole.csproj", "{727947A9-4275-4EC5-AE76-07C1798C64E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AskholeLib", "AskholeLib\AskholeLib.csproj", "{AE76BC99-5558-48FE-904D-8C16A55F3A07}"
 EndProject
