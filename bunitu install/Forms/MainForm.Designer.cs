@@ -42,13 +42,13 @@ namespace Askhole
             this.UserHeader = new System.Windows.Forms.Panel();
             this.MenuSearch = new System.Windows.Forms.Panel();
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
-            this.contactList1 = new Askhole.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
-            this.chat1 = new Askhole.Chat();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.chat1 = new Askhole.Chat();
+            this.contactList1 = new Askhole.ContactList();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
@@ -72,8 +72,9 @@ namespace Askhole
             this.Header.Controls.Add(this.panel2);
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
+            this.Header.Margin = new System.Windows.Forms.Padding(4);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(753, 24);
+            this.Header.Size = new System.Drawing.Size(1004, 30);
             this.Header.TabIndex = 0;
             // 
             // panel2
@@ -82,21 +83,21 @@ namespace Askhole
             this.panel2.Controls.Add(this.Minimize);
             this.panel2.Controls.Add(this.Close);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(685, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(913, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(68, 24);
+            this.panel2.Size = new System.Drawing.Size(91, 30);
             this.panel2.TabIndex = 1;
             // 
             // Resize
             // 
             this.Resize.BackColor = System.Drawing.Color.Transparent;
-            this.Resize.Image = global::Askhole.Properties.Resources.sq;
+            this.Resize.Image = ((System.Drawing.Image)(resources.GetObject("Resize.Image")));
             this.Resize.ImageActive = null;
-            this.Resize.Location = new System.Drawing.Point(23, 4);
-            this.Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Resize.Location = new System.Drawing.Point(31, 5);
+            this.Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Resize.Name = "Resize";
-            this.Resize.Size = new System.Drawing.Size(22, 16);
+            this.Resize.Size = new System.Drawing.Size(29, 20);
             this.Resize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Resize.TabIndex = 1;
             this.Resize.TabStop = false;
@@ -109,9 +110,9 @@ namespace Askhole
             this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
             this.Minimize.ImageActive = null;
             this.Minimize.Location = new System.Drawing.Point(1, -2);
-            this.Minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Minimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(22, 24);
+            this.Minimize.Size = new System.Drawing.Size(29, 30);
             this.Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimize.TabIndex = 1;
             this.Minimize.TabStop = false;
@@ -123,10 +124,10 @@ namespace Askhole
             this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Image = ((System.Drawing.Image)(resources.GetObject("Close.Image")));
             this.Close.ImageActive = null;
-            this.Close.Location = new System.Drawing.Point(46, 0);
-            this.Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Close.Location = new System.Drawing.Point(61, 0);
+            this.Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(22, 24);
+            this.Close.Size = new System.Drawing.Size(29, 30);
             this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Close.TabIndex = 1;
             this.Close.TabStop = false;
@@ -143,9 +144,10 @@ namespace Askhole
             this.UserHeader.BackColor = System.Drawing.Color.WhiteSmoke;
             this.UserHeader.Controls.Add(this.MenuSearch);
             this.UserHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UserHeader.Location = new System.Drawing.Point(0, 24);
+            this.UserHeader.Location = new System.Drawing.Point(0, 30);
+            this.UserHeader.Margin = new System.Windows.Forms.Padding(4);
             this.UserHeader.Name = "UserHeader";
-            this.UserHeader.Size = new System.Drawing.Size(753, 46);
+            this.UserHeader.Size = new System.Drawing.Size(1004, 57);
             this.UserHeader.TabIndex = 1;
             // 
             // MenuSearch
@@ -155,8 +157,9 @@ namespace Askhole
             this.MenuSearch.Controls.Add(this.Search);
             this.MenuSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuSearch.Location = new System.Drawing.Point(0, 0);
+            this.MenuSearch.Margin = new System.Windows.Forms.Padding(4);
             this.MenuSearch.Name = "MenuSearch";
-            this.MenuSearch.Size = new System.Drawing.Size(253, 46);
+            this.MenuSearch.Size = new System.Drawing.Size(337, 57);
             this.MenuSearch.TabIndex = 0;
             // 
             // Hamburger
@@ -164,13 +167,47 @@ namespace Askhole
             this.Hamburger.BackColor = System.Drawing.Color.Transparent;
             this.Hamburger.Image = ((System.Drawing.Image)(resources.GetObject("Hamburger.Image")));
             this.Hamburger.ImageActive = ((System.Drawing.Image)(resources.GetObject("Hamburger.ImageActive")));
-            this.Hamburger.Location = new System.Drawing.Point(8, 5);
+            this.Hamburger.Location = new System.Drawing.Point(11, 6);
+            this.Hamburger.Margin = new System.Windows.Forms.Padding(4);
             this.Hamburger.Name = "Hamburger";
-            this.Hamburger.Size = new System.Drawing.Size(40, 40);
+            this.Hamburger.Size = new System.Drawing.Size(53, 49);
             this.Hamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Hamburger.TabIndex = 1;
             this.Hamburger.TabStop = false;
             this.Hamburger.Zoom = 10;
+            // 
+            // UserList
+            // 
+            this.UserList.AutoScroll = true;
+            this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserList.Controls.Add(this.contactList1);
+            this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.UserList.Location = new System.Drawing.Point(0, 87);
+            this.UserList.Margin = new System.Windows.Forms.Padding(4);
+            this.UserList.Name = "UserList";
+            this.UserList.Size = new System.Drawing.Size(337, 615);
+            this.UserList.TabIndex = 2;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.Header;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // Chat
+            // 
+            this.Chat.Controls.Add(this.chat1);
+            this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Chat.Location = new System.Drawing.Point(337, 87);
+            this.Chat.Margin = new System.Windows.Forms.Padding(4);
+            this.Chat.Name = "Chat";
+            this.Chat.Size = new System.Drawing.Size(667, 615);
+            this.Chat.TabIndex = 3;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Search
             // 
@@ -184,78 +221,48 @@ namespace Askhole
             this.Search.LineIdleColor = System.Drawing.Color.Gray;
             this.Search.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Search.LineThickness = 4;
-            this.Search.Location = new System.Drawing.Point(56, 4);
-            this.Search.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Search.Location = new System.Drawing.Point(75, 5);
+            this.Search.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(191, 37);
+            this.Search.Size = new System.Drawing.Size(255, 46);
             this.Search.TabIndex = 0;
             this.Search.Text = "Search";
             this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search.Enter += new System.EventHandler(this.Search_Enter);
             this.Search.Leave += new System.EventHandler(this.Search_Leave);
             // 
-            // UserList
+            // chat1
             // 
-            this.UserList.AutoScroll = true;
-            this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.UserList.Controls.Add(this.contactList1);
-            this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.UserList.Location = new System.Drawing.Point(0, 70);
-            this.UserList.Name = "UserList";
-            this.UserList.Size = new System.Drawing.Size(253, 500);
-            this.UserList.TabIndex = 2;
+            this.chat1.AutoScroll = true;
+            this.chat1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chat1.Location = new System.Drawing.Point(0, 0);
+            this.chat1.Margin = new System.Windows.Forms.Padding(5);
+            this.chat1.Name = "chat1";
+            this.chat1.Size = new System.Drawing.Size(667, 615);
+            this.chat1.TabIndex = 0;
             // 
             // contactList1
             // 
             this.contactList1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.contactList1.Dock = System.Windows.Forms.DockStyle.Left;
             this.contactList1.Location = new System.Drawing.Point(0, 0);
-            this.contactList1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contactList1.Margin = new System.Windows.Forms.Padding(5);
             this.contactList1.Name = "contactList1";
-            this.contactList1.Size = new System.Drawing.Size(253, 500);
+            this.contactList1.Size = new System.Drawing.Size(337, 615);
             this.contactList1.TabIndex = 0;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.Header;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // Chat
-            // 
-            this.Chat.Controls.Add(this.chat1);
-            this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Chat.Location = new System.Drawing.Point(253, 70);
-            this.Chat.Name = "Chat";
-            this.Chat.Size = new System.Drawing.Size(500, 500);
-            this.Chat.TabIndex = 3;
-            // 
-            // chat1
-            // 
-            this.chat1.AutoScroll = true;
-            this.chat1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chat1.Location = new System.Drawing.Point(0, 0);
-            this.chat1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chat1.Name = "chat1";
-            this.chat1.Size = new System.Drawing.Size(500, 500);
-            this.chat1.TabIndex = 0;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(753, 570);
+            this.ClientSize = new System.Drawing.Size(1004, 702);
             this.Controls.Add(this.Chat);
             this.Controls.Add(this.UserList);
             this.Controls.Add(this.UserHeader);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -286,11 +293,11 @@ namespace Askhole
         private System.Windows.Forms.Panel UserHeader;
         private System.Windows.Forms.Panel MenuSearch;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox Search;
         private Bunifu.Framework.UI.BunifuImageButton Hamburger;
         private System.Windows.Forms.Panel Chat;
         private Chat chat1;
         private ContactList contactList1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Search;
     }
 }

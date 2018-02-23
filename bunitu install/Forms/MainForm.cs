@@ -50,8 +50,8 @@ namespace Askhole
         {
             var square = Resize;
             Control control = (Control)this;
-            if(Lib.Resize(square, control, startWidth, startHeight))
-                Resize.Image = Properties.Resources.sq;
+            if (Lib.Resize(square, control, startWidth, startHeight))           
+            Resize.Image = Properties.Resources.sq;
             else
                 Resize.Image = Properties.Resources.windows;
         }

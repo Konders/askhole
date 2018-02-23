@@ -21,8 +21,7 @@ namespace Askhole
             else
                 cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
 
-            cmd = new SqlCommand();
-            cmd.Connection = cn;
+            cmd = new SqlCommand {Connection = cn};
         }
     }
     static class Program
