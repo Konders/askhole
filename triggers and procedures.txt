@@ -113,3 +113,19 @@ end
 
 // приклад
 exec AddingMessage 'user', 'Ivan', 'Hello world', '13:07:30'
+
+
+_______________________________________________________________________
+GO
+ALTER procedure [dbo].[AddingMessage]
+@sender int,
+@receiver int,
+@text varchar(MAX),
+@time time
+as 
+insert into Messages (id_sender, id_receiver, Message, Data) 
+values (@sender, @receiver, @text, @time)
+
+
+// приклад
+exec AddingMessage 123, 12, 'Hello world', '13:07:30'

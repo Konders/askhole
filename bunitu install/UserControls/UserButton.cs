@@ -46,7 +46,8 @@ namespace Askhole.UserControls
             if (UserName.Text != "Add contact")
             {
                 MainForm.NameU = DB.RecieverName;
-                MainForm.ChangeName();
+                var temp = sender as MainForm;
+                
             }
         }
     }

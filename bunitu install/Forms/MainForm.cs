@@ -7,7 +7,6 @@ namespace Askhole
     public partial class MainForm : Form
     {
         public static string NameU { get; set;}
-        
         static private bool settings = true;
         public MainForm()
         {
@@ -82,9 +81,7 @@ namespace Askhole
             }
         }
 
-       static public void ChangeName()
-        {
-            Name.Text = NameU;
-        }
+
+       // static public void ChangeName() => Name.Text = NameU;
     }
 }

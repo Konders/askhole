@@ -13,16 +13,16 @@ namespace Askhole
     public partial class ContactList : UserControl
     {
         Dictionary<int, Lib.User> Contacts = new Dictionary<int, Lib.User>();
-        Dictionary<int, Askhole.UserControls.UserButton> Buttons = new Dictionary<int, Askhole.UserControls.UserButton>();
+        Dictionary<int, UserControls.UserButton> Buttons = new Dictionary<int, UserControls.UserButton>();
         public void RefreshButtons()
         {
             if (Buttons.Count == 0)
                 return;
             List_Panel.Controls.Clear();
             int idk = Buttons.Count * Buttons[0].Height - Buttons[0].Height;
-            for(int i = 0;i<Buttons.Count;i++)
+            for (int i = 0; i < Buttons.Count; i++)
             {
-                Buttons[i].Location = new Point(Buttons[i].Location.X,idk);
+                Buttons[i].Location = new Point(Buttons[i].Location.X, idk);
                 idk -= Buttons[0].Height;
                 List_Panel.Controls.Add(Buttons[i]);
             }
@@ -35,7 +35,7 @@ namespace Askhole
             InitializeComponent();
             //Contacts.Add(0, new Lib.User(123,"Illya",null));
             //Contacts.Add(1, new Lib.User(512, "Olya", null));
-            Buttons.Add(0, new Askhole.UserControls.UserButton());
+            Buttons.Add(0, new UserControls.UserButton());
             Buttons[0].Location = AddContactButton.Location;
             Buttons[0].Size = AddContactButton.Size;
             Buttons[0].Anchor = AddContactButton.Anchor;
@@ -45,11 +45,11 @@ namespace Askhole
             List_Panel.Controls.Add(Buttons[0]);
             //Buttons[0].
         }
-        public void AddContact(int id,string name)
+        public void AddContact(int id, string name)
         {
             //select * from users where id = @id
             Contacts.Add(Contacts.Count, new Lib.User(id, name, null));
-            Buttons.Add(Contacts.Count , new Askhole.UserControls.UserButton(Contacts[Contacts.Count-1]));
+            Buttons.Add(Contacts.Count, new UserControls.UserButton(Contacts[Contacts.Count - 1]));
             Buttons[Contacts.Count - 1].Location = AddContactButton.Location;
             Buttons[Contacts.Count - 1].Size = AddContactButton.Size;
             Buttons[Contacts.Count - 1].Anchor = AddContactButton.Anchor;
@@ -60,7 +60,7 @@ namespace Askhole
         }
         private void ContactList_MouseEnter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void AddContactButton_Click(object sender, EventArgs e)
