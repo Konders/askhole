@@ -37,5 +37,10 @@ namespace Askhole.UserControls
             LogOut.ForeColor = Color.FromArgb(64, 64, 64);
 
         }
+
+        private void DeleteProfile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

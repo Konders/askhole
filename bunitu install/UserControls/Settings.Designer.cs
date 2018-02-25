@@ -66,6 +66,7 @@
             this.DeleteProfile.Size = new System.Drawing.Size(160, 21);
             this.DeleteProfile.TabIndex = 10;
             this.DeleteProfile.Text = "Delete your profile";
+            this.DeleteProfile.Click += new System.EventHandler(this.DeleteProfile_Click);
             this.DeleteProfile.MouseLeave += new System.EventHandler(this.DeleteProfile_MouseLeave);
             this.DeleteProfile.MouseHover += new System.EventHandler(this.DeleteProfile_MouseHover);
             // 

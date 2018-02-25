@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Database;
 
 namespace Askhole.UserControls
 {
@@ -39,6 +40,14 @@ namespace Askhole.UserControls
             UserName.Text = name;
         }
 
-      
+        private void UserName_Click(object sender, EventArgs e)
+        {
+            DB.RecieverName = UserName.Text;
+            if (UserName.Text != "Add contact")
+            {
+                MainForm.NameU = DB.RecieverName;
+                MainForm.ChangeName();
+            }
+        }
     }
 }

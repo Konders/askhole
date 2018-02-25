@@ -6,6 +6,8 @@ namespace Askhole
 {
     public partial class MainForm : Form
     {
+        public static string NameU { get; set;}
+        
         static private bool settings = true;
         public MainForm()
         {
@@ -13,9 +15,10 @@ namespace Askhole
             this.Activate();
             Hamburger.Select();
             Name.Text = DB.UserName;
-       //     this.Enabled = false;
-         //   Color t = ForeColor;
-      //      this.ForeColor = Color.FromArgb(240, 240, 240, 240);
+            NameU = Name.Text;
+                 //     this.Enabled = false;
+                 //   Color t = ForeColor;
+                 //      this.ForeColor = Color.FromArgb(240, 240, 240, 240);
         }
         #region Variables
         private int startWidth = 753;
@@ -62,6 +65,9 @@ namespace Askhole
             if (Search.Text.Length == 0) Search.Text = "Search";
         }
 
+        /// <summary>
+        /// вікно з налаштуваннями
+        /// </summary>
         private void Hamburger_Click(object sender, EventArgs e)
         {
             if (settings)
@@ -76,6 +82,9 @@ namespace Askhole
             }
         }
 
-     
+       static public void ChangeName()
+        {
+            Name.Text = NameU;
+        }
     }
 }

@@ -269,6 +269,8 @@ namespace Askhole
             // 
             // Search
             // 
+            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Search.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Search.Font = new System.Drawing.Font("Century Gothic", 11.75F);
             this.Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -310,7 +312,6 @@ namespace Askhole
             this.settings1.Size = new System.Drawing.Size(337, 337);
             this.settings1.TabIndex = 1;
             this.settings1.Visible = false;
-            this.settings1.Load += new System.EventHandler(this.settings1_Load);
             this.settings1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // contactList1
@@ -371,6 +372,7 @@ namespace Askhole
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
+      //      this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);
