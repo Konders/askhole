@@ -48,7 +48,8 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>I:\code\ms sql\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
@@ -110,6 +111,12 @@
     <Compile Include="Forms\Sign_in.Designer.cs">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\Sign_in.resx">
       <DependentUpon>Sign_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserButton.resx">
       <DependentUpon>UserButton.cs</DependentUpon>

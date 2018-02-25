@@ -40,21 +40,30 @@ namespace Askhole
             this.Close = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.UserHeader = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.online = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Name = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuSearch = new System.Windows.Forms.Panel();
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
+            this.contactList1 = new Askhole.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.chat1 = new Askhole.Chat();
-            this.contactList1 = new Askhole.ContactList();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.UserHeader.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).BeginInit();
             this.UserList.SuspendLayout();
@@ -92,7 +101,7 @@ namespace Askhole
             // Resize
             // 
             this.Resize.BackColor = System.Drawing.Color.Transparent;
-            this.Resize.Image = ((System.Drawing.Image)(resources.GetObject("Resize.Image")));
+            this.Resize.Image = global::Askhole.Properties.Resources.sq;
             this.Resize.ImageActive = null;
             this.Resize.Location = new System.Drawing.Point(31, 5);
             this.Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -142,6 +151,8 @@ namespace Askhole
             // UserHeader
             // 
             this.UserHeader.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserHeader.Controls.Add(this.tableLayoutPanel1);
+            this.UserHeader.Controls.Add(this.panel1);
             this.UserHeader.Controls.Add(this.MenuSearch);
             this.UserHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.UserHeader.Location = new System.Drawing.Point(0, 30);
@@ -149,6 +160,83 @@ namespace Askhole
             this.UserHeader.Name = "UserHeader";
             this.UserHeader.Size = new System.Drawing.Size(1004, 57);
             this.UserHeader.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.online, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Name, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(394, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.87719F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.12281F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(610, 57);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // online
+            // 
+            this.online.AutoSize = true;
+            this.online.Font = new System.Drawing.Font("Century Gothic", 7.75F);
+            this.online.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.online.Location = new System.Drawing.Point(3, 0);
+            this.online.Name = "online";
+            this.online.Size = new System.Drawing.Size(0, 17);
+            this.online.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 7.75F);
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Location = new System.Drawing.Point(206, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 28);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "online";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Name
+            // 
+            this.Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Name.AutoSize = true;
+            this.Name.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Name.Location = new System.Drawing.Point(206, 8);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(197, 21);
+            this.Name.TabIndex = 11;
+            this.Name.Text = "Name";
+            this.Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(337, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(57, 57);
+            this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuSearch
             // 
@@ -176,39 +264,6 @@ namespace Askhole
             this.Hamburger.TabStop = false;
             this.Hamburger.Zoom = 10;
             // 
-            // UserList
-            // 
-            this.UserList.AutoScroll = true;
-            this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.UserList.Controls.Add(this.contactList1);
-            this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.UserList.Location = new System.Drawing.Point(0, 87);
-            this.UserList.Margin = new System.Windows.Forms.Padding(4);
-            this.UserList.Name = "UserList";
-            this.UserList.Size = new System.Drawing.Size(337, 615);
-            this.UserList.TabIndex = 2;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.Header;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // Chat
-            // 
-            this.Chat.Controls.Add(this.chat1);
-            this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Chat.Location = new System.Drawing.Point(337, 87);
-            this.Chat.Margin = new System.Windows.Forms.Padding(4);
-            this.Chat.Name = "Chat";
-            this.Chat.Size = new System.Drawing.Size(667, 615);
-            this.Chat.TabIndex = 3;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // Search
             // 
             this.Search.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -231,15 +286,17 @@ namespace Askhole
             this.Search.Enter += new System.EventHandler(this.Search_Enter);
             this.Search.Leave += new System.EventHandler(this.Search_Leave);
             // 
-            // chat1
+            // UserList
             // 
-            this.chat1.AutoScroll = true;
-            this.chat1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chat1.Location = new System.Drawing.Point(0, 0);
-            this.chat1.Margin = new System.Windows.Forms.Padding(5);
-            this.chat1.Name = "chat1";
-            this.chat1.Size = new System.Drawing.Size(667, 615);
-            this.chat1.TabIndex = 0;
+            this.UserList.AutoScroll = true;
+            this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserList.Controls.Add(this.contactList1);
+            this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.UserList.Location = new System.Drawing.Point(0, 87);
+            this.UserList.Margin = new System.Windows.Forms.Padding(4);
+            this.UserList.Name = "UserList";
+            this.UserList.Size = new System.Drawing.Size(337, 615);
+            this.UserList.TabIndex = 2;
             // 
             // contactList1
             // 
@@ -250,6 +307,40 @@ namespace Askhole
             this.contactList1.Name = "contactList1";
             this.contactList1.Size = new System.Drawing.Size(337, 615);
             this.contactList1.TabIndex = 0;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.Header;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // Chat
+            // 
+            this.Chat.Controls.Add(this.chat1);
+            this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Chat.Location = new System.Drawing.Point(337, 87);
+            this.Chat.Margin = new System.Windows.Forms.Padding(4);
+            this.Chat.Name = "Chat";
+            this.Chat.Size = new System.Drawing.Size(667, 615);
+            this.Chat.TabIndex = 3;
+            // 
+            // chat1
+            // 
+            this.chat1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chat1.AutoScroll = true;
+            this.chat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.chat1.Location = new System.Drawing.Point(0, 0);
+            this.chat1.Margin = new System.Windows.Forms.Padding(5);
+            this.chat1.Name = "chat1";
+            this.chat1.Size = new System.Drawing.Size(667, 615);
+            this.chat1.TabIndex = 0;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
@@ -263,7 +354,7 @@ namespace Askhole
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MainForm";
+        //    this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);
@@ -272,6 +363,10 @@ namespace Askhole
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             this.UserHeader.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).EndInit();
             this.UserList.ResumeLayout(false);
@@ -299,5 +394,11 @@ namespace Askhole
         private ContactList contactList1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Search;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label online;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Name;
     }
 }

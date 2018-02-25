@@ -113,7 +113,7 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel2.Controls.Add(this.messageBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);

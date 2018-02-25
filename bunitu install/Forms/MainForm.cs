@@ -20,7 +20,9 @@ namespace Askhole
             InitializeComponent();
             this.Activate();
             Hamburger.Select();
-            var k = DB.cmd;
+       //     this.Enabled = false;
+            Color t = ForeColor;
+      //      this.ForeColor = Color.FromArgb(240, 240, 240, 240);
         }
         #region Variables
         private int startWidth = 753;
