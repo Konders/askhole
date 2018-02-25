@@ -38,10 +38,12 @@ namespace Askhole
             message.Text = text;
             this.time.Text = time;
             AdjustHeight();
-            if(mt == MessageType.In)
+            if (mt == MessageType.In)
                 this.BackColor = Color.FromArgb(240, 240, 240);
             else
-                this.BackColor = Color.FromArgb(147, 228, 241);        
+            {
+                this.BackColor = Color.FromArgb(147, 228, 241);
+            }
         }
         /// <summary>
         /// Змінюємо розміри поля з повідомленням
@@ -63,7 +65,7 @@ namespace Askhole
         {
             AdjustHeight();
         }
+
        
-        
     }
 }

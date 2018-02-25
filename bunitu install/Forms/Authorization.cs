@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AskholeLib;
+using Database;
 
 namespace Askhole
 {
@@ -94,26 +95,16 @@ namespace Askhole
         /// </summary>
         private void NewUser()
         {
-            try
+            var email = (Email.Text == Email.Name) ? null : Email.Text;
+            if (DB.NewUser(Username.Text, Password.Text, email, birthDay.Value))
             {
-                cn.Open();
-                var email = (Email.Text == Email.Name) ? null : Email.Text;
-                   // команда з бд             
-                 StringBuilder comand = new StringBuilder("exec AddUser '" + Username.Text + "', '" +
-                               Password.Text + "', '"+ email + "', '"+ birthDay.Value + "'");
-                cmd.CommandText = Convert.ToString(comand);
-                cmd.ExecuteNonQuery();
                 Hide();
                 MainForm mainForm = new MainForm(); // форма з повідомленнями
                 mainForm.Show();
-                cn.Close();
-                Error.ForeColor = Color.FromArgb(248, 248, 248); // вертаємо колір помилки
+                Error.Visible = false; // вертаємо колір помилки
             }
-            catch (SqlException ex)
-            {
-                Error.ForeColor = Color.Red; // вертаємо колір помилки
-                cn.Close();
-            }
+            else Error.Visible = true; // вертаємо колір помилки
+         
         }
     }
 }

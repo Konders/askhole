@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Database;
 
 namespace Askhole
 {
@@ -68,11 +69,14 @@ namespace Askhole
         {
             if (e.KeyCode == Keys.Enter)
             {
-                // поточний час
+                
+                DateTime MessageTime = new DateTime();// поточний час
+                MessageTime = DateTime.Now;
                 string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute +".");
                 AddMessage(Message.Text, time, MessageBox.MessageType.Out);
                 AddMessage(Message.Text, time, MessageBox.MessageType.In);
                 panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;//Добавляємо скроллінг
+                DB.AddMessageText(Message.Text, MessageTime);
             }
         }
 

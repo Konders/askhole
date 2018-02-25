@@ -1,17 +1,11 @@
 ﻿using AskholeLib;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
-using Bunifu.Framework.UI;
-
+using Database;
 namespace Askhole
 {
 
@@ -66,29 +60,21 @@ namespace Askhole
         private void Enter_Click(object sender, EventArgs e)
         {
             username = Username.Text;
+            DB.UserName = username;
             password = Password.Text;
             // якщо паролі не відповідають вимогам нічого не міняється
-            if (!Lib.Spelling(username, password, ErrorName, ErrorPassword)) return; 
-           
-            try
+            if (!Lib.Spelling(username, password, ErrorName, ErrorPassword)) return;
+            if (DB.SingIn(username, password))
             {
-                cn.Open(); // запит до бд
-                StringBuilder str = new StringBuilder("exec SignIn '" + username + "', '" + 
-                                                        password + "'");
-                cmd.CommandText = Convert.ToString(str);
-                cmd.ExecuteNonQuery();
                 Hide();
                 MainForm mainForm = new MainForm(); // форма з повідомленнями
                 mainForm.Show();
                 timer.Stop();
-                cn.Close();
                 Error.Hide(); // вертаємо колір помилки
             }
-            catch (SqlException ex)
-            {
-                Error.Show(); // вертаємо колір помилки
-                cn.Close();
-            }
+            else Error.Show(); // вертаємо колір помилки
+
+          
         }      
 
         #region Work this text fields

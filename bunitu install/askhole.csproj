@@ -196,6 +196,10 @@
       <Project>{ae76bc99-5558-48fe-904d-8c16a55f3a07}</Project>
       <Name>AskholeLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{5f61e7ff-73e1-4686-b85b-0ce4a6765260}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
