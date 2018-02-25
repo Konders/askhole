@@ -67,7 +67,7 @@ namespace Askhole
             if (DB.SingIn(username, password))
             {
                 Hide();
-                MainForm mainForm = new MainForm(); // форма з повідомленнями
+                MainForm mainForm = new MainForm(); // форма з повідомленнями               
                 mainForm.Show();
                 timer.Stop();
                 Error.Hide(); // вертаємо колір помилки

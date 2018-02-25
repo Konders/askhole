@@ -50,6 +50,7 @@ namespace Askhole
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
             this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
+            this.settings1 = new Askhole.UserControls.Settings();
             this.contactList1 = new Askhole.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
@@ -178,6 +179,7 @@ namespace Askhole
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.12281F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(610, 57);
             this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // online
             // 
@@ -197,9 +199,9 @@ namespace Askhole
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 7.75F);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(206, 29);
+            this.label1.Location = new System.Drawing.Point(206, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 28);
+            this.label1.Size = new System.Drawing.Size(197, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "online";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -210,7 +212,7 @@ namespace Askhole
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Name.AutoSize = true;
             this.Name.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Name.Location = new System.Drawing.Point(206, 8);
+            this.Name.Location = new System.Drawing.Point(206, 7);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(197, 21);
             this.Name.TabIndex = 11;
@@ -263,6 +265,7 @@ namespace Askhole
             this.Hamburger.TabIndex = 1;
             this.Hamburger.TabStop = false;
             this.Hamburger.Zoom = 10;
+            this.Hamburger.Click += new System.EventHandler(this.Hamburger_Click);
             // 
             // Search
             // 
@@ -290,6 +293,7 @@ namespace Askhole
             // 
             this.UserList.AutoScroll = true;
             this.UserList.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserList.Controls.Add(this.settings1);
             this.UserList.Controls.Add(this.contactList1);
             this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
             this.UserList.Location = new System.Drawing.Point(0, 87);
@@ -297,6 +301,17 @@ namespace Askhole
             this.UserList.Name = "UserList";
             this.UserList.Size = new System.Drawing.Size(337, 615);
             this.UserList.TabIndex = 2;
+            // 
+            // settings1
+            // 
+            this.settings1.BackColor = System.Drawing.Color.White;
+            this.settings1.Location = new System.Drawing.Point(0, 0);
+            this.settings1.Name = "settings1";
+            this.settings1.Size = new System.Drawing.Size(337, 337);
+            this.settings1.TabIndex = 1;
+            this.settings1.Visible = false;
+            this.settings1.Load += new System.EventHandler(this.settings1_Load);
+            this.settings1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // contactList1
             // 
@@ -307,6 +322,7 @@ namespace Askhole
             this.contactList1.Name = "contactList1";
             this.contactList1.Size = new System.Drawing.Size(337, 615);
             this.contactList1.TabIndex = 0;
+            this.contactList1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // bunifuDragControl1
             // 
@@ -337,6 +353,7 @@ namespace Askhole
             this.chat1.Name = "chat1";
             this.chat1.Size = new System.Drawing.Size(667, 615);
             this.chat1.TabIndex = 0;
+            this.chat1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // openFileDialog1
             // 
@@ -354,7 +371,6 @@ namespace Askhole
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-        //    this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);
@@ -400,5 +416,6 @@ namespace Askhole
         private System.Windows.Forms.Label online;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Name;
+        private UserControls.Settings settings1;
     }
 }

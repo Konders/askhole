@@ -1,27 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AskholeLib;
-using Bunifu.Framework.UI;
-
+using Database;
 namespace Askhole
 {
     public partial class MainForm : Form
     {
+        static private bool settings = true;
         public MainForm()
         {
             InitializeComponent();
             this.Activate();
             Hamburger.Select();
+            Name.Text = DB.UserName;
        //     this.Enabled = false;
-            Color t = ForeColor;
+         //   Color t = ForeColor;
       //      this.ForeColor = Color.FromArgb(240, 240, 240, 240);
         }
         #region Variables
@@ -67,6 +60,22 @@ namespace Askhole
         private void Search_Leave(object sender, EventArgs e)
         {
             if (Search.Text.Length == 0) Search.Text = "Search";
-        }   
+        }
+
+        private void Hamburger_Click(object sender, EventArgs e)
+        {
+            if (settings)
+            {
+                settings1.Visible = true;
+                settings = false;
+            }
+            else
+            {
+                settings1.Visible = false;
+                settings = true;
+            }
+        }
+
+     
     }
 }

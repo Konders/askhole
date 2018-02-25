@@ -16,5 +16,26 @@ namespace Askhole.UserControls
         {
             InitializeComponent();
         }
+
+        private void DeleteProfile_MouseHover(object sender, EventArgs e)
+        {
+            DeleteProfile.ForeColor = Color.FromArgb(147, 228, 241);
+        }
+
+        private void LogOut_MouseHover(object sender, EventArgs e)
+        {
+            LogOut.ForeColor = Color.FromArgb(147, 228, 241);
+        }
+
+        private void DeleteProfile_MouseLeave(object sender, EventArgs e)
+        {
+            DeleteProfile.ForeColor = Color.FromArgb(64, 64, 64);
+    }
+
+        private void LogOut_MouseLeave(object sender, EventArgs e)
+        {
+            LogOut.ForeColor = Color.FromArgb(64, 64, 64);
+
+        }
     }
 }
