@@ -18,3 +18,7 @@ AskholeLib/obj/*
 AskholeLib\bin\*
 
 AskholeLib\obj\*
+
+Database\bin\*
+
+Database\obj\*
