@@ -24,7 +24,7 @@ namespace Database
             if (Environment.UserName == "olyal")
                 cn = new SqlConnection($"Data Source={Environment.MachineName};Initial Catalog=Chat;Integrated Security=True");
             else
-                cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
+                cn = new SqlConnection($"Data Source={Environment.MachineName + @"SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
 
             cmd = new SqlCommand { Connection = cn };
         }

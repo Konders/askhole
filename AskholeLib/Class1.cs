@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Security.Policy;
 using System.Resources;
 using System.IO;
+using System.ComponentModel.DataAnnotations;
 using Bunifu.Framework.UI;
 
 namespace AskholeLib
@@ -176,10 +177,10 @@ namespace AskholeLib
             if (email == "Email")
             {
                 ErrorEmail.Show();
-                return true;
+                return false;
             }
             ErrorEmail.Hide();
-            return false;
+            return true;
         }
     }
 }
