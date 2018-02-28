@@ -13,7 +13,7 @@ namespace Askhole
     {
         #region Variables
         private string password;
-        private string username;
+        private string email;
         List<PictureBox> picture;
         List<int> list = new List<int>();
         List<BunifuAnimatorNS.BunifuTransition> transitions;
@@ -59,12 +59,12 @@ namespace Askhole
 
         private void Enter_Click(object sender, EventArgs e)
         {
-            username = Username.Text;
-            DB.user.Name = username;
+            email = Email.Text;
+            DB.user.username = email;
             password = Password.Text;
             // якщо паролі не відповідають вимогам нічого не міняється
-            if (!Lib.Spelling(username, password, ErrorName, ErrorPassword)) return;
-            if (DB.SingIn(username, password))
+            if (!Lib.Spelling(email, password, ErrorName, ErrorPassword)) return;
+            if (DB.SignIn(email, password))
             {
                 Hide();
                 //MainForm mainForm = new MainForm(); // форма з повідомленнями               

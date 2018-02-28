@@ -4,20 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AskholeLib;
 
 namespace Database
 {
-    public struct Users
-    {
-        public string Name { get; set; }
-        public int Id { get; set; }
-    }
     public class DB
     {
         static public SqlConnection cn;
         static public SqlCommand cmd;
-        static public Users user = new Users { Name = "user" };
-        static public Users reciever = new Users { Name = "Ivan" };
+        static public Lib.User user = new Lib.User { username = "user" };
+        static public Lib.User reciever = new Lib.User { username = "Ivan" };
         // static public string UserName { get; set; } // поточний користувач
         //  static public string RecieverName { get; set; } // отримувач
 
@@ -34,15 +30,15 @@ namespace Database
         /// <summary>
         /// Вхід в систему
         /// </summary>
-        /// <param name="username">ім'я користувача</param>
+        /// <param name="email">email</param>
         /// <param name="password">пароль</param>
         /// <returns></returns>
-        static public bool SingIn(string username, string password)
+        static public bool SignIn(string email, string password)
         {
             try
             {
                 cn.Open(); // запит до бд
-                StringBuilder str = new StringBuilder("exec SignIn '" + username + "', '" +
+                StringBuilder str = new StringBuilder("exec SignIn '" + email + "', '" +
                                                         password + "'");
                 cmd.CommandText = Convert.ToString(str);
                 cmd.ExecuteNonQuery();
@@ -66,8 +62,8 @@ namespace Database
             try
             {
                 cn.Open(); // запит до бд
-                StringBuilder str = new StringBuilder("exec AddingMessage  '" + user.Name + "', '" +
-                                       reciever.Name + "', '" + text + "', '" + time + "'");
+                StringBuilder str = new StringBuilder("exec AddingMessage  '" + user.username + "', '" +
+                                       reciever.username + "', '" + text + "', '" + time + "'");
                 cmd.CommandText = Convert.ToString(str);
                 cmd.ExecuteNonQuery();
                 cn.Close();
