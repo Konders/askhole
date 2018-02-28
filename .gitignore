@@ -22,3 +22,7 @@ AskholeLib\obj\*
 Database\bin\*
 
 Database\obj\*
+
+Database/bin/*
+
+Database/obj/*
