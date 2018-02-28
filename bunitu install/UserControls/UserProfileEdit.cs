@@ -22,8 +22,11 @@ namespace Askhole
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                Bitmap img = new Bitmap(openFileDialog1.FileName);
                 byte[] image = File.ReadAllBytes(openFileDialog1.FileName);
+                pictureBox1.Image = img;
             }
+            
         }
     }
 }

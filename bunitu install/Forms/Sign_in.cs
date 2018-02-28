@@ -60,7 +60,7 @@ namespace Askhole
         private void Enter_Click(object sender, EventArgs e)
         {
             username = Username.Text;
-            DB.UserName = username;
+            DB.user.name = username;
             password = Password.Text;
             // якщо паролі не відповідають вимогам нічого не міняється
             if (!Lib.Spelling(username, password, ErrorName, ErrorPassword)) return;

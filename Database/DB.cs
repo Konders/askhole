@@ -7,12 +7,19 @@ using System.Threading.Tasks;
 
 namespace Database
 {
+    public struct Users
+    {
+        public string Name { get; set; }
+        public int Id { get; set; }
+    }
     public class DB
     {
         static public SqlConnection cn;
         static public SqlCommand cmd;
-        static public string UserName { get; set; } // поточний користувач
-        static public string RecieverName { get; set; } // отримувач
+        static public Users user = new Users { Name = "user" };
+        static public Users reciever = new Users { Name = "Ivan" };
+        // static public string UserName { get; set; } // поточний користувач
+        //  static public string RecieverName { get; set; } // отримувач
         public DB()
         {
             if (Environment.UserName == "olyal")
@@ -21,8 +28,6 @@ namespace Database
                 cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
 
             cmd = new SqlCommand { Connection = cn };
-            UserName = "user";
-            RecieverName = "Ivan";
         }
 
         /// <summary>
@@ -60,8 +65,8 @@ namespace Database
             try
             {
                 cn.Open(); // запит до бд
-                StringBuilder str = new StringBuilder("exec AddingMessage  '" + UserName + "', '" +
-                                       RecieverName + "', '" + text + "', '" + time + "'");
+                StringBuilder str = new StringBuilder("exec AddingMessage  '" + user.Name + "', '" +
+                                       reciever.Name + "', '" + text + "', '" + time + "'");
                 cmd.CommandText = Convert.ToString(str);
                 cmd.ExecuteNonQuery();
                 cn.Close();
