@@ -4,3 +4,9 @@ C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\obj\Debug\Dat
 C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
 C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\obj\Debug\Database.dll
 C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\obj\Debug\Database.pdb
+C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\bin\Debug\Database.dll
+C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\bin\Debug\Database.pdb
+C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\obj\Debug\Database.dll
+C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\obj\Debug\Database.pdb
