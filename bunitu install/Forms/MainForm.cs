@@ -82,9 +82,10 @@ namespace Askhole
             }
         }
 
-       static public void ChangeName()
+       public void ChangeName(string name)
         {
-            Name.Text = NameU;
+            if(name != contactList1.AddContactButton.Text)
+            this.Name.Text = name;
         }
     }
 }

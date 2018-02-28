@@ -72,8 +72,9 @@ namespace Askhole
                 cmd.CommandText = Convert.ToString(str);
                 cmd.ExecuteNonQuery();
                 this.Hide();
-                MainForm mainForm = new MainForm(); // форма з повідомленнями
-                mainForm.Show();
+                //MainForm mainForm = new MainForm(); // форма з повідомленнями
+                Globals.mainForm = new MainForm();
+                Globals.mainForm.Show();
                 cn.Close();
                 Error.Hide(); // вертаємо колір помилки
             }

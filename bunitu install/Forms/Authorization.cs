@@ -99,8 +99,9 @@ namespace Askhole
             if (DB.NewUser(Username.Text, Password.Text, email, birthDay.Value))
             {
                 Hide();
-                MainForm mainForm = new MainForm(); // форма з повідомленнями
-                mainForm.Show();
+                //MainForm mainForm = new MainForm(); // форма з повідомленнями
+                Globals.mainForm = new MainForm();
+                Globals.mainForm.Show();
                 Error.Visible = false; // вертаємо колір помилки
             }
             else Error.Visible = true; // вертаємо колір помилки

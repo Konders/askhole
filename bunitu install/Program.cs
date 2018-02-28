@@ -10,9 +10,14 @@ using System.Windows.Forms;
 
 namespace Askhole
 {
+    public static class Globals
+    {
+        public static MainForm mainForm = new MainForm();
+    }
     
-    static class Program
-    {      
+    class Program
+    {
+        
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -22,7 +27,12 @@ namespace Askhole
             DB db = new DB();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(/*new Sign_in(cn, cmd)*/new MainForm());
+            //Application.Run(/*new Sign_in(cn, cmd)*/);
+            Run();
+        }
+        public static void Run()
+        {
+            Application.Run(Globals.mainForm);
         }
     }
 }
