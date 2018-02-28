@@ -70,6 +70,7 @@ namespace Askhole
                 //MainForm mainForm = new MainForm(); // форма з повідомленнями               
                 Globals.mainForm = new MainForm();
                 Globals.mainForm.Show();
+
                 timer.Stop();
                 Error.Hide(); // вертаємо колір помилки
             }

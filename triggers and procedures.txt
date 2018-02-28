@@ -113,3 +113,29 @@ end
 
 // приклад
 exec AddingMessage 'user', 'Ivan', 'Hello world', '13:07:30'
+
+
+// вит€гуЇмо ≥д
+alter function ID (@email varchar(50)) returns int
+as
+begin
+declare 
+@id int
+select @id = id from Users where Email = @email
+return @id
+end
+
+// приклад
+select dbo.ID('email'	)
+
+
+-- temp one
+alter procedure ID_user
+@email varchar(50)
+as
+begin
+declare 
+@id int
+select @id = id from Users where Email = @email
+raiserror ('%d', 16 ,5, @id)  
+end

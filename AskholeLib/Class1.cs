@@ -19,11 +19,13 @@ namespace AskholeLib
             public int id;
             public string username;
             public Bitmap photo;
-            public User(int id, string username, Bitmap photo)
+            public string email;
+            public User(int id, string username, string email,  Bitmap photo = null)
             {
                 this.id = id;
                 this.username = username;
                 this.photo = photo;
+                this.email = email;
             }
         }
         /// <summary>

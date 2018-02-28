@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,7 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    public struct Users
-    {
-        public string Name { get; set; }
-        public int Id { get; set; }
-    }
+
     public class DB
     {
         static public SqlConnection cn;
@@ -102,6 +99,27 @@ namespace Database
             {
                 cn.Close();
                 return false;
+            }
+        }
+        static public int IdPicker()
+        {
+            try
+            {
+                cn.Open();
+                StringBuilder comand = new StringBuilder("exec ID_user 'email'");
+                cmd.CommandText = Convert.ToString(comand);
+                //SqlParameter retValue = cmd.Parameters.Add("@id", SqlDbType.Int);
+                //retValue.Direction = ParameterDirection.ReturnValue;
+                //int tmp =  
+                    cmd.ExecuteNonQuery();
+                cn.Close();
+                return -1;
+            }
+            catch (SqlException ex)
+            {
+                int tmp =Convert.ToInt32(ex.Message);
+                cn.Close();
+                return tmp;
             }
         }
     }
