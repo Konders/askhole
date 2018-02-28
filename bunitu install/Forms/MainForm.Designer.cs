@@ -409,7 +409,7 @@ namespace Askhole
         private Bunifu.Framework.UI.BunifuImageButton Hamburger;
         private System.Windows.Forms.Panel Chat;
         private Chat chat1;
-        private ContactList contactList1;
+        public ContactList contactList1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Search;
         private System.Windows.Forms.Panel panel1;

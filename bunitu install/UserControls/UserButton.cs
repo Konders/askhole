@@ -42,9 +42,13 @@ namespace Askhole.UserControls
 
         private void UserName_Click(object sender, EventArgs e)
         {
-            DB.RecieverName = UserName.Text;
-                MainForm.NameU = DB.RecieverName;
-                Globals.mainForm.ChangeName(UserName.Text);
+            if (UserName.Text != Globals.mainForm.contactList1.AddContactButton.Text)
+            {
+                DB.RecieverName = UserName.Text;
+
+                //MainForm.NameU = DB.RecieverName;
+                Globals.mainForm.ChangeName(UserName.Text, UserName.Iconimage);
+            }
         }
     }
 }

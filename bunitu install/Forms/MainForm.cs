@@ -82,9 +82,9 @@ namespace Askhole
             }
         }
 
-       public void ChangeName(string name)
+       public void ChangeName(string name,System.Drawing.Image img)
         {
-            if(name != contactList1.AddContactButton.Text)
+            pictureBox1.Image = img;
             this.Name.Text = name;
         }
     }
