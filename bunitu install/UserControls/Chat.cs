@@ -86,9 +86,9 @@ namespace Askhole
             {
                 var filePath = openFileDialog1.FileName;
                 Bitmap bitmap = new Bitmap(openFileDialog1.FileName);
+                //teststuff
+                Globals.mainForm.contactList1.AddContact(3, "test", bitmap);
             }
         }
-
-      
     }
 }
