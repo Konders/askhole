@@ -124,19 +124,19 @@ namespace AskholeLib
         /// <summary>
         /// перевірка чи пароль з іменем відповідають умовам
         /// </summary>
-        /// <param name="username">ім'я користувача</param>
+        /// <param name="email">ім'я користувача</param>
         /// <param name="password">пароль</param>
         /// <returns></returns>
         /// <param name="ErName">текст для помилки</param>
         /// <param name="ErPassword">текст для помилки</param>
         /// <returns></returns>
-        static public bool Spelling(string username, string password,
+        static public bool Spelling(string email, string password,
                               BunifuCustomLabel ErName, BunifuCustomLabel ErPassword)
         {
             bool spell = true;
             // перевірка чи не початкові дані
-                if ((username == "Username") && (password == "Password")) return false;
-                if (username.Length < 2) // перевірка імені
+                if ((email == "E-mail") && (password == "Password")) return false;
+                if (email.Length < 2) // перевірка імені
                 {
                     ErName.Show(); // попередження
                     spell = false;

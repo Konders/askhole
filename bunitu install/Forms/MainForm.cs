@@ -14,7 +14,7 @@ namespace Askhole
             InitializeComponent();
             this.Activate();
             Hamburger.Select();
-            Name.Text = DB.user.Name;
+            Name.Text = DB.user.username;
             NameU = Name.Text;
                  //     this.Enabled = false;
                  //   Color t = ForeColor;
