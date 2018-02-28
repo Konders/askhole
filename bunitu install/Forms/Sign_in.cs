@@ -60,7 +60,6 @@ namespace Askhole
         private void Enter_Click(object sender, EventArgs e)
         {
             email = Email.Text;
-            DB.user.username = email;
             password = Password.Text;
             // якщо паролі не відповідають вимогам нічого не міняється
             if (!Lib.Spelling(email, password, ErrorName, ErrorPassword)) return;
@@ -70,15 +69,24 @@ namespace Askhole
                 //MainForm mainForm = new MainForm(); // форма з повідомленнями               
                 Globals.mainForm = new MainForm();
                 Globals.mainForm.Show();
-
+                UsersData(email);
+              
                 timer.Stop();
                 Error.Hide(); // вертаємо колір помилки
             }
-            else Error.Show(); // вертаємо колір помилки
+            else Error.Show(); // вертаємо колір помилки          
+        }
 
-          
-        }      
+        private void UsersData(string email)
+        {
+            DB.user.username = DB.NamePicker(email);
+            DB.user.email = email;
+            int id = DB.IdPicker(email);
+            DB.user.id = id;
+// функція з бд для фото замість null
+            DB.user.photo = null;
 
+        }
         #region Work this text fields
         /// <summary>
         /// При наведені на текстове поле стирається початкова інформація
@@ -177,5 +185,6 @@ namespace Askhole
             ResetPassword rpassword = new ResetPassword(this, cn, cmd);
             rpassword.Show();
         }
+
     }
 }

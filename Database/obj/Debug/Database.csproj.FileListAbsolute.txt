@@ -13,3 +13,6 @@ C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\obj\Debug\Dat
 C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\bin\Debug\AskholeLib.dll
 C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\illya\OneDrive\Документы\GitHub\askhole\Database\bin\Debug\AskholeLib.pdb
+C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\bin\Debug\AskholeLib.dll
+C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\olyal\OneDrive\Документи\GitHub\askhole\Database\bin\Debug\AskholeLib.pdb

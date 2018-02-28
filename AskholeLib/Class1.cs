@@ -135,7 +135,7 @@ namespace AskholeLib
         {
             bool spell = true;
             // перевірка чи не початкові дані
-                if ((email == "E-mail") && (password == "Password")) return false;
+                if ((email == "Email") && (password == "Password")) return false;
                 if (email.Length < 2) // перевірка імені
                 {
                     ErName.Show(); // попередження

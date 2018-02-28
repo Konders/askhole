@@ -9,10 +9,7 @@ using AskholeLib;
 
 namespace Database
 {
-<<<<<<< HEAD
 
-=======
->>>>>>> 37cfaa07adf00d244c58cebe0ab94ba62fa92a0a
     public class DB
     {
         static public SqlConnection cn;
@@ -105,12 +102,18 @@ namespace Database
                 return false;
             }
         }
-        static public int IdPicker()
+
+        /// <summary>
+        /// Отримання id користувача
+        /// </summary>
+        /// <param name="email">пошта</param>
+        /// <returns></returns>
+        static public int IdPicker(string email)
         {
             try
             {
                 cn.Open();
-                StringBuilder comand = new StringBuilder("exec ID_user 'email'");
+                StringBuilder comand = new StringBuilder("exec ID_user '"+email+"'");
                 cmd.CommandText = Convert.ToString(comand);
                 //SqlParameter retValue = cmd.Parameters.Add("@id", SqlDbType.Int);
                 //retValue.Direction = ParameterDirection.ReturnValue;
@@ -122,6 +125,30 @@ namespace Database
             catch (SqlException ex)
             {
                 int tmp =Convert.ToInt32(ex.Message);
+                cn.Close();
+                return tmp;
+            }
+        }
+
+        /// <summary>
+        /// отрмання імені користувача по емейлу
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        static public string NamePicker(string email)
+        {
+            try
+            {
+                cn.Open();
+                StringBuilder comand = new StringBuilder("exec ID_username '" + email + "'");
+                cmd.CommandText = Convert.ToString(comand);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                return null;
+            }
+            catch (SqlException ex)
+            {
+                string tmp = ex.Message;
                 cn.Close();
                 return tmp;
             }

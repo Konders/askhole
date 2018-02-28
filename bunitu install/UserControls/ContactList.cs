@@ -45,10 +45,10 @@ namespace Askhole
             List_Panel.Controls.Add(Buttons[0]);
             //Buttons[0].
         }
-        public void AddContact(int id, string name, byte[] img)
+        public void AddContact(int id, string name,  byte[] img)
         {
             //select * from users where id = @id
-            Contacts.Add(Contacts.Count, new Lib.User(id, name, AskholeLib.Lib.ByteArrayToImage(img)));
+            Contacts.Add(Contacts.Count, new Lib.User(id, name, null, AskholeLib.Lib.ByteArrayToImage(img)));
             Buttons.Add(Contacts.Count, new Askhole.UserControls.UserButton(Contacts[Contacts.Count - 1]));
             Buttons[Contacts.Count - 1].Location = AddContactButton.Location;
             Buttons[Contacts.Count - 1].Size = AddContactButton.Size;
@@ -58,10 +58,10 @@ namespace Askhole
             //AddContactButton.Top += Buttons[0].Height;
 
         }
-        public void AddContact(int id, string name,Bitmap img)
+        public void AddContact(int id, string name,  Bitmap img)
         {
             //select * from users where id = @id
-            Contacts.Add(Contacts.Count, new Lib.User(id, name, img));
+            Contacts.Add(Contacts.Count, new Lib.User(id, name, null,  img));
             Buttons.Add(Contacts.Count, new Askhole.UserControls.UserButton(Contacts[Contacts.Count - 1]));
             Buttons[Contacts.Count - 1].Location = AddContactButton.Location;
             Buttons[Contacts.Count - 1].Size = AddContactButton.Size;

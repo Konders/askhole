@@ -48,18 +48,18 @@ end
 
 // перевірка входу
 ALTER procedure [dbo].[SignIn] 
-@name varchar(50),
+@email varchar(50),
 @password varchar(50) = null
 as begin
 declare 
 @pass varchar(50)
 begin
-select @pass = Password from Users where Name = @name
+select @pass = Password from Users where Email = @email
 if @pass is null 
 	raiserror ('Could not sign in', 16 ,5)  
 if @pass <> @password 
 	raiserror ('Could not sign in', 16 ,5)  
-else update Users set Online = 1 where Name = @name
+else update Users set Online = 1 where Email = @email
 end
 end
 
