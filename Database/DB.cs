@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 
 namespace Database
 {
+    public struct User
+    {
+        public string name;
+        public int id;
+    }
     public class DB
     {
         static public SqlConnection cn;
         static public SqlCommand cmd;
-        static public string UserName { get; set; } // поточний користувач
-        static public string RecieverName { get; set; } // отримувач
+        static public User user = new User(); // поточний користувач
+        static public User Reciever = new User(); // отримувач
         public DB()
         {
             if (Environment.UserName == "olyal")
@@ -21,8 +26,8 @@ namespace Database
                 cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
 
             cmd = new SqlCommand { Connection = cn };
-            UserName = "user";
-            RecieverName = "Ivan";
+            user.name = "user";
+            Reciever.name = "Ivan";
         }
 
         /// <summary>
@@ -60,8 +65,8 @@ namespace Database
             try
             {
                 cn.Open(); // запит до бд
-                StringBuilder str = new StringBuilder("exec AddingMessage  '" + UserName + "', '" +
-                                       RecieverName + "', '" + text + "', '" + time + "'");
+                StringBuilder str = new StringBuilder("exec AddingMessage  '" + user.name + "', '" +
+                                       Reciever.name + "', '" + text + "', '" + time + "'");
                 cmd.CommandText = Convert.ToString(str);
                 cmd.ExecuteNonQuery();
                 cn.Close();
@@ -86,7 +91,7 @@ namespace Database
             {
                 cn.Open();
                 StringBuilder comand = new StringBuilder("exec AddUser '" + userName + "', '" +
-                              password + "', '" + email + "', '" + birthDay+ "'");
+                              password + "', '" + email + "', '" + birthDay + "'");
                 cmd.CommandText = Convert.ToString(comand);
                 cmd.ExecuteNonQuery();
                 cn.Close();
