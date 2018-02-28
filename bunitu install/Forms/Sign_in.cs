@@ -85,7 +85,7 @@ namespace Askhole
             DB.user.id = id;
 // функція з бд для фото замість null
             DB.user.photo = null;
-
+       //     DB.user.birthDate = DB.BirthDatePicker(id);
         }
         #region Work this text fields
         /// <summary>

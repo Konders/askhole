@@ -139,3 +139,44 @@ declare
 select @id = id from Users where Email = @email
 raiserror ('%d', 16 ,5, @id)  
 end
+
+-- user name
+alter procedure ID_username
+@email varchar(50)
+as
+begin
+declare 
+@name varchar(50)
+select @name = name from Users where Email = @email
+raiserror (@name, 16 ,5)  
+end
+
+
+// фото по ід
+create function Photo (@id int) returns varbinary(MAX)
+as
+begin
+declare 
+@photo varbinary(MAX)
+select @photo = Photo from Users where id = @id
+return @photo
+end
+
+
+// зміна дати народження
+create procedure ChangeBirthDate
+@id int,
+@birthDay date
+as
+begin
+update Users  set [Birth_date] = @birthDay where id = @id
+end
+
+// зміна імені
+create procedure ChangeName
+@id int,
+@name varchar(50)
+as
+begin
+update Users  set Name = @name where id = @id
+end

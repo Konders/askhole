@@ -113,18 +113,18 @@ namespace Database
             try
             {
                 cn.Open();
-                StringBuilder comand = new StringBuilder("exec ID_user '"+email+"'");
+                StringBuilder comand = new StringBuilder("exec ID_user '" + email + "'");
                 cmd.CommandText = Convert.ToString(comand);
                 //SqlParameter retValue = cmd.Parameters.Add("@id", SqlDbType.Int);
                 //retValue.Direction = ParameterDirection.ReturnValue;
                 //int tmp =  
-                    cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 cn.Close();
                 return -1;
             }
             catch (SqlException ex)
             {
-                int tmp =Convert.ToInt32(ex.Message);
+                int tmp = Convert.ToInt32(ex.Message);
                 cn.Close();
                 return tmp;
             }
@@ -151,6 +151,67 @@ namespace Database
                 string tmp = ex.Message;
                 cn.Close();
                 return tmp;
+            }
+        }
+
+        /// <summary>
+        /// Отримуємо дату народження
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        static public DateTime BirthDatePicker(int id)
+        {
+            return DateTime.Now;
+            try
+            {
+                cn.Open();
+                StringBuilder comand = new StringBuilder("exec ID_username '" + id + "'");
+                cmd.CommandText = Convert.ToString(comand);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                return DateTime.Now;
+            }
+            catch (SqlException ex)
+            {
+                //  DateTime tmp = Convert.DateTime( ex.Message);
+                cn.Close();
+                //   return tmp;
+            }
+        }
+
+        /// <summary>
+        /// змін дати народження
+        /// </summary>
+        /// <param name="date"></param>
+        static public void ChangeBirthDay(DateTime date)
+        {
+            try
+            {
+                cn.Open();
+                StringBuilder comand = new StringBuilder("exec ChangeBirthDate '" + user.id + "','"+ date + "'");
+                cmd.CommandText = Convert.ToString(comand);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (SqlException ex)
+            {
+                cn.Close();
+            }
+        }
+
+        static public void ChangeName(string name)
+        {
+            try
+            {
+                cn.Open();
+                StringBuilder comand = new StringBuilder("exec ChangeName " + user.id + ",'" + name + "'");
+                cmd.CommandText = Convert.ToString(comand);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+            catch (SqlException ex)
+            {
+                cn.Close();
             }
         }
     }
