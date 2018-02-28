@@ -179,7 +179,12 @@ namespace AskholeLib
                 ErrorEmail.Show();
                 return false;
             }
-            ErrorEmail.Hide();
+            else
+            {
+                ErrorEmail.Hide();
+                if (new EmailAddressAttribute().IsValid(email))
+                    return true;
+            }
             return true;
         }
     }
