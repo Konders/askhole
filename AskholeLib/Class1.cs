@@ -18,6 +18,7 @@ namespace AskholeLib
         {
             public int id;
             public string username;
+            public DateTime birthDate;
             public Bitmap photo;
             public string email;
             public User(int id, string username, string email,  Bitmap photo = null)
@@ -26,6 +27,7 @@ namespace AskholeLib
                 this.username = username;
                 this.photo = photo;
                 this.email = email;
+                birthDate = DateTime.Now;
             }
         }
         /// <summary>
