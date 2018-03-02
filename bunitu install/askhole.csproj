@@ -111,6 +111,12 @@
     <Compile Include="Forms\Sign_in.Designer.cs">
       <DependentUpon>Sign_in.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PictureMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PictureMessage.Designer.cs">
+      <DependentUpon>PictureMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Settings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\Sign_in.resx">
       <DependentUpon>Sign_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PictureMessage.resx">
+      <DependentUpon>PictureMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

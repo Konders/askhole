@@ -45,7 +45,6 @@ namespace Askhole.UserControls
             if (UserName.Text != Globals.mainForm.contactList1.AddContactButton.Text)
             {
                 DB.reciever.username = UserName.Text;
-
                 //MainForm.NameU = DB.RecieverName;
                 Globals.mainForm.ChangeName(UserName.Text, UserName.Iconimage);
             }

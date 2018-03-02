@@ -34,7 +34,7 @@
             // 
             // UserName
             // 
-            this.UserName.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UserName.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.UserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UserName.BackColor = System.Drawing.Color.Transparent;
@@ -59,7 +59,7 @@
             this.UserName.Margin = new System.Windows.Forms.Padding(5);
             this.UserName.Name = "UserName";
             this.UserName.Normalcolor = System.Drawing.Color.Transparent;
-            this.UserName.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UserName.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.UserName.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UserName.selected = false;
             this.UserName.Size = new System.Drawing.Size(337, 78);

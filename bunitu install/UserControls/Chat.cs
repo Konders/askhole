@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Database;
+using Askhole.UserControls;
 
 namespace Askhole
 {
@@ -20,10 +21,11 @@ namespace Askhole
             if(!this.DesignMode)
             InitializeComponent();
             messageBox1.Hide();
+            pictureMessage1.Hide();
             Message_Old = messageBox1;          
         }
         MessageBox Message_Old = new MessageBox();
-
+        
         /// <summary>
         /// Додаємо повідомлення
         /// </summary>
@@ -68,8 +70,7 @@ namespace Askhole
         private void Message_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
-                
+            {              
                 DateTime MessageTime = new DateTime();// поточний час
                 MessageTime = DateTime.Now;
                 string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute +".");
@@ -86,9 +87,28 @@ namespace Askhole
             {
                 var filePath = openFileDialog1.FileName;
                 Bitmap bitmap = new Bitmap(openFileDialog1.FileName);
+                DateTime MessageTime = new DateTime();// поточний час
+                MessageTime = DateTime.Now;
+                string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ".");
+                AddPhoto(bitmap, time);
                 //teststuff
-                Globals.mainForm.contactList1.AddContact(3, "test", bitmap);
+                //Globals.mainForm.contactList1.AddContact(3, "test", bitmap);
             }
         }
+
+        public void AddPhoto(Bitmap img, string time)
+        {
+            PictureMessage msg = new PictureMessage(img, time);
+            msg.Location = pictureMessage1.Location;
+            msg.Size = pictureMessage1.Size;
+            msg.Anchor = pictureMessage1.Anchor;
+            msg.Top = Message_Old.Bottom + 10;
+            //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
+             msg.Left = (Size.Width) - 370;
+
+            panel2.Controls.Add(msg);
+           // Message_Old = msg;
+        }
+
     }
 }

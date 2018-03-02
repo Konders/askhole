@@ -99,7 +99,6 @@
             this.Controls.Add(this.List_Panel);
             this.Name = "ContactList";
             this.Size = new System.Drawing.Size(343, 613);
-            this.MouseEnter += new System.EventHandler(this.ContactList_MouseEnter);
             this.List_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 

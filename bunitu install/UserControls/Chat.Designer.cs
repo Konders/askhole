@@ -34,6 +34,7 @@
             this.Emoji = new Bunifu.Framework.UI.BunifuImageButton();
             this.Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureMessage1 = new Askhole.UserControls.PictureMessage();
             this.messageBox1 = new Askhole.MessageBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
@@ -114,6 +115,7 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.panel2.Controls.Add(this.pictureMessage1);
             this.panel2.Controls.Add(this.messageBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -121,6 +123,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(908, 607);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureMessage1
+            // 
+            this.pictureMessage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
+            this.pictureMessage1.Location = new System.Drawing.Point(5, 71);
+            this.pictureMessage1.Name = "pictureMessage1";
+            this.pictureMessage1.Size = new System.Drawing.Size(395, 309);
+            this.pictureMessage1.TabIndex = 1;
             // 
             // messageBox1
             // 
@@ -164,5 +174,6 @@
         private Bunifu.Framework.UI.BunifuImageButton Emoji;
         private MessageBox messageBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private UserControls.PictureMessage pictureMessage1;
     }
 }

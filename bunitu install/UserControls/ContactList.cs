@@ -84,10 +84,6 @@ namespace Askhole
             //AddContactButton.Top += Buttons[0].Height;
 
         }
-        private void ContactList_MouseEnter(object sender, EventArgs e)
-        {
-           
-        }
 
         private void AddContactButton_Click(object sender, EventArgs e)
         {

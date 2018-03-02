@@ -5,9 +5,7 @@ using Database;
 namespace Askhole
 {
     public partial class MainForm : Form
-    {
-        public static string NameU { get; set;}
-        
+    {       
         static private bool settings = true;
         public MainForm()
         {
@@ -15,10 +13,9 @@ namespace Askhole
             this.Activate();
             Hamburger.Select();
             Name.Text = DB.user.username;
-            NameU = Name.Text;
                  //     this.Enabled = false;
-                 //   Color t = ForeColor;
-                 //      this.ForeColor = Color.FromArgb(240, 240, 240, 240);
+                 //     Color t = ForeColor;
+                 //     this.ForeColor = Color.FromArgb(240, 240, 240, 240);
         }
         #region Variables
         private int startWidth = 753;
@@ -85,7 +82,7 @@ namespace Askhole
        public void ChangeName(string name,System.Drawing.Image img)
         {
             pictureBox1.Image = img;
-            this.Name.Text = name;
+            Name.Text = name;
         }
 
     }
