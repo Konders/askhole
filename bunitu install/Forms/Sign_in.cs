@@ -20,17 +20,11 @@ namespace Askhole
         Random rand = new Random();
 
         System.Timers.Timer timer = new System.Timers.Timer();
-        SqlConnection cn;
-        SqlCommand cmd;
         #endregion
 
         #region Constructors
+     
         public Sign_in()
-        {
-            InitializeComponent();
-            Enter.Select();
-        }
-        public Sign_in(SqlConnection cn, SqlCommand cmd)
         {
             
             InitializeComponent();
@@ -45,9 +39,6 @@ namespace Askhole
             timer.Interval = 2000; // таймер для зображень
             timer.Elapsed += ChangePictures;
             timer.Start();
-
-            this.cn = cn; // з'єднання з ЬД
-            this.cmd = cmd;
         }
         #endregion
 
@@ -109,10 +100,8 @@ namespace Askhole
         //Переходимо у форму реєстрації
         private void SignUp_Click(object sender, EventArgs e)
         {
-            //  Authorization.ActiveForm.Show();
-            //  Sign_in.ActiveForm.Close();
-            this.Hide();
-            Authorization authorization = new Authorization(this, cn, cmd);
+            Hide();
+            Authorization authorization = new Authorization(this);
             authorization.Show();
         }
         // Закривається поточне вікно
@@ -182,7 +171,7 @@ namespace Askhole
         private void ResetPassword_Click(object sender, EventArgs e)
         {
             Hide();
-            ResetPassword rpassword = new ResetPassword(this, cn, cmd);
+            ResetPassword rpassword = new ResetPassword(this);
             rpassword.Show();
         }
 

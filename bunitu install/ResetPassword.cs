@@ -1,4 +1,5 @@
 ﻿using AskholeLib;
+using Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,21 +16,17 @@ namespace Askhole
     public partial class ResetPassword : Form
     {
         private Sign_in signIn;
-        SqlConnection cn;
-        SqlCommand cmd;
 
         public ResetPassword()
         {
             InitializeComponent();
             Confirm.Select(); // керування фокусом
         }
-        public ResetPassword(Sign_in signIn, SqlConnection cn, SqlCommand cmd)
+        public ResetPassword(Sign_in signIn)
         {
             InitializeComponent();
             this.signIn = signIn;
             Confirm.Select(); // керування фокусом
-            this.cn = cn; // з'єднання з ЬД
-            this.cmd = cmd;
         }
         // повернення назад до форми входу
         private void Close_Click(object sender, EventArgs e)
@@ -64,25 +61,15 @@ namespace Askhole
 
             if (!Lib.ConfirmPassword(Password.Text, Passconfirm.Text, Confirmation)) return;
 
-            try
-            {
-                cn.Open();
-                StringBuilder str = new StringBuilder("exec ToResetPassword '" + Username.Text + "', '" +
-                                                        Email.Text + "', '" + Passconfirm.Text + "'");
-                cmd.CommandText = Convert.ToString(str);
-                cmd.ExecuteNonQuery();
+            if (DB.ResetPassword(Username.Text, Email.Text, Passconfirm.Text))
+            { 
                 this.Hide();
                 //MainForm mainForm = new MainForm(); // форма з повідомленнями
                 Globals.mainForm = new MainForm();
                 Globals.mainForm.Show();
-                cn.Close();
                 Error.Hide(); // вертаємо колір помилки
             }
-            catch (SqlException ex)
-            {
-                Error.Show(); // вертаємо колір помилки
-                cn.Close();
-            }
+            else Error.Show(); // вертаємо колір помилки           
         }
         // для перевірки пароля
         private void LeaveConfirm(object sender, EventArgs e)

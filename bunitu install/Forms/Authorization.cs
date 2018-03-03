@@ -16,21 +16,17 @@ namespace Askhole
     public partial class Authorization : Form
     {
         private Sign_in signIn;
-        SqlConnection cn;
-        SqlCommand cmd;
 
         public Authorization()
         {
             InitializeComponent();
             Signup.Select(); // керування фокусом
         }
-        public Authorization(Sign_in signIn, SqlConnection cn, SqlCommand cmd)
+        public Authorization(Sign_in signIn)
         {
             InitializeComponent();
             Signup.Select(); // керування фокусом
             this.signIn = signIn;
-            this.cn = cn; // з'єднання з ЬД
-            this.cmd = cmd;
         }
 
         private void Exit_Click(object sender, EventArgs e)

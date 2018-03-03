@@ -188,7 +188,7 @@ namespace Database
             try
             {
                 cn.Open();
-                StringBuilder comand = new StringBuilder("exec ChangeBirthDate '" + user.id + "','"+ date + "'");
+                StringBuilder comand = new StringBuilder("exec ChangeBirthDate '" + user.id + "','" + date + "'");
                 cmd.CommandText = Convert.ToString(comand);
                 cmd.ExecuteNonQuery();
                 cn.Close();
@@ -212,6 +212,24 @@ namespace Database
             catch (SqlException ex)
             {
                 cn.Close();
+            }
+        }
+        static public bool ResetPassword(string username, string email, string newPassword)
+        {
+            try
+            {
+                cn.Open();
+                StringBuilder str = new StringBuilder("exec ToResetPassword '" + username + "', '" +
+                                                        email + "', '" + newPassword + "'");
+                cmd.CommandText = Convert.ToString(str);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                cn.Close();
+                return false;
             }
         }
     }
