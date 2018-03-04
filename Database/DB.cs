@@ -45,6 +45,31 @@ namespace Database
         }
 
         /// <summary>
+        /// Метод для роботи з бд для повернення результатів
+        /// </summary>
+        /// <param name="query">запит</param>
+        /// <returns>зміну типу sql</returns>
+        static private SqlDataReader ReturnMethods(string query)
+        {
+            try
+            {
+                cn.Open();
+                cmd.CommandText = Convert.ToString(query);
+                SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader returns = null;
+                while (reader.Read())
+                    returns = reader[0] as SqlDataReader;
+                cn.Close();
+                return returns;
+            }
+            catch (SqlException ex)
+            {
+                cn.Close();
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Вхід в систему
         /// </summary>
         /// <param name="email">email</param>
@@ -91,24 +116,11 @@ namespace Database
         /// <returns></returns>
         static public int IdPicker(string email)
         {
-            try
-            {
-                cn.Open();
-                StringBuilder comand = new StringBuilder("exec ID_user '" + email + "'");
-                cmd.CommandText = Convert.ToString(comand);
-                //SqlParameter retValue = cmd.Parameters.Add("@id", SqlDbType.Int);
-                //retValue.Direction = ParameterDirection.ReturnValue;
-                //int tmp =  
-                cmd.ExecuteNonQuery();
-                cn.Close();
-                return -1;
-            }
-            catch (SqlException ex)
-            {
-                int tmp = Convert.ToInt32(ex.Message);
-                cn.Close();
-                return tmp;
-            }
+            StringBuilder query = new StringBuilder("select dbo.ID('"+email+"')");
+            var result = ReturnMethods(query.ToString());
+            if (result != null)
+                return Convert.ToInt32(result);
+            else return -1;
         }
 
         /// <summary>
@@ -118,46 +130,20 @@ namespace Database
         /// <returns></returns>
         static public string NamePicker(string email)
         {
-            try
-            {
-                cn.Open();
-                StringBuilder comand = new StringBuilder("exec ID_username '" + email + "'");
-                cmd.CommandText = Convert.ToString(comand);
-                cmd.ExecuteNonQuery();
-                cn.Close();
-                return null;
-            }
-            catch (SqlException ex)
-            {
-                string tmp = ex.Message;
-                cn.Close();
-                return tmp;
-            }
+            StringBuilder query = new StringBuilder("select dbo.ReturnName('" + email + "')");
+            return Convert.ToString(ReturnMethods(query.ToString()));
         }
 
         /// <summary>
         /// Отримуємо дату народження
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         static public DateTime BirthDatePicker(int id)
         {
-            return DateTime.Now;
-            try
-            {
-                cn.Open();
-                StringBuilder comand = new StringBuilder("exec ID_username '" + id + "'");
-                cmd.CommandText = Convert.ToString(comand);
-                cmd.ExecuteNonQuery();
-                cn.Close();
-                return DateTime.Now;
-            }
-            catch (SqlException ex)
-            {
-                //  DateTime tmp = Convert.DateTime( ex.Message);
-                cn.Close();
-                //   return tmp;
-            }
+            StringBuilder query = new StringBuilder("select dbo.ReturnBirthDay(" + id + ")");
+            var result = ReturnMethods(query.ToString());
+            if (result != null)
+                return Convert.ToDateTime(result);
+            else return DateTime.Now;          
         }
 
         /// <summary>
