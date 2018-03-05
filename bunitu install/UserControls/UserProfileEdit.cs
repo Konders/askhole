@@ -18,7 +18,8 @@ namespace Askhole
         {
             InitializeComponent();
             Name.Text = DB.user.username;
-          //  BirthDay.Value = DB.user.birthDate;
+            var date = DB.user.birthDate;
+            Date.Text = String.Format("{0:00}-{1:00}-{2:00}", date.Day, date.Month, date.Year);
             if (DB.user.photo != null)
                 Photo.Image = DB.user.photo;
         }

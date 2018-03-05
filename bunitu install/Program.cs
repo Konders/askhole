@@ -25,11 +25,10 @@ namespace Askhole
         static void Main()
         {
             DB db = new DB();
-            DB.IdPicker("");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          //  Application.Run(new Sign_in());
-           Run();
+            Application.Run(new Sign_in());
+       //    Run();
         }
         public static void Run()
         {

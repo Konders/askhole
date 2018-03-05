@@ -49,16 +49,16 @@ namespace Database
         /// </summary>
         /// <param name="query">запит</param>
         /// <returns>зміну типу sql</returns>
-        static private SqlDataReader ReturnMethods(string query)
+        static private object ReturnMethods(string query)
         {
             try
             {
+                object returns = null;
                 cn.Open();
                 cmd.CommandText = Convert.ToString(query);
                 SqlDataReader reader = cmd.ExecuteReader();
-                SqlDataReader returns = null;
                 while (reader.Read())
-                    returns = reader[0] as SqlDataReader;
+                    returns = reader[0];
                 cn.Close();
                 return returns;
             }
@@ -67,6 +67,17 @@ namespace Database
                 cn.Close();
                 return null;
             }
+        }
+
+        public static void UsersData(string email)
+        {
+            int id = IdPicker(email);
+            user.username = NamePicker(email);
+            user.email = email;          
+            user.id = id;
+            // функція з бд для фото замість null
+            user.photo = null;
+            user.birthDate = BirthDatePicker(id);
         }
 
         /// <summary>

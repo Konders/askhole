@@ -60,7 +60,7 @@ namespace Askhole
                 //MainForm mainForm = new MainForm(); // форма з повідомленнями               
                 Globals.mainForm = new MainForm();
                 Globals.mainForm.Show();
-                UsersData(email);
+                DB.UsersData(email);
               
                 timer.Stop();
                 Error.Hide(); // вертаємо колір помилки
@@ -68,16 +68,7 @@ namespace Askhole
             else Error.Show(); // вертаємо колір помилки          
         }
 
-        private void UsersData(string email)
-        {
-            DB.user.username = DB.NamePicker(email);
-            DB.user.email = email;
-            int id = DB.IdPicker(email);
-            DB.user.id = id;
-// функція з бд для фото замість null
-            DB.user.photo = null;
-       //     DB.user.birthDate = DB.BirthDatePicker(id);
-        }
+       
         #region Work this text fields
         /// <summary>
         /// При наведені на текстове поле стирається початкова інформація
