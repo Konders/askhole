@@ -42,7 +42,7 @@
             this.userProfileEdit1.Name = "userProfileEdit1";
             this.userProfileEdit1.Size = new System.Drawing.Size(330, 161);
             this.userProfileEdit1.TabIndex = 9;
-           // 
+            // 
             // LogOut
             // 
             this.LogOut.AutoSize = true;

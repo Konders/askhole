@@ -1,6 +1,4 @@
-﻿using System.Data.SqlClient;
-
-namespace Askhole
+﻿namespace Askhole
 {
     partial class MainForm
     {
@@ -56,6 +54,8 @@ namespace Askhole
             this.Chat = new System.Windows.Forms.Panel();
             this.chat1 = new Askhole.Chat();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.emoji1 = new Askhole.UserControls.Emoji();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
@@ -334,6 +334,8 @@ namespace Askhole
             // 
             // Chat
             // 
+            this.Chat.Controls.Add(this.panel3);
+            this.Chat.Controls.Add(this.emoji1);
             this.Chat.Controls.Add(this.chat1);
             this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Chat.Location = new System.Drawing.Point(337, 87);
@@ -360,6 +362,23 @@ namespace Askhole
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 607);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(667, 8);
+            this.panel3.TabIndex = 2;
+            // 
+            // emoji1
+            // 
+            this.emoji1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emoji1.Location = new System.Drawing.Point(195, 301);
+            this.emoji1.Name = "emoji1";
+            this.emoji1.Size = new System.Drawing.Size(469, 215);
+            this.emoji1.TabIndex = 1;
+            this.emoji1.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,7 +391,7 @@ namespace Askhole
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            
+        
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);
@@ -419,5 +438,7 @@ namespace Askhole
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Name;
         private UserControls.Settings settings1;
+        private System.Windows.Forms.Panel panel3;
+        public UserControls.Emoji emoji1;
     }
 }

@@ -109,6 +109,19 @@ namespace Askhole
             panel2.Controls.Add(msg);
            // Message_Old = msg;
         }
-
+        static bool emoji = true;
+        private void Emoji_Click(object sender, EventArgs e)
+        {
+            if (emoji)
+            {
+                Globals.mainForm.emoji1.Visible = true;
+                emoji = false;
+            }
+            else
+            {
+                Globals.mainForm.emoji1.Visible = false;
+                emoji = true;
+            }
+        }
     }
 }

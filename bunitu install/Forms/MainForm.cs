@@ -45,10 +45,18 @@ namespace Askhole
         {
             var square = Resize;
             Control control = (Control)this;
-            if (Lib.Resize(square, control, startWidth, startHeight))           
-            Resize.Image = Properties.Resources.sq;
+            if (Lib.Resize(square, control, startWidth, startHeight))
+            {
+                Resize.Image = Properties.Resources.sq;
+                emoji1.Left = this.Size.Width - emoji1.Size.Width *2 + 50;
+                emoji1.Top = this.Size.Height - emoji1.Size.Height -150;
+            }
             else
+            {
                 Resize.Image = Properties.Resources.windows;
+                emoji1.Left = this.Size.Width - emoji1.Size.Width *2 +50;
+                emoji1.Top = this.Size.Height - emoji1.Size.Height -150;
+            }
         }
 
         private void Search_Enter(object sender, EventArgs e)
@@ -85,5 +93,9 @@ namespace Askhole
             Name.Text = name;
         }
 
+        private void Hamburger_Click(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

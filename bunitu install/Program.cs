@@ -27,8 +27,8 @@ namespace Askhole
             DB db = new DB();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sign_in());
-       //    Run();
+          //  Application.Run(new Sign_in());
+           Run();
         }
         public static void Run()
         {

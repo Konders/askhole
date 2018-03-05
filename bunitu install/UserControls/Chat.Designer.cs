@@ -34,9 +34,9 @@
             this.Emoji = new Bunifu.Framework.UI.BunifuImageButton();
             this.Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureMessage1 = new Askhole.UserControls.PictureMessage();
             this.messageBox1 = new Askhole.MessageBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Emoji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Attach)).BeginInit();
@@ -95,6 +95,7 @@
             this.Emoji.TabIndex = 0;
             this.Emoji.TabStop = false;
             this.Emoji.Zoom = 10;
+            this.Emoji.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // Attach
             // 
@@ -124,6 +125,10 @@
             this.panel2.Size = new System.Drawing.Size(908, 607);
             this.panel2.TabIndex = 1;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // pictureMessage1
             // 
             this.pictureMessage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
@@ -142,10 +147,6 @@
             this.messageBox1.Name = "messageBox1";
             this.messageBox1.Size = new System.Drawing.Size(395, 69);
             this.messageBox1.TabIndex = 0;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Chat
             // 

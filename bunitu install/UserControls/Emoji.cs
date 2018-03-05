@@ -16,5 +16,12 @@ namespace Askhole.UserControls
         {
             InitializeComponent();
         }
+
+        private void Emoji_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
