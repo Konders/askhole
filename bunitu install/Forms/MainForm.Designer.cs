@@ -52,10 +52,10 @@
             this.contactList1 = new Askhole.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
-            this.chat1 = new Askhole.Chat();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel3 = new System.Windows.Forms.Panel();
             this.emoji1 = new Askhole.UserControls.Emoji();
+            this.chat1 = new Askhole.Chat();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
@@ -344,6 +344,23 @@
             this.Chat.Size = new System.Drawing.Size(667, 615);
             this.Chat.TabIndex = 3;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 607);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(667, 8);
+            this.panel3.TabIndex = 2;
+            // 
+            // emoji1
+            // 
+            this.emoji1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emoji1.Location = new System.Drawing.Point(195, 301);
+            this.emoji1.Name = "emoji1";
+            this.emoji1.Size = new System.Drawing.Size(469, 215);
+            this.emoji1.TabIndex = 1;
+            this.emoji1.Visible = false;
+            // 
             // chat1
             // 
             this.chat1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -362,23 +379,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 607);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(667, 8);
-            this.panel3.TabIndex = 2;
-            // 
-            // emoji1
-            // 
-            this.emoji1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emoji1.Location = new System.Drawing.Point(195, 301);
-            this.emoji1.Name = "emoji1";
-            this.emoji1.Size = new System.Drawing.Size(469, 215);
-            this.emoji1.TabIndex = 1;
-            this.emoji1.Visible = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,8 +391,7 @@
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-        
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+           this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

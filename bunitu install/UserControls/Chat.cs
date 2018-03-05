@@ -109,7 +109,7 @@ namespace Askhole
             panel2.Controls.Add(msg);
            // Message_Old = msg;
         }
-        static bool emoji = true;
+        static public bool emoji = true;
         private void Emoji_Click(object sender, EventArgs e)
         {
             if (emoji)

@@ -185,6 +185,7 @@
             this.bunifuImageButton36.TabIndex = 35;
             this.bunifuImageButton36.TabStop = false;
             this.bunifuImageButton36.Zoom = 20;
+            this.bunifuImageButton36.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton35
             // 
@@ -198,6 +199,7 @@
             this.bunifuImageButton35.TabIndex = 34;
             this.bunifuImageButton35.TabStop = false;
             this.bunifuImageButton35.Zoom = 10;
+            this.bunifuImageButton35.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton34
             // 
@@ -211,6 +213,7 @@
             this.bunifuImageButton34.TabIndex = 33;
             this.bunifuImageButton34.TabStop = false;
             this.bunifuImageButton34.Zoom = 10;
+            this.bunifuImageButton34.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton33
             // 
@@ -224,6 +227,7 @@
             this.bunifuImageButton33.TabIndex = 32;
             this.bunifuImageButton33.TabStop = false;
             this.bunifuImageButton33.Zoom = 10;
+            this.bunifuImageButton33.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton32
             // 
@@ -237,6 +241,7 @@
             this.bunifuImageButton32.TabIndex = 31;
             this.bunifuImageButton32.TabStop = false;
             this.bunifuImageButton32.Zoom = 20;
+            this.bunifuImageButton32.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton31
             // 
@@ -250,6 +255,7 @@
             this.bunifuImageButton31.TabIndex = 30;
             this.bunifuImageButton31.TabStop = false;
             this.bunifuImageButton31.Zoom = 20;
+            this.bunifuImageButton31.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton30
             // 
@@ -263,6 +269,7 @@
             this.bunifuImageButton30.TabIndex = 29;
             this.bunifuImageButton30.TabStop = false;
             this.bunifuImageButton30.Zoom = 20;
+            this.bunifuImageButton30.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton29
             // 
@@ -276,6 +283,7 @@
             this.bunifuImageButton29.TabIndex = 28;
             this.bunifuImageButton29.TabStop = false;
             this.bunifuImageButton29.Zoom = 20;
+            this.bunifuImageButton29.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton28
             // 
@@ -289,6 +297,7 @@
             this.bunifuImageButton28.TabIndex = 27;
             this.bunifuImageButton28.TabStop = false;
             this.bunifuImageButton28.Zoom = 20;
+            this.bunifuImageButton28.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton27
             // 
@@ -302,6 +311,7 @@
             this.bunifuImageButton27.TabIndex = 26;
             this.bunifuImageButton27.TabStop = false;
             this.bunifuImageButton27.Zoom = 20;
+            this.bunifuImageButton27.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton26
             // 
@@ -315,6 +325,7 @@
             this.bunifuImageButton26.TabIndex = 25;
             this.bunifuImageButton26.TabStop = false;
             this.bunifuImageButton26.Zoom = 20;
+            this.bunifuImageButton26.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton25
             // 
@@ -328,6 +339,7 @@
             this.bunifuImageButton25.TabIndex = 24;
             this.bunifuImageButton25.TabStop = false;
             this.bunifuImageButton25.Zoom = 20;
+            this.bunifuImageButton25.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton24
             // 
@@ -341,6 +353,7 @@
             this.bunifuImageButton24.TabIndex = 23;
             this.bunifuImageButton24.TabStop = false;
             this.bunifuImageButton24.Zoom = 20;
+            this.bunifuImageButton24.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton23
             // 
@@ -354,6 +367,7 @@
             this.bunifuImageButton23.TabIndex = 22;
             this.bunifuImageButton23.TabStop = false;
             this.bunifuImageButton23.Zoom = 20;
+            this.bunifuImageButton23.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton22
             // 
@@ -367,6 +381,7 @@
             this.bunifuImageButton22.TabIndex = 21;
             this.bunifuImageButton22.TabStop = false;
             this.bunifuImageButton22.Zoom = 20;
+            this.bunifuImageButton22.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton21
             // 
@@ -380,6 +395,7 @@
             this.bunifuImageButton21.TabIndex = 20;
             this.bunifuImageButton21.TabStop = false;
             this.bunifuImageButton21.Zoom = 20;
+            this.bunifuImageButton21.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton20
             // 
@@ -393,6 +409,7 @@
             this.bunifuImageButton20.TabIndex = 19;
             this.bunifuImageButton20.TabStop = false;
             this.bunifuImageButton20.Zoom = 20;
+            this.bunifuImageButton20.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton19
             // 
@@ -406,6 +423,7 @@
             this.bunifuImageButton19.TabIndex = 18;
             this.bunifuImageButton19.TabStop = false;
             this.bunifuImageButton19.Zoom = 20;
+            this.bunifuImageButton19.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton18
             // 
@@ -419,6 +437,7 @@
             this.bunifuImageButton18.TabIndex = 17;
             this.bunifuImageButton18.TabStop = false;
             this.bunifuImageButton18.Zoom = 20;
+            this.bunifuImageButton18.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton17
             // 
@@ -432,6 +451,7 @@
             this.bunifuImageButton17.TabIndex = 16;
             this.bunifuImageButton17.TabStop = false;
             this.bunifuImageButton17.Zoom = 20;
+            this.bunifuImageButton17.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton16
             // 
@@ -445,6 +465,7 @@
             this.bunifuImageButton16.TabIndex = 15;
             this.bunifuImageButton16.TabStop = false;
             this.bunifuImageButton16.Zoom = 20;
+            this.bunifuImageButton16.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton15
             // 
@@ -458,6 +479,7 @@
             this.bunifuImageButton15.TabIndex = 14;
             this.bunifuImageButton15.TabStop = false;
             this.bunifuImageButton15.Zoom = 20;
+            this.bunifuImageButton15.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton14
             // 
@@ -471,6 +493,7 @@
             this.bunifuImageButton14.TabIndex = 13;
             this.bunifuImageButton14.TabStop = false;
             this.bunifuImageButton14.Zoom = 20;
+            this.bunifuImageButton14.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton13
             // 
@@ -484,6 +507,7 @@
             this.bunifuImageButton13.TabIndex = 12;
             this.bunifuImageButton13.TabStop = false;
             this.bunifuImageButton13.Zoom = 20;
+            this.bunifuImageButton13.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton12
             // 
@@ -497,6 +521,7 @@
             this.bunifuImageButton12.TabIndex = 11;
             this.bunifuImageButton12.TabStop = false;
             this.bunifuImageButton12.Zoom = 20;
+            this.bunifuImageButton12.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton11
             // 
@@ -510,6 +535,7 @@
             this.bunifuImageButton11.TabIndex = 10;
             this.bunifuImageButton11.TabStop = false;
             this.bunifuImageButton11.Zoom = 20;
+            this.bunifuImageButton11.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton10
             // 
@@ -523,6 +549,7 @@
             this.bunifuImageButton10.TabIndex = 9;
             this.bunifuImageButton10.TabStop = false;
             this.bunifuImageButton10.Zoom = 20;
+            this.bunifuImageButton10.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton9
             // 
@@ -536,6 +563,7 @@
             this.bunifuImageButton9.TabIndex = 8;
             this.bunifuImageButton9.TabStop = false;
             this.bunifuImageButton9.Zoom = 20;
+            this.bunifuImageButton9.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton8
             // 
@@ -549,6 +577,7 @@
             this.bunifuImageButton8.TabIndex = 7;
             this.bunifuImageButton8.TabStop = false;
             this.bunifuImageButton8.Zoom = 20;
+            this.bunifuImageButton8.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton7
             // 
@@ -562,6 +591,7 @@
             this.bunifuImageButton7.TabIndex = 6;
             this.bunifuImageButton7.TabStop = false;
             this.bunifuImageButton7.Zoom = 20;
+            this.bunifuImageButton7.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton6
             // 
@@ -575,6 +605,7 @@
             this.bunifuImageButton6.TabIndex = 5;
             this.bunifuImageButton6.TabStop = false;
             this.bunifuImageButton6.Zoom = 20;
+            this.bunifuImageButton6.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton5
             // 
@@ -588,6 +619,7 @@
             this.bunifuImageButton5.TabIndex = 4;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 20;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton4
             // 
@@ -601,6 +633,7 @@
             this.bunifuImageButton4.TabIndex = 3;
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 20;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton3
             // 
@@ -614,6 +647,7 @@
             this.bunifuImageButton3.TabIndex = 2;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 20;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton2
             // 
@@ -627,6 +661,7 @@
             this.bunifuImageButton2.TabIndex = 1;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 20;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // bunifuImageButton1
             // 
@@ -640,6 +675,7 @@
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 20;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.Emoji_Click);
             // 
             // Emoji
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.Framework.UI;
 
 namespace Askhole.UserControls
 {
@@ -16,12 +17,17 @@ namespace Askhole.UserControls
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// натиснення на смайлик
+        /// </summary>
         private void Emoji_Click(object sender, EventArgs e)
         {
-
+            Chat.emoji = true; // закриваємо вікно
+            Globals.mainForm.emoji1.Visible = false;
+            var but = sender as BunifuImageButton; //отримуємо зображення з клавіші
+            Image bmp = but.Image;
+            // Chat.AddToRichTextBox (bmp);
         }
 
-       
     }
 }
