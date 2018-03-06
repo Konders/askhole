@@ -38,9 +38,8 @@
             this.userProfileEdit1.BackColor = System.Drawing.Color.White;
             this.userProfileEdit1.Dock = System.Windows.Forms.DockStyle.Top;
             this.userProfileEdit1.Location = new System.Drawing.Point(0, 0);
-            this.userProfileEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.userProfileEdit1.Name = "userProfileEdit1";
-            this.userProfileEdit1.Size = new System.Drawing.Size(330, 161);
+            this.userProfileEdit1.Size = new System.Drawing.Size(248, 131);
             this.userProfileEdit1.TabIndex = 9;
             // 
             // LogOut
@@ -48,11 +47,13 @@
             this.LogOut.AutoSize = true;
             this.LogOut.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LogOut.Location = new System.Drawing.Point(126, 212);
+            this.LogOut.Location = new System.Drawing.Point(94, 172);
+            this.LogOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(73, 21);
+            this.LogOut.Size = new System.Drawing.Size(58, 17);
             this.LogOut.TabIndex = 10;
             this.LogOut.Text = "Log out";
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             this.LogOut.MouseLeave += new System.EventHandler(this.LogOut_MouseLeave);
             this.LogOut.MouseHover += new System.EventHandler(this.LogOut_MouseHover);
             // 
@@ -61,9 +62,10 @@
             this.DeleteProfile.AutoSize = true;
             this.DeleteProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.DeleteProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DeleteProfile.Location = new System.Drawing.Point(84, 176);
+            this.DeleteProfile.Location = new System.Drawing.Point(63, 143);
+            this.DeleteProfile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DeleteProfile.Name = "DeleteProfile";
-            this.DeleteProfile.Size = new System.Drawing.Size(160, 21);
+            this.DeleteProfile.Size = new System.Drawing.Size(125, 17);
             this.DeleteProfile.TabIndex = 10;
             this.DeleteProfile.Text = "Delete your profile";
             this.DeleteProfile.Click += new System.EventHandler(this.DeleteProfile_Click);
@@ -72,14 +74,15 @@
             // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.DeleteProfile);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.userProfileEdit1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Settings";
-            this.Size = new System.Drawing.Size(330, 260);
+            this.Size = new System.Drawing.Size(248, 211);
             this.ResumeLayout(false);
             this.PerformLayout();
 

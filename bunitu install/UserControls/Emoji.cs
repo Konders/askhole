@@ -28,6 +28,7 @@ namespace Askhole.UserControls
             Image bmp = but.Image;
             Clipboard.SetImage(bmp);
             Globals.mainForm.chat1.Message.Paste();
+            Globals.mainForm.chat1.Message.Rtf = AskholeLib.Lib.ChangeRTFsize(Globals.mainForm.chat1.Message.Rtf, 30, 30);//NOT WORKING 
         }
 
     }
