@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Database;
 
 namespace Askhole.UserControls
 {
@@ -40,9 +41,14 @@ namespace Askhole.UserControls
 
         private void DeleteProfile_Click(object sender, EventArgs e)
         {
-
+            DB.DeleteProfile();
+            Application.Restart();
         }
 
-
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            DB.LogOut();
+            Application.Restart();
+        }
     }
 }

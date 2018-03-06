@@ -9,7 +9,7 @@ namespace Database
     {
         static public SqlConnection cn;
         static public SqlCommand cmd;
-        static public Lib.User user = new Lib.User { username = "user" };
+        static public Lib.User user = new Lib.User { username = "test", email =  "test@gmail.com"};
         static public Lib.User reciever = new Lib.User { username = "Ivan" };
 
         public DB()
@@ -17,7 +17,7 @@ namespace Database
             if (Environment.UserName == "olyal")
                 cn = new SqlConnection($"Data Source={Environment.MachineName};Initial Catalog=Chat;Integrated Security=True");
             else
-                cn = new SqlConnection($"Data Source={Environment.MachineName + @"SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
+                cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
 
             cmd = new SqlCommand { Connection = cn };
         }
@@ -79,7 +79,16 @@ namespace Database
             user.photo = null;
             user.birthDate = BirthDatePicker(id);
         }
-
+        static public void DeleteProfile()
+        {
+            StringBuilder query = new StringBuilder("exec DeleteProfile  '" + user.email);
+            DBWork(query.ToString());
+        }
+        static public void LogOut()
+        {
+            StringBuilder query = new StringBuilder("exec LogOut  '" + user.email );
+            DBWork(query.ToString());
+        }
         /// <summary>
         /// Вхід в систему
         /// </summary>

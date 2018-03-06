@@ -189,5 +189,14 @@ namespace AskholeLib
             }
             return true;
         }
+        static public string ChangeRTFsize(string rtf,int w, int h)
+        {
+            if (rtf.IndexOf("picw") < 0 && rtf.IndexOf(@"\pich") < 0) return rtf;
+            string rtfwidth = rtf.Substring(rtf.IndexOf("picw"), rtf.IndexOf(@"\pich") - rtf.IndexOf("picw"));
+            rtf = rtf.Replace(rtfwidth, String.Format($"picw{w}"));
+            string rtfheight = rtf.Substring(rtf.IndexOf("pich"), rtf.IndexOf(@"\picwgoal") - rtf.IndexOf(@"\pich"));
+            rtf = rtf.Replace(rtfheight, String.Format($"pich{h}\\"));
+            return rtf;
+        }
     }
 }
