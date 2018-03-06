@@ -126,7 +126,7 @@ return @id
 end
 
 // приклад
-select dbo.ID('email'	)
+select dbo.ID('email')
 
 
 -- temp one
@@ -149,6 +149,16 @@ declare
 @name varchar(50)
 select @name = name from Users where Email = @email
 raiserror (@name, 16 ,5)  
+end
+
+// function
+create function ReturnName (@email varchar(50)) returns varchar(50)
+as
+begin
+declare 
+@name varchar(50)
+select @name = name from Users where Email = @email
+return @name
 end
 
 
@@ -180,3 +190,19 @@ as
 begin
 update Users  set Name = @name where id = @id
 end
+
+// дата народження
+alter function ReturnBirthDay (@id int) returns datetime
+as
+begin
+declare 
+@date datetime
+select @date = Birth_date from Users where id = @id
+if @date <> Null 
+return @date
+else 
+set  @date = GETDATE()
+return @date
+end
+
+select dbo.ReturnBirthDay(9)

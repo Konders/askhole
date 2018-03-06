@@ -67,16 +67,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddNewContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddNewContact.Designer.cs">
+      <DependentUpon>AddNewContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResetPassword.cs">
+    <Compile Include="Forms\ResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResetPassword.Designer.cs">
+    <Compile Include="Forms\ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Chat.cs">
@@ -147,10 +153,13 @@
     <Compile Include="UserControls\UserProfileInformation.Designer.cs">
       <DependentUpon>UserProfileInformation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddNewContact.resx">
+      <DependentUpon>AddNewContact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResetPassword.resx">
+    <EmbeddedResource Include="Forms\ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Chat.resx">

@@ -1,4 +1,5 @@
-﻿using Database;
+﻿using Askhole.Forms;
+using Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -27,7 +28,7 @@ namespace Askhole
             DB db = new DB();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          //  Application.Run(new Sign_in());
+         //  Application.Run(new AddNewContact());
            Run();
         }
         public static void Run()

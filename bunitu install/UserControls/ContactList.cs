@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AskholeLib;
+using Askhole.Forms;
+
 namespace Askhole
 {
     public partial class ContactList : UserControl
@@ -87,8 +89,10 @@ namespace Askhole
 
         private void AddContactButton_Click(object sender, EventArgs e)
         {
-            AddContact(0, "Illya");
-            AddContact(1, "Olya");
+           // AddContact(0, "Illya");
+           // AddContact(1, "Olya");
+            AddNewContact addC = new AddNewContact();
+            addC.Show();
         }
     }
 }
