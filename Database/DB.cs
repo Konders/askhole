@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using System.Text;
 using AskholeLib;
+using System.IO;
+using System.Collections.Generic;
 
 namespace Database
 {
@@ -61,6 +63,40 @@ namespace Database
                     returns = reader[0];
                 cn.Close();
                 return returns;
+            }
+            catch (SqlException ex)
+            {
+                cn.Close();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// інформація по користувачах
+        /// </summary>
+        /// <param name="query">запит</param>
+        /// <returns></returns>
+        static private List<Lib.User> UsersInfo (string query)
+        {
+            List<Lib.User> list = new List<Lib.User>();
+            try
+            {
+                object returns = null;
+                cn.Open();
+                cmd.CommandText = Convert.ToString(query);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Lib.User temp = new Lib.User();
+                    temp.id = Convert.ToInt32(reader[0]);
+                    temp.username = reader[1].ToString();
+                    temp.photo = null;//reader[4];
+                    temp.birthDate = Convert.ToDateTime(reader[5]);
+                    temp.online = Convert.ToBoolean(reader[6]);
+                }
+                    returns = reader[0];
+                cn.Close();
+                return list;
             }
             catch (SqlException ex)
             {
@@ -176,17 +212,49 @@ namespace Database
             DBWork(query.ToString());
         }
 
+        /// <summary>
+        /// Зміна імені
+        /// </summary>
+        /// <param name="name">нове ім'я</param>
         static public void ChangeName(string name)
         {
             StringBuilder query = new StringBuilder("exec ChangeName " + user.id + ",'" + name + "'");
             DBWork(query.ToString());
         }
 
+        /// <summary>
+        /// зміна паролю
+        /// </summary>
+        /// <param name="username">користувач</param>
+        /// <param name="email">емейл</param>
+        /// <param name="newPassword">новий пароль</param>
         static public bool ResetPassword(string username, string email, string newPassword)
         {
             StringBuilder query = new StringBuilder("exec ToResetPassword '" + username + "', '" +
                                                        email + "', '" + newPassword + "'");
             return DBWork(query.ToString());
+        }
+
+        /// <summary>
+        /// пошук по імені
+        /// </summary>
+        /// <param name="name">ім'я</param>
+        static public List<Lib.User>  SearchByName(string name)
+        {
+            StringBuilder query = new StringBuilder("exec SearchByName  '" + name + "'");
+            if (query.Length > 0) return UsersInfo(query.ToString());
+            else return null;
+        }
+
+        /// <summary>
+        /// пошук по емейлі
+        /// </summary>
+        /// <param name="email">емейл</param>
+        static public List<Lib.User> SearchByEmail(string email)
+        {
+            StringBuilder query = new StringBuilder("exec SearchByEmail  '" + email + "'");
+            if (query.Length > 0) return UsersInfo(query.ToString());
+            else return null;
         }
     }
 }

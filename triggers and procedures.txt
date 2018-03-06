@@ -206,3 +206,24 @@ return @date
 end
 
 select dbo.ReturnBirthDay(9)
+
+
+
+
+// Пошук по імені по всій бд
+alter procedure SearchByName 
+@name varchar(50)
+as
+begin
+select * from Users where Name like @name+'%'
+end
+
+exec SearchByName ' '
+
+// пошук по емейлу
+create procedure SearchByEmail
+@email varchar(50)
+as
+begin
+select * from Users where Email like @email+'%'
+end

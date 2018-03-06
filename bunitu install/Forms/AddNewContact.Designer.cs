@@ -37,9 +37,9 @@
             this.Add = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.ForSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.userButton1 = new Askhole.UserControls.UserButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -127,33 +127,16 @@
             this.ForSearch.LineIdleColor = System.Drawing.Color.Gray;
             this.ForSearch.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.ForSearch.LineThickness = 3;
-            this.ForSearch.Location = new System.Drawing.Point(55, 5);
+            this.ForSearch.Location = new System.Drawing.Point(58, 5);
             this.ForSearch.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ForSearch.Name = "ForSearch";
-            this.ForSearch.Size = new System.Drawing.Size(235, 45);
+            this.ForSearch.Size = new System.Drawing.Size(253, 45);
             this.ForSearch.TabIndex = 9;
             this.ForSearch.Text = "User\'s name or email";
             this.ForSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ForSearch.OnValueChanged += new System.EventHandler(this.ForSearch_OnValueChanged);
             this.ForSearch.Enter += new System.EventHandler(this.ForSearch_Enter);
             this.ForSearch.Leave += new System.EventHandler(this.ForSearch_Leave);
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(340, 30);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(21, 378);
-            this.vScrollBar1.TabIndex = 3;
-            // 
-            // userButton1
-            // 
-            this.userButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.userButton1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userButton1.Location = new System.Drawing.Point(0, 89);
-            this.userButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.userButton1.Name = "userButton1";
-            this.userButton1.Size = new System.Drawing.Size(336, 81);
-            this.userButton1.TabIndex = 4;
             // 
             // tableLayoutPanel1
             // 
@@ -167,8 +150,26 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(340, 55);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(361, 55);
             this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.vScrollBar1.Location = new System.Drawing.Point(340, 85);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(21, 323);
+            this.vScrollBar1.TabIndex = 11;
+            // 
+            // userButton1
+            // 
+            this.userButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.userButton1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userButton1.Location = new System.Drawing.Point(0, 85);
+            this.userButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.userButton1.Name = "userButton1";
+            this.userButton1.Size = new System.Drawing.Size(336, 84);
+            this.userButton1.TabIndex = 4;
             // 
             // AddNewContact
             // 
@@ -176,9 +177,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(361, 408);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.userButton1);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddNewContact";
@@ -201,9 +202,9 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label Add;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox ForSearch;
-        private UserControls.UserButton userButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private UserControls.UserButton userButton1;
     }
 }
