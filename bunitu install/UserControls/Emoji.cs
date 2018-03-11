@@ -25,8 +25,9 @@ namespace Askhole.UserControls
             Chat.emoji = true; // закриваємо вікно
             Globals.mainForm.emoji1.Visible = false;
             var but = sender as BunifuImageButton; //отримуємо зображення з клавіші
-            Image bmp = but.Image;
-            Clipboard.SetImage(bmp);
+            StringBuilder sb  =new StringBuilder(but.Name, 1, but.Name.Length-1, but.Name.Length);
+            int key = Convert.ToInt32(sb.ToString());
+            Clipboard.SetImage(imageList1.Images[key]);
             Globals.mainForm.chat1.Message.Paste();
             Globals.mainForm.chat1.Message.Rtf = AskholeLib.Lib.ChangeRTFsize(Globals.mainForm.chat1.Message.Rtf, 30, 30);//NOT WORKING 
         }

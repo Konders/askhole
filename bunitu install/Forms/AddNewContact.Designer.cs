@@ -130,7 +130,7 @@
             this.ForSearch.Location = new System.Drawing.Point(58, 5);
             this.ForSearch.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ForSearch.Name = "ForSearch";
-            this.ForSearch.Size = new System.Drawing.Size(253, 45);
+            this.ForSearch.Size = new System.Drawing.Size(252, 45);
             this.ForSearch.TabIndex = 9;
             this.ForSearch.Text = "User\'s name or email";
             this.ForSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -143,7 +143,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.55405F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.44595F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel1.Controls.Add(this.ForSearch, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 30);
@@ -165,7 +165,7 @@
             // 
             this.userButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.userButton1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userButton1.Location = new System.Drawing.Point(0, 85);
+            this.userButton1.Location = new System.Drawing.Point(0, 89);
             this.userButton1.Margin = new System.Windows.Forms.Padding(4);
             this.userButton1.Name = "userButton1";
             this.userButton1.Size = new System.Drawing.Size(336, 84);
