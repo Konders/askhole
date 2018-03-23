@@ -7,10 +7,13 @@ namespace Askhole
     public partial class MainForm : Form
     {       
         static private bool settings = true;
+        ContactList cl;
         public MainForm()
         {
             InitializeComponent();
             this.Activate();
+            var list = this.Controls[1].Controls[1];
+            cl = list as ContactList;
             Hamburger.Select();
             Name.Text = DB.user.username;
                  //     this.Enabled = false;
@@ -62,12 +65,17 @@ namespace Askhole
         private void Search_Enter(object sender, EventArgs e)
         {
             if (Search.Text == "Search") // перевірка чи поле поміняло назву
+            {
                 Search.Text = "";
+                closeSearch.Visible = true;
+            }
         }
 
         private void Search_Leave(object sender, EventArgs e)
         {
-            if (Search.Text.Length == 0) Search.Text = "Search";
+            if (Search.Text.Length == 0) { Search.Text = "Search";
+                closeSearch.Visible = false;
+            }
         }
 
         /// <summary>
@@ -96,6 +104,27 @@ namespace Askhole
         private void Hamburger_Click(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void Search_OnValueChanged(object sender, EventArgs e)
+        {
+
+            if (Search.Text.Length > 0)
+            {
+                cl.ContactsSearch.Clear();
+                foreach (var el in cl.Contacts.Values)
+                {
+                    if (el.username.ToLower().Contains(Search.Text.ToLower()) )
+                        cl.AddContactSearch(el.id, el.username);
+                }
+                cl.AddButtons(cl.ContactsSearch);
+            }
+
+        }
+
+        private void closeSearch_Click(object sender, EventArgs e)
+        {
+            cl.RefreshButtons(cl.Buttons);
         }
     }
 }

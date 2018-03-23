@@ -81,8 +81,7 @@
             this.AddContactButton.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddContactButton.TextFont = new System.Drawing.Font("Century Gothic", 10F);
             this.AddContactButton.Visible = false;
-            this.AddContactButton.Click += new System.EventHandler(this.AddContactButton_Click);
-            // 
+           // 
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;

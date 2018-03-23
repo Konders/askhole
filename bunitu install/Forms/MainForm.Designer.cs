@@ -46,6 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuSearch = new System.Windows.Forms.Panel();
             this.Hamburger = new Bunifu.Framework.UI.BunifuImageButton();
+            this.closeSearch = new Bunifu.Framework.UI.BunifuImageButton();
             this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
             this.settings1 = new Askhole.UserControls.Settings();
@@ -67,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeSearch)).BeginInit();
             this.UserList.SuspendLayout();
             this.Chat.SuspendLayout();
             this.SuspendLayout();
@@ -244,6 +246,7 @@
             // 
             this.MenuSearch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.MenuSearch.Controls.Add(this.Hamburger);
+            this.MenuSearch.Controls.Add(this.closeSearch);
             this.MenuSearch.Controls.Add(this.Search);
             this.MenuSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuSearch.Location = new System.Drawing.Point(0, 0);
@@ -267,6 +270,22 @@
             this.Hamburger.Zoom = 10;
             this.Hamburger.Click += new System.EventHandler(this.Hamburger_Click);
             // 
+            // closeSearch
+            // 
+            this.closeSearch.BackColor = System.Drawing.Color.Transparent;
+            this.closeSearch.Image = ((System.Drawing.Image)(resources.GetObject("closeSearch.Image")));
+            this.closeSearch.ImageActive = null;
+            this.closeSearch.Location = new System.Drawing.Point(294, 2);
+            this.closeSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeSearch.Name = "closeSearch";
+            this.closeSearch.Size = new System.Drawing.Size(42, 45);
+            this.closeSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeSearch.TabIndex = 1;
+            this.closeSearch.TabStop = false;
+            this.closeSearch.Visible = false;
+            this.closeSearch.Zoom = 20;
+            this.closeSearch.Click += new System.EventHandler(this.closeSearch_Click);
+            // 
             // Search
             // 
             this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -281,13 +300,14 @@
             this.Search.LineIdleColor = System.Drawing.Color.Gray;
             this.Search.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Search.LineThickness = 4;
-            this.Search.Location = new System.Drawing.Point(75, 5);
+            this.Search.Location = new System.Drawing.Point(75, 6);
             this.Search.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(255, 46);
             this.Search.TabIndex = 0;
             this.Search.Text = "Search";
             this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Search.OnValueChanged += new System.EventHandler(this.Search_OnValueChanged);
             this.Search.Enter += new System.EventHandler(this.Search_Enter);
             this.Search.Leave += new System.EventHandler(this.Search_Leave);
             // 
@@ -307,7 +327,8 @@
             // settings1
             // 
             this.settings1.BackColor = System.Drawing.Color.White;
-            this.settings1.Location = new System.Drawing.Point(0, 0);
+            this.settings1.Location = new System.Drawing.Point(0, 3);
+            this.settings1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.settings1.Name = "settings1";
             this.settings1.Size = new System.Drawing.Size(337, 337);
             this.settings1.TabIndex = 1;
@@ -391,7 +412,8 @@
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-           this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+       //     this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -405,6 +427,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Hamburger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeSearch)).EndInit();
             this.UserList.ResumeLayout(false);
             this.Chat.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -439,5 +462,6 @@
         private UserControls.Settings settings1;
         private System.Windows.Forms.Panel panel3;
         public UserControls.Emoji emoji1;
+        private Bunifu.Framework.UI.BunifuImageButton closeSearch;
     }
 }
