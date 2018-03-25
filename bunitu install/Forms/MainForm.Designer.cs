@@ -275,7 +275,7 @@
             this.closeSearch.BackColor = System.Drawing.Color.Transparent;
             this.closeSearch.Image = ((System.Drawing.Image)(resources.GetObject("closeSearch.Image")));
             this.closeSearch.ImageActive = null;
-            this.closeSearch.Location = new System.Drawing.Point(294, 2);
+            this.closeSearch.Location = new System.Drawing.Point(294, -2);
             this.closeSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closeSearch.Name = "closeSearch";
             this.closeSearch.Size = new System.Drawing.Size(42, 45);
@@ -283,7 +283,7 @@
             this.closeSearch.TabIndex = 1;
             this.closeSearch.TabStop = false;
             this.closeSearch.Visible = false;
-            this.closeSearch.Zoom = 20;
+            this.closeSearch.Zoom = 10;
             this.closeSearch.Click += new System.EventHandler(this.closeSearch_Click);
             // 
             // Search
@@ -412,7 +412,7 @@
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-       //     this.Name = "MainForm";
+         
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);

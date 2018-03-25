@@ -11,7 +11,7 @@ namespace Askhole
     {
         public Dictionary<int, Lib.User> Contacts = new Dictionary<int, Lib.User>();
         public Dictionary<int, Lib.User> ContactsSearch = new Dictionary<int, Lib.User>();
-        public  Dictionary<int, Askhole.UserControls.UserButton> Buttons = new Dictionary<int, Askhole.UserControls.UserButton>();
+        public Dictionary<int, Askhole.UserControls.UserButton> Buttons = new Dictionary<int, Askhole.UserControls.UserButton>();
         public Dictionary<int, Askhole.UserControls.UserButton> SearchBut = new Dictionary<int, Askhole.UserControls.UserButton>();
 
         public void RefreshButtons(Dictionary<int, Askhole.UserControls.UserButton> Buttons)
@@ -20,9 +20,9 @@ namespace Askhole
                 return;
             List_Panel.Controls.Clear();
             int idk = Buttons.Count * Buttons[0].Height - Buttons[0].Height;
-            for(int i = 0;i<Buttons.Count;i++)
+            for (int i = 0; i < Buttons.Count; i++)
             {
-                Buttons[i].Location = new Point(Buttons[i].Location.X,idk);
+                Buttons[i].Location = new Point(Buttons[i].Location.X, idk);
                 idk -= Buttons[0].Height;
                 List_Panel.Controls.Add(Buttons[i]);
             }
@@ -43,7 +43,7 @@ namespace Askhole
             AddContact(3, "Tom");
             AddContact(4, "Tim");
             AddContact(5, "Emma");
-           
+
         }
 
         private void FirstButton()
@@ -56,7 +56,7 @@ namespace Askhole
             Buttons[0].UserName.Text = AddContactButton.Text;
             List_Panel.Controls.Add(Buttons[0]);
         }
-        public void AddContact(int id, string name,  byte[] img)
+        public void AddContact(int id, string name, byte[] img)
         {
             //select * from users where id = @id
             Contacts.Add(Contacts.Count, new Lib.User(id, name, null, AskholeLib.Lib.ByteArrayToImage(img)));
@@ -69,10 +69,10 @@ namespace Askhole
             //AddContactButton.Top += Buttons[0].Height;
 
         }
-        public void AddContact(int id, string name,  Bitmap img)
+        public void AddContact(int id, string name, Bitmap img)
         {
             //select * from users where id = @id
-            Contacts.Add(Contacts.Count, new Lib.User(id, name, null,  img));
+            Contacts.Add(Contacts.Count, new Lib.User(id, name, null, img));
             Buttons.Add(Contacts.Count, new Askhole.UserControls.UserButton(Contacts[Contacts.Count - 1]));
             Buttons[Contacts.Count - 1].Location = AddContactButton.Location;
             Buttons[Contacts.Count - 1].Size = AddContactButton.Size;
@@ -82,11 +82,11 @@ namespace Askhole
             //AddContactButton.Top += Buttons[0].Height;
 
         }
-        public void AddContact(int id,string name)
+        public void AddContact(int id, string name)
         {
             //select * from users where id = @id
             Contacts.Add(Contacts.Count, new Lib.User(id, name, null));
-           Buttons.Add(Contacts.Count , new Askhole.UserControls.UserButton(Contacts[Contacts.Count-1]));
+            Buttons.Add(Contacts.Count, new Askhole.UserControls.UserButton(Contacts[Contacts.Count - 1]));
             Buttons[Contacts.Count - 1].Location = AddContactButton.Location;
             Buttons[Contacts.Count - 1].Size = AddContactButton.Size;
             Buttons[Contacts.Count - 1].Anchor = AddContactButton.Anchor;
@@ -95,25 +95,33 @@ namespace Askhole
             //List_Panel.Controls.Add(Buttons[Contacts.Count - 1]);
             //AddContactButton.Top += Buttons[0].Height;
         }
-
+        // знайдені контакти що відповідають запиту користувача
         public void AddContactSearch(int id, string name)
         {
-            //select * from users where id = @id
             ContactsSearch.Add(ContactsSearch.Count, new Lib.User(id, name, null));
-           }
+        }
+        // дані з бази даних що відкповідають запиту користувача
+        public void AddContactSearch(List<Lib.User> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+                ContactsSearch.Add(ContactsSearch.Count, list[i]);
+        }
 
+        // формування кнопок що відображаються
         public void AddButtons(Dictionary<int, Lib.User> Contacts)
         {
             Buttons.Clear();
             FirstButton();
-            for (int i = 1; i <= Contacts.Count; i++) {
+            for (int i = 1; i <= Contacts.Count; i++)
+            {
                 Buttons.Add(i, new Askhole.UserControls.UserButton(Contacts[i - 1]));
                 Buttons[i].Location = AddContactButton.Location;
                 Buttons[i].Size = AddContactButton.Size;
                 Buttons[i].Anchor = AddContactButton.Anchor;
                 RefreshButtons(Buttons);
             }
-        }
+            if (Contacts.Count == 0) RefreshButtons(Buttons);
 
+        }
     }
 }

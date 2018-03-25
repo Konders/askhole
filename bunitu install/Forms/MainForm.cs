@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using AskholeLib;
 using Database;
@@ -62,6 +63,7 @@ namespace Askhole
             }
         }
 
+        //При поставлені курсору іде підготовка для користувача поля
         private void Search_Enter(object sender, EventArgs e)
         {
             if (Search.Text == "Search") // перевірка чи поле поміняло назву
@@ -70,7 +72,9 @@ namespace Askhole
                 closeSearch.Visible = true;
             }
         }
-
+        /// <summary>
+        /// Повернення початкового значення для поля пошуку
+        /// </summary>
         private void Search_Leave(object sender, EventArgs e)
         {
             if (Search.Text.Length == 0) { Search.Text = "Search";
@@ -106,25 +110,39 @@ namespace Askhole
 
         }
 
+        /// <summary>
+        /// Пошук по списку контактах та пошук нових контактів
+        /// </summary>
         private void Search_OnValueChanged(object sender, EventArgs e)
         {
 
             if (Search.Text.Length > 0)
             {
-                cl.ContactsSearch.Clear();
+                cl.ContactsSearch.Clear(); // очищення знайдених контактів
                 foreach (var el in cl.Contacts.Values)
                 {
-                    if (el.username.ToLower().Contains(Search.Text.ToLower()) )
-                        cl.AddContactSearch(el.id, el.username);
+                    if (el.username.ToLower().Contains(Search.Text.ToLower())) // якщо є співпадіння
+                        cl.AddContactSearch(el.id, el.username); // додаємо новий контакт
                 }
+                List<Lib.User> list = DB.SearchNewContact(Search.Text);
+                if (list.Count > 0) cl.AddContactSearch(list);
                 cl.AddButtons(cl.ContactsSearch);
+            }
+            else // якщо поле пусте показуємо наявні контакти
+            { 
+                cl.AddButtons(cl.Contacts);
             }
 
         }
 
+        // закриваємо вікно пошуку
         private void closeSearch_Click(object sender, EventArgs e)
         {
-            cl.RefreshButtons(cl.Buttons);
+            cl.AddButtons(cl.Contacts); // вертаємо початкові контакти
+            Search.Text = ""; // вертаємо початкові значення
+            closeSearch.Visible = false;
+            Search.Text = "Search";
+            Hamburger.Select(); // змінюємо фокус
         }
     }
 }

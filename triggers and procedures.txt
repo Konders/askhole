@@ -227,3 +227,14 @@ as
 begin
 select * from Users where Email like @email+'%'
 end
+
+//пошук нових користувачів
+
+create procedure SearchNewContact
+@name varchar(50)
+as
+begin
+select * from Users where name like '%'+@name+'%'
+end
+
+ exec SearchNewContact 'om'

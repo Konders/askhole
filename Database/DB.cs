@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Text;
 using AskholeLib;
 using System.IO;
+using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
 namespace Database
@@ -253,6 +254,19 @@ namespace Database
         static public List<Lib.User> SearchByEmail(string email)
         {
             StringBuilder query = new StringBuilder("exec SearchByEmail  '" + email + "'");
+            if (query.Length > 0) return UsersInfo(query.ToString());
+            else return null;
+        }
+
+        static public List<Lib.User> SearchNewContact(string findString)
+        {
+            bool emailAdress = false;
+            StringBuilder query;
+            if (new EmailAddressAttribute().IsValid(findString))
+                emailAdress = true;
+            if (emailAdress) query = new StringBuilder("exec SearchByEmail  '" + findString + "'");
+            else query = new StringBuilder("exec SearchNewContact '" + findString + "'");
+            
             if (query.Length > 0) return UsersInfo(query.ToString());
             else return null;
         }
