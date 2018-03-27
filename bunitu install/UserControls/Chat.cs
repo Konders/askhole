@@ -22,9 +22,41 @@ namespace Askhole
             InitializeComponent();
             messageBox1.Hide();
             pictureMessage1.Hide();
-            Message_Old = messageBox1;          
+            lastmessagepos = new PosAndSize();
+            lastmessagepos = SetPos(messageBox1);          
         }
-        MessageBox Message_Old = new MessageBox();
+        struct PosAndSize
+        {
+            public Size size;
+            public int top;
+            public int bottom;
+            public int left;
+            public int right;
+        }
+        PosAndSize SetPos(MessageBox inputbox)
+        {
+            PosAndSize temp = new PosAndSize();
+            temp.size = inputbox.Size;
+            temp.top = inputbox.Top;
+            temp.bottom = inputbox.Bottom;
+            temp.left = inputbox.Left;
+            temp.right = inputbox.Right;
+
+            return temp;
+        }
+        PosAndSize SetPos(PictureMessage inputbox)
+        {
+            PosAndSize temp = new PosAndSize();
+            temp.size = inputbox.Size;
+            temp.top = inputbox.Top;
+            temp.bottom = inputbox.Bottom;
+            temp.left = inputbox.Left;
+            temp.right = inputbox.Right;
+
+            return temp;
+        }
+        PosAndSize lastmessagepos = new PosAndSize();
+        //MessageBox Message_Old = new MessageBox();
         
         /// <summary>
         /// Додаємо повідомлення
@@ -38,13 +70,13 @@ namespace Askhole
             msg.Location = messageBox1.Location;
             msg.Size = messageBox1.Size;
             msg.Anchor = messageBox1.Anchor;
-            msg.Top = Message_Old.Bottom + 10;
+            msg.Top = lastmessagepos.bottom + 10;
             //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
             if (mt == MessageBox.MessageType.Out)
                 msg.Left = (Size.Width - msg.MessageWidth) - 40; 
 
             panel2.Controls.Add(msg);
-            Message_Old = msg;
+            lastmessagepos = SetPos(msg);
         }
 
         /// <summary>
@@ -90,24 +122,26 @@ namespace Askhole
                 DateTime MessageTime = new DateTime();// поточний час
                 MessageTime = DateTime.Now;
                 string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ".");
-                AddPhoto(bitmap, time);
+                AddPhoto(bitmap, time, PictureMessage.MessageType.Out);
                 //teststuff
                 //Globals.mainForm.contactList1.AddContact(3, "test", bitmap);
             }
         }
 
-        public void AddPhoto(Bitmap img, string time)
+        public void AddPhoto(Bitmap img, string time, PictureMessage.MessageType mt)
         {
-            PictureMessage msg = new PictureMessage(img, time);
-            msg.Location = pictureMessage1.Location;
-            msg.Size = pictureMessage1.Size;
-            msg.Anchor = pictureMessage1.Anchor;
-            msg.Top = Message_Old.Bottom + 10;
+            PictureMessage msg = new PictureMessage(img, time, mt);
+            msg.Location = messageBox1.Location;
+            msg.Size = messageBox1.Size;
+            msg.Anchor = messageBox1.Anchor;
+            msg.Top = lastmessagepos.bottom + 10;
             //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
-             msg.Left = (Size.Width) - 370;
-
+            // msg.Left = (Size.Width) - 370;
+            if (mt == PictureMessage.MessageType.Out)
+                msg.Left = (Size.Width - msg.MessageWidth) - 40;
             panel2.Controls.Add(msg);
-           // Message_Old = msg;
+            lastmessagepos = SetPos(msg);
+            // Message_Old = msg;
         }
         static public bool emoji = true;
         private void Emoji_Click(object sender, EventArgs e)
