@@ -4,7 +4,7 @@ Routes and views for the flask application.
 
 from datetime import datetime
 from flask import render_template, redirect, request
-from FlaskWebProject1 import app
+from AskholeWeb import app
 import pyodbc
 import Database as DB
 
@@ -38,15 +38,6 @@ def about():
         message='Your application description page.'
     )
 
-@app.route('/send', methods = ['POST', 'GET'])
-def form():
-    """Renders the contact page.""" 
-    if request.method == 'POST':
-        age = request.form['vik']
-        return render_template("your_age.html", a = age)
-    elif request.method == 'GET':
-        return render_template("how_old.html")
-
 @app.route('/signin', methods = ['GET', 'POST'])
 def signin():
     """Renders the about page."""
@@ -57,9 +48,9 @@ def signin():
         if (DB.SignIn(cursor, email, password) ==1):
             return render_template('signinsuccessful.html',title='MainForm', em = email, pas = password)
         else:
-            return render_template('about.html',title='MainForm')
-    elif request.method == 'GET':
-        return render_template('signin.html',title='Sign in')
+            return render_template('signin.html',title='Sign in',err = 1)
+    elif request.method == 'GET':        
+        return render_template('signin.html',title='Sign in',err = 0)
 
 @app.route('/signup', methods = ['GET', 'POST'])
 def signup():

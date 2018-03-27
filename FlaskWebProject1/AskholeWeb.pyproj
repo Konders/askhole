@@ -33,45 +33,45 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
-    <Compile Include="FlaskWebProject1\__init__.py" />
-    <Compile Include="FlaskWebProject1\views.py" />
+    <Compile Include="AskholeWeb\__init__.py" />
+    <Compile Include="AskholeWeb\views.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="FlaskWebProject1\" />
-    <Folder Include="FlaskWebProject1\static\" />
-    <Folder Include="FlaskWebProject1\static\content\" />
-    <Folder Include="FlaskWebProject1\static\fonts\" />
-    <Folder Include="FlaskWebProject1\static\scripts\" />
-    <Folder Include="FlaskWebProject1\templates\" />
+    <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\" />
+    <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\static\" />
+    <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\static\content\" />
+    <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\static\fonts\" />
+    <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\static\scripts\" />
+    <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="FlaskWebProject1\static\content\bootstrap.css" />
-    <Content Include="FlaskWebProject1\static\content\bootstrap.min.css" />
-    <Content Include="FlaskWebProject1\static\content\site.css" />
-    <Content Include="FlaskWebProject1\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="FlaskWebProject1\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FlaskWebProject1\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="FlaskWebProject1\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="FlaskWebProject1\static\scripts\bootstrap.js" />
-    <Content Include="FlaskWebProject1\static\scripts\bootstrap.min.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery-1.10.2.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery.validate.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery.validate.min.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="FlaskWebProject1\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="FlaskWebProject1\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="FlaskWebProject1\static\scripts\respond.js" />
-    <Content Include="FlaskWebProject1\static\scripts\respond.min.js" />
-    <Content Include="FlaskWebProject1\static\scripts\_references.js" />
-    <Content Include="FlaskWebProject1\templates\about.html" />
-    <Content Include="FlaskWebProject1\templates\contact.html" />
-    <Content Include="FlaskWebProject1\templates\index.html" />
-    <Content Include="FlaskWebProject1\templates\layout.html" />
+    <Content Include="AskholeWeb\static\content\bootstrap.css" />
+    <Content Include="AskholeWeb\static\content\bootstrap.min.css" />
+    <Content Include="AskholeWeb\static\content\site.css" />
+    <Content Include="AskholeWeb\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AskholeWeb\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AskholeWeb\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AskholeWeb\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="AskholeWeb\static\scripts\bootstrap.js" />
+    <Content Include="AskholeWeb\static\scripts\bootstrap.min.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery-1.10.2.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="AskholeWeb\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery.validate.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery.validate.min.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="AskholeWeb\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="AskholeWeb\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="AskholeWeb\static\scripts\respond.js" />
+    <Content Include="AskholeWeb\static\scripts\respond.min.js" />
+    <Content Include="AskholeWeb\static\scripts\_references.js" />
+    <Content Include="AskholeWeb\templates\about.html" />
+    <Content Include="AskholeWeb\templates\contact.html" />
+    <Content Include="AskholeWeb\templates\index.html" />
+    <Content Include="AskholeWeb\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
