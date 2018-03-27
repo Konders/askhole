@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="E:\Developing\Python\AskholeWEB\AskholeWEB\env"
+VIRTUAL_ENV="C:\Users\olyal\source\repos\FlaskWebProject1\FlaskWebProject1\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

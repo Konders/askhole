@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=E:\Developing\Python\AskholeWEB\AskholeWEB\env"
+set "VIRTUAL_ENV=C:\Users\olyal\source\repos\FlaskWebProject1\FlaskWebProject1\env"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

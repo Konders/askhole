@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="E:\Developing\Python\AskholeWEB\AskholeWEB\env"
+$env:VIRTUAL_ENV="C:\Users\olyal\source\repos\FlaskWebProject1\FlaskWebProject1\env"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name
