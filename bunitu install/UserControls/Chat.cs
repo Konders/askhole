@@ -108,7 +108,7 @@ namespace Askhole
                 AddMessage(Message.Text, time, MessageBox.MessageType.Out);
                 AddMessage(Message.Text, time, MessageBox.MessageType.In);
                 panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;//Добавляємо скроллінг
-                //DB.AddMessageText(Message.Text, MessageTime); //Laggy connection
+                DB.AddMessageText(Message.Text, MessageTime); //Laggy connection
             }
         }
 

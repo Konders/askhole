@@ -5,26 +5,55 @@ using AskholeLib;
 using System.IO;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Database
 {
-    public class DB
+    public class ConnectionCMD
     {
-        static public SqlConnection cn;
-        static public SqlCommand cmd;
-        static public Lib.User user = new Lib.User { username = "test", email =  "test@gmail.com"};
-        static public Lib.User reciever = new Lib.User { username = "Ivan" };
-
-        public DB()
+        public SqlConnection cn ;
+        public SqlCommand cmd;
+        public ConnectionCMD()
         {
-            if (Environment.UserName == "olyal")
-                cn = new SqlConnection($"Data Source={Environment.MachineName};Initial Catalog=Chat;Integrated Security=True");
-            else
-                cn = new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
-
+            cn = DB.ReadyConnection();
             cmd = new SqlCommand { Connection = cn };
         }
 
+    }
+    public class DB
+    {
+        //static public Thread DatabaseThread;
+        //static public SqlConnection cn;
+        //static public SqlCommand cmd;
+        static public Lib.User user = new Lib.User { username = "test", email =  "test@gmail.com"};
+        static public Lib.User reciever = new Lib.User { username = "Ivan" };
+        
+        static public SqlConnection ReadyConnection()
+        {
+            if (Environment.UserName == "olyal")
+                return  new SqlConnection($"Data Source={Environment.MachineName};Initial Catalog=Chat;Integrated Security=True");
+            else
+                return new SqlConnection($"Data Source={Environment.MachineName + @"\SQLEXPRESS"};Initial Catalog=Chat;Integrated Security=True");
+        }
+        public DB()
+        {
+        }
+
+
+        static private void Execute(object x)
+        {
+            ConnectionCMD temp = x as ConnectionCMD;
+            try
+            {
+                temp.cn.Open();
+                temp.cmd.ExecuteNonQuery();
+                temp.cn.Close();
+            }
+            catch (SqlException ex)
+            {
+                temp.cn.Close();
+            }
+        }
         /// <summary>
         /// Активація та виконання запитів в базі даних
         /// </summary>
@@ -34,15 +63,19 @@ namespace Database
         {
             try
             {
-                cn.Open(); // запит до бд
-                cmd.CommandText = Convert.ToString(query);
-                cmd.ExecuteNonQuery();
-                cn.Close();
+                Thread DatabaseThread = new Thread(new ParameterizedThreadStart(Execute));
+                ConnectionCMD cn = new ConnectionCMD();
+
+                //cn.Open(); // запит до бд
+                cn.cmd.CommandText = Convert.ToString(query);
+                DatabaseThread.Start(cn);
+                //cmd.ExecuteNonQuery();
+                //cn.Close();
                 return true;
             }
             catch (SqlException ex)
             {
-                cn.Close();
+                //cn.Close();
                 return false;
             }
         }
@@ -54,20 +87,22 @@ namespace Database
         /// <returns>зміну типу sql</returns>
         static private object ReturnMethods(string query)
         {
+            ConnectionCMD cn = new ConnectionCMD();
             try
             {
                 object returns = null;
-                cn.Open();
-                cmd.CommandText = Convert.ToString(query);
-                SqlDataReader reader = cmd.ExecuteReader();
+                
+                cn.cn.Open();
+                cn.cmd.CommandText = Convert.ToString(query);
+                SqlDataReader reader = cn.cmd.ExecuteReader();
                 while (reader.Read())
                     returns = reader[0];
-                cn.Close();
+                cn.cn.Close();
                 return returns;
             }
             catch (SqlException ex)
             {
-                cn.Close();
+                cn.cn.Close();
                 return null;
             }
         }
@@ -80,12 +115,13 @@ namespace Database
         static private List<Lib.User> UsersInfo (string query)
         {
             List<Lib.User> list = new List<Lib.User>();
+            ConnectionCMD cn = new ConnectionCMD();
             try
             {
                 object returns = null;
-                cn.Open();
-                cmd.CommandText = Convert.ToString(query);
-                SqlDataReader reader = cmd.ExecuteReader();
+                cn.cn.Open();
+                cn.cmd.CommandText = Convert.ToString(query);
+                SqlDataReader reader = cn.cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     Lib.User temp = new Lib.User();
@@ -96,12 +132,12 @@ namespace Database
                     temp.online = Convert.ToBoolean(reader[6]);
                 }
                     returns = reader[0];
-                cn.Close();
+                cn.cn.Close();
                 return list;
             }
             catch (SqlException ex)
             {
-                cn.Close();
+                cn.cn.Close();
                 return null;
             }
         }
