@@ -66,7 +66,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MessageBox";
             this.Size = new System.Drawing.Size(600, 134);
-            this.Resize += new System.EventHandler(this.MessageBox_Resize);
             this.ResumeLayout(false);
 
         }

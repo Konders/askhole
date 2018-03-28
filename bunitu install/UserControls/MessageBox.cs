@@ -46,7 +46,7 @@ namespace Askhole
         /// <summary>
         /// Змінюємо розміри поля з повідомленням
         /// </summary>
-        void AdjustHeight()
+        public void AdjustHeight()
         {
             Graphics g = CreateGraphics();
             time.Width = Convert.ToInt32(Math.Round(g.MeasureString(time.Text,
@@ -58,12 +58,6 @@ namespace Askhole
             time.Left = message.Width - time.Width + 25;
             Height = time.Bottom + padding;
         }
-
-        private void MessageBox_Resize(object sender, EventArgs e)
-        {
-            AdjustHeight();
-        }
-
        
     }
 }

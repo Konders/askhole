@@ -49,14 +49,14 @@
             this.closeSearch = new Bunifu.Framework.UI.BunifuImageButton();
             this.Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.UserList = new System.Windows.Forms.Panel();
-            this.settings1 = new Askhole.UserControls.Settings();
-            this.contactList1 = new Askhole.ContactList();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Chat = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.emoji1 = new Askhole.UserControls.Emoji();
             this.chat1 = new Askhole.Chat();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.settings1 = new Askhole.UserControls.Settings();
+            this.contactList1 = new Askhole.ContactList();
             this.Header.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Resize)).BeginInit();
@@ -84,9 +84,8 @@
             this.Header.Controls.Add(this.panel2);
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
-            this.Header.Margin = new System.Windows.Forms.Padding(4);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1004, 30);
+            this.Header.Size = new System.Drawing.Size(753, 24);
             this.Header.TabIndex = 0;
             // 
             // panel2
@@ -95,10 +94,10 @@
             this.panel2.Controls.Add(this.Minimize);
             this.panel2.Controls.Add(this.Close);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(913, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(685, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(91, 30);
+            this.panel2.Size = new System.Drawing.Size(68, 24);
             this.panel2.TabIndex = 1;
             // 
             // Resize
@@ -106,10 +105,10 @@
             this.Resize.BackColor = System.Drawing.Color.Transparent;
             this.Resize.Image = global::Askhole.Properties.Resources.sq;
             this.Resize.ImageActive = null;
-            this.Resize.Location = new System.Drawing.Point(31, 5);
-            this.Resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Resize.Location = new System.Drawing.Point(23, 4);
+            this.Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Resize.Name = "Resize";
-            this.Resize.Size = new System.Drawing.Size(29, 20);
+            this.Resize.Size = new System.Drawing.Size(22, 16);
             this.Resize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Resize.TabIndex = 1;
             this.Resize.TabStop = false;
@@ -122,9 +121,9 @@
             this.Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Minimize.Image")));
             this.Minimize.ImageActive = null;
             this.Minimize.Location = new System.Drawing.Point(1, -2);
-            this.Minimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Minimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(29, 30);
+            this.Minimize.Size = new System.Drawing.Size(22, 24);
             this.Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimize.TabIndex = 1;
             this.Minimize.TabStop = false;
@@ -136,10 +135,10 @@
             this.Close.BackColor = System.Drawing.Color.Transparent;
             this.Close.Image = ((System.Drawing.Image)(resources.GetObject("Close.Image")));
             this.Close.ImageActive = null;
-            this.Close.Location = new System.Drawing.Point(61, 0);
-            this.Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Close.Location = new System.Drawing.Point(46, 0);
+            this.Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(29, 30);
+            this.Close.Size = new System.Drawing.Size(22, 24);
             this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Close.TabIndex = 1;
             this.Close.TabStop = false;
@@ -158,10 +157,9 @@
             this.UserHeader.Controls.Add(this.panel1);
             this.UserHeader.Controls.Add(this.MenuSearch);
             this.UserHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UserHeader.Location = new System.Drawing.Point(0, 30);
-            this.UserHeader.Margin = new System.Windows.Forms.Padding(4);
+            this.UserHeader.Location = new System.Drawing.Point(0, 24);
             this.UserHeader.Name = "UserHeader";
-            this.UserHeader.Size = new System.Drawing.Size(1004, 57);
+            this.UserHeader.Size = new System.Drawing.Size(753, 46);
             this.UserHeader.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -174,12 +172,13 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.Name, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(394, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(296, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.87719F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.12281F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(610, 57);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(457, 46);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
@@ -188,9 +187,10 @@
             this.online.AutoSize = true;
             this.online.Font = new System.Drawing.Font("Century Gothic", 7.75F);
             this.online.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.online.Location = new System.Drawing.Point(3, 0);
+            this.online.Location = new System.Drawing.Point(2, 0);
+            this.online.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.online.Name = "online";
-            this.online.Size = new System.Drawing.Size(0, 17);
+            this.online.Size = new System.Drawing.Size(0, 16);
             this.online.TabIndex = 9;
             // 
             // label1
@@ -201,9 +201,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 7.75F);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(206, 28);
+            this.label1.Location = new System.Drawing.Point(154, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 29);
+            this.label1.Size = new System.Drawing.Size(148, 23);
             this.label1.TabIndex = 10;
             this.label1.Text = "online";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -214,9 +215,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Name.AutoSize = true;
             this.Name.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Name.Location = new System.Drawing.Point(206, 7);
+            this.Name.Location = new System.Drawing.Point(154, 6);
+            this.Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(197, 21);
+            this.Name.Size = new System.Drawing.Size(148, 17);
             this.Name.TabIndex = 11;
             this.Name.Text = "Name";
             this.Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -225,9 +227,10 @@
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(337, 0);
+            this.panel1.Location = new System.Drawing.Point(253, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(57, 57);
+            this.panel1.Size = new System.Drawing.Size(43, 46);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -235,9 +238,8 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -250,9 +252,8 @@
             this.MenuSearch.Controls.Add(this.Search);
             this.MenuSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuSearch.Location = new System.Drawing.Point(0, 0);
-            this.MenuSearch.Margin = new System.Windows.Forms.Padding(4);
             this.MenuSearch.Name = "MenuSearch";
-            this.MenuSearch.Size = new System.Drawing.Size(337, 57);
+            this.MenuSearch.Size = new System.Drawing.Size(253, 46);
             this.MenuSearch.TabIndex = 0;
             // 
             // Hamburger
@@ -260,10 +261,9 @@
             this.Hamburger.BackColor = System.Drawing.Color.Transparent;
             this.Hamburger.Image = ((System.Drawing.Image)(resources.GetObject("Hamburger.Image")));
             this.Hamburger.ImageActive = ((System.Drawing.Image)(resources.GetObject("Hamburger.ImageActive")));
-            this.Hamburger.Location = new System.Drawing.Point(11, 6);
-            this.Hamburger.Margin = new System.Windows.Forms.Padding(4);
+            this.Hamburger.Location = new System.Drawing.Point(8, 5);
             this.Hamburger.Name = "Hamburger";
-            this.Hamburger.Size = new System.Drawing.Size(53, 49);
+            this.Hamburger.Size = new System.Drawing.Size(40, 40);
             this.Hamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Hamburger.TabIndex = 1;
             this.Hamburger.TabStop = false;
@@ -275,10 +275,10 @@
             this.closeSearch.BackColor = System.Drawing.Color.Transparent;
             this.closeSearch.Image = ((System.Drawing.Image)(resources.GetObject("closeSearch.Image")));
             this.closeSearch.ImageActive = null;
-            this.closeSearch.Location = new System.Drawing.Point(294, -2);
-            this.closeSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeSearch.Location = new System.Drawing.Point(220, -2);
+            this.closeSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closeSearch.Name = "closeSearch";
-            this.closeSearch.Size = new System.Drawing.Size(42, 45);
+            this.closeSearch.Size = new System.Drawing.Size(32, 37);
             this.closeSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closeSearch.TabIndex = 1;
             this.closeSearch.TabStop = false;
@@ -300,10 +300,10 @@
             this.Search.LineIdleColor = System.Drawing.Color.Gray;
             this.Search.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(228)))), ((int)(((byte)(241)))));
             this.Search.LineThickness = 4;
-            this.Search.Location = new System.Drawing.Point(75, 6);
-            this.Search.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Search.Location = new System.Drawing.Point(56, 5);
+            this.Search.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(255, 46);
+            this.Search.Size = new System.Drawing.Size(191, 37);
             this.Search.TabIndex = 0;
             this.Search.Text = "Search";
             this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -318,33 +318,10 @@
             this.UserList.Controls.Add(this.settings1);
             this.UserList.Controls.Add(this.contactList1);
             this.UserList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.UserList.Location = new System.Drawing.Point(0, 87);
-            this.UserList.Margin = new System.Windows.Forms.Padding(4);
+            this.UserList.Location = new System.Drawing.Point(0, 70);
             this.UserList.Name = "UserList";
-            this.UserList.Size = new System.Drawing.Size(337, 615);
+            this.UserList.Size = new System.Drawing.Size(253, 500);
             this.UserList.TabIndex = 2;
-            // 
-            // settings1
-            // 
-            this.settings1.BackColor = System.Drawing.Color.White;
-            this.settings1.Location = new System.Drawing.Point(0, 3);
-            this.settings1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.settings1.Name = "settings1";
-            this.settings1.Size = new System.Drawing.Size(337, 337);
-            this.settings1.TabIndex = 1;
-            this.settings1.Visible = false;
-            this.settings1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
-            // 
-            // contactList1
-            // 
-            this.contactList1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.contactList1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.contactList1.Location = new System.Drawing.Point(0, 0);
-            this.contactList1.Margin = new System.Windows.Forms.Padding(5);
-            this.contactList1.Name = "contactList1";
-            this.contactList1.Size = new System.Drawing.Size(337, 615);
-            this.contactList1.TabIndex = 0;
-            this.contactList1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // bunifuDragControl1
             // 
@@ -359,26 +336,31 @@
             this.Chat.Controls.Add(this.emoji1);
             this.Chat.Controls.Add(this.chat1);
             this.Chat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Chat.Location = new System.Drawing.Point(337, 87);
-            this.Chat.Margin = new System.Windows.Forms.Padding(4);
+            this.Chat.Location = new System.Drawing.Point(253, 70);
             this.Chat.Name = "Chat";
-            this.Chat.Size = new System.Drawing.Size(667, 615);
+            this.Chat.Size = new System.Drawing.Size(500, 500);
             this.Chat.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 607);
+            this.panel3.Location = new System.Drawing.Point(0, 494);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(667, 8);
+            this.panel3.Size = new System.Drawing.Size(500, 6);
             this.panel3.TabIndex = 2;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // emoji1
             // 
             this.emoji1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emoji1.Location = new System.Drawing.Point(195, 301);
+            this.emoji1.Location = new System.Drawing.Point(146, 245);
+            this.emoji1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emoji1.Name = "emoji1";
-            this.emoji1.Size = new System.Drawing.Size(469, 215);
+            this.emoji1.Size = new System.Drawing.Size(352, 175);
             this.emoji1.TabIndex = 1;
             this.emoji1.Visible = false;
             // 
@@ -390,29 +372,45 @@
             this.chat1.AutoScroll = true;
             this.chat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.chat1.Location = new System.Drawing.Point(0, 0);
-            this.chat1.Margin = new System.Windows.Forms.Padding(5);
+            this.chat1.Margin = new System.Windows.Forms.Padding(4);
             this.chat1.Name = "chat1";
-            this.chat1.Size = new System.Drawing.Size(667, 615);
+            this.chat1.Size = new System.Drawing.Size(500, 500);
             this.chat1.TabIndex = 0;
             this.chat1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
-            // openFileDialog1
+            // settings1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.settings1.BackColor = System.Drawing.Color.White;
+            this.settings1.Location = new System.Drawing.Point(0, 2);
+            this.settings1.Margin = new System.Windows.Forms.Padding(2);
+            this.settings1.Name = "settings1";
+            this.settings1.Size = new System.Drawing.Size(253, 274);
+            this.settings1.TabIndex = 1;
+            this.settings1.Visible = false;
+            this.settings1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
+            // 
+            // contactList1
+            // 
+            this.contactList1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contactList1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.contactList1.Location = new System.Drawing.Point(0, 0);
+            this.contactList1.Margin = new System.Windows.Forms.Padding(4);
+            this.contactList1.Name = "contactList1";
+            this.contactList1.Size = new System.Drawing.Size(253, 500);
+            this.contactList1.TabIndex = 0;
+            this.contactList1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Hamburger_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1004, 702);
+            this.ClientSize = new System.Drawing.Size(753, 570);
             this.Controls.Add(this.Chat);
             this.Controls.Add(this.UserList);
             this.Controls.Add(this.UserHeader);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-         
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Header.ResumeLayout(false);

@@ -27,7 +27,7 @@ namespace Askhole
                 List_Panel.Controls.Add(Buttons[i]);
             }
             //vScrollBar1.Scroll += (sender,e) =>{ List_Panel.VerticalScroll.Value = vScrollBar1.Value};
-            List_Panel.VerticalScroll.Value = vScrollBar1.Value;
+            //List_Panel.VerticalScroll.Value = vScrollBar1.Value;
             //List_Panel.VerticalScroll.Value = List_Panel.VerticalScroll.Maximum;
         }
 

@@ -10,53 +10,22 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Database;
 using Askhole.UserControls;
+using System.Threading;
 
 namespace Askhole
 {
     public partial class Chat : UserControl
     {
-       
+        private Thread ResizeThread;
+        int message_padding = 10;
             public Chat()
         {
             if(!this.DesignMode)
             InitializeComponent();
             messageBox1.Hide();
-            pictureMessage1.Hide();
-            lastmessagepos = SetPos(messageBox1);          
+            pictureMessage1.Hide();     
         }
-        struct PosAndSize
-        {
-            public Size size;
-            public int top;
-            public int bottom;
-            public int left;
-            public int right;
-        }
-        PosAndSize SetPos(MessageBox inputbox)
-        {
-            PosAndSize temp = new PosAndSize();
-            temp.size = inputbox.Size;
-            temp.top = inputbox.Top;
-            temp.bottom = inputbox.Bottom;
-            temp.left = inputbox.Left;
-            temp.right = inputbox.Right;
-
-            return temp;
-        }
-        PosAndSize SetPos(PictureMessage inputbox)
-        {
-            PosAndSize temp = new PosAndSize();
-            temp.size = inputbox.Size;
-            temp.top = inputbox.Top;
-            temp.bottom = inputbox.Bottom;
-            temp.left = inputbox.Left;
-            temp.right = inputbox.Right;
-
-            return temp;
-        }
-        PosAndSize lastmessagepos = new PosAndSize();
-        //MessageBox Message_Old = new MessageBox();
-        
+       
         /// <summary>
         /// Додаємо повідомлення
         /// </summary>
@@ -67,15 +36,13 @@ namespace Askhole
         {
             MessageBox msg = new MessageBox(text, time, mt);
             msg.Location = messageBox1.Location;
-            msg.Size = messageBox1.Size;
             msg.Anchor = messageBox1.Anchor;
-            msg.Top = lastmessagepos.bottom + 10;
+            msg.Top = panel2.Controls[panel2.Controls.Count - 1].Bottom + message_padding;
             //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
             if (mt == MessageBox.MessageType.Out)
                 msg.Left = (Size.Width - msg.MessageWidth) - 40; 
 
             panel2.Controls.Add(msg);
-            lastmessagepos = SetPos(msg);
         }
 
         /// <summary>
@@ -133,15 +100,10 @@ namespace Askhole
             msg.Location = messageBox1.Location;
             //msg.Size = messageBox1.Size;
             msg.Anchor = messageBox1.Anchor;
-            msg.Top = lastmessagepos.bottom + 10;
-            //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
-            // msg.Left = (Size.Width) - 370;
-            //msg.AdjustSize();
+            msg.Top = panel2.Controls[panel2.Controls.Count - 1].Bottom + message_padding;
             if (mt == PictureMessage.MessageType.Out)
                 msg.Left = (Size.Width - msg.MessageWidth) - 40;
             panel2.Controls.Add(msg);
-            lastmessagepos = SetPos(msg);
-            // Message_Old = msg;
         }
         static public bool emoji = true;
         private void Emoji_Click(object sender, EventArgs e)
@@ -156,6 +118,27 @@ namespace Askhole
                 Globals.mainForm.emoji1.Visible = false;
                 emoji = true;
             }
+        }
+        private void Resize()
+        {
+            for(int i = 1;i<panel2.Controls.Count;i++)
+            {
+                if (panel2.Controls[i].GetType() == typeof(MessageBox))
+                    (panel2.Controls[i] as MessageBox).AdjustHeight();
+                else if (panel2.Controls[i].GetType() == typeof(PictureBox))
+                    (panel2.Controls[i] as PictureMessage).AdjustSize();
+                panel2.Controls[i].Top = panel2.Controls[i - 1].Bottom + message_padding;
+            }
+        }
+
+        public void threadresize()
+        {
+            ResizeThread = new Thread(this.Resize);
+            ResizeThread.Start();
+        }
+        private void panel2_Resize(object sender, EventArgs e)
+        {
+            
         }
     }
 }

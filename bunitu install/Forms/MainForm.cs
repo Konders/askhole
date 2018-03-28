@@ -61,6 +61,7 @@ namespace Askhole
                 emoji1.Left = this.Size.Width - emoji1.Size.Width *2 +50;
                 emoji1.Top = this.Size.Height - emoji1.Size.Height -150;
             }
+            chat1.threadresize();
         }
 
         //При поставлені курсору іде підготовка для користувача поля
