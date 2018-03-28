@@ -59,6 +59,9 @@ def signup():
         username = request.form['inputUsername']
         email = request.form['inputEmail']
         password = request.form['inputPassword']
+        confirmPassword = request.form['inputConfirmPassword']
+     #   if (password != confirmPassword)
+     #        return render_template('signup.html',title='Sign up', err = 1)
         return render_template('signinsuccessful.html',title='MainForm', em = email, pas = password)
     elif request.method == 'GET':
         return render_template('signup.html',title='Sign up')

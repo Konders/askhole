@@ -35,24 +35,35 @@ namespace Askhole.UserControls
 
             pictureBox1.Image = img;
             this.time.Text = time;
-            AdjustHeight();
+            AdjustSize();
             if (mt == MessageType.In)
                 this.BackColor = Color.FromArgb(240, 240, 240);
             else
-            {
                 this.BackColor = Color.FromArgb(147, 228, 241);
-            }
         }
-        void AdjustHeight()
+        public void AdjustSize()
         {
+            double ratio = 0;
+            double maxpicwidth = 200;
+            double maxpicheight = 200;
             Graphics g = CreateGraphics();
             time.Width = Convert.ToInt32(Math.Round(g.MeasureString(time.Text,
-                                            time.Font, time.Width).Width + 2, 0));
-            Size maxSize = new Size(pictureBox1.Width, int.MaxValue);
-            pictureBox1.Height = pictureBox1.Size.Height + 2;
+            time.Font, time.Width).Width + 2, 0));
+            if (pictureBox1.Image.Width > pictureBox1.Image.Height)
+                ratio = maxpicwidth / pictureBox1.Image.Width;
+            else 
+                ratio = maxpicheight / pictureBox1.Image.Height;
+
+
+            double NewWidth =  ratio * pictureBox1.Image.Width;
+            double NewHeight = ratio * pictureBox1.Image.Height;
+
+            pictureBox1.Width = (int)NewWidth;
+            pictureBox1.Height = (int)NewHeight;
+            this.Height = (int)NewHeight;
+            this.Width = (int)NewWidth;
             time.Top = pictureBox1.Bottom + padding;
             time.Left = pictureBox1.Width - time.Width + 25;
-            Height = time.Bottom + padding;
         }
     }
 }
