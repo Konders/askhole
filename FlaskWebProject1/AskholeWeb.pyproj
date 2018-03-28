@@ -37,6 +37,12 @@
     <Compile Include="AskholeWeb\views.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AskholeWeb\" />
+    <Folder Include="AskholeWeb\static\" />
+    <Folder Include="AskholeWeb\static\content\" />
+    <Folder Include="AskholeWeb\static\fonts\" />
+    <Folder Include="AskholeWeb\static\scripts\" />
+    <Folder Include="AskholeWeb\templates\" />
     <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\" />
     <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\static\" />
     <Folder Include="C:\Users\olyal\OneDrive\Документи\askhole\FlaskWebProject1\AskholeWeb\static\content\" />
