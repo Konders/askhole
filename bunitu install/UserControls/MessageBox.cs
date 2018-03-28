@@ -41,9 +41,7 @@ namespace Askhole
             if (mt == MessageType.In)
                 this.BackColor = Color.FromArgb(240, 240, 240);
             else
-            {
                 this.BackColor = Color.FromArgb(147, 228, 241);
-            }
         }
         /// <summary>
         /// Змінюємо розміри поля з повідомленням

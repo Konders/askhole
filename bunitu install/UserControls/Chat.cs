@@ -22,7 +22,6 @@ namespace Askhole
             InitializeComponent();
             messageBox1.Hide();
             pictureMessage1.Hide();
-            lastmessagepos = new PosAndSize();
             lastmessagepos = SetPos(messageBox1);          
         }
         struct PosAndSize
@@ -102,14 +101,14 @@ namespace Askhole
         private void Message_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {              
+            {
                 DateTime MessageTime = new DateTime();// поточний час
                 MessageTime = DateTime.Now;
-                string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute +".");
+                string time = MessageTime.ToShortTimeString();//Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute +".");
                 AddMessage(Message.Text, time, MessageBox.MessageType.Out);
                 AddMessage(Message.Text, time, MessageBox.MessageType.In);
                 panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;//Добавляємо скроллінг
-                DB.AddMessageText(Message.Text, MessageTime);
+                //DB.AddMessageText(Message.Text, MessageTime); //Laggy connection
             }
         }
 
@@ -121,7 +120,7 @@ namespace Askhole
                 Bitmap bitmap = new Bitmap(openFileDialog1.FileName);
                 DateTime MessageTime = new DateTime();// поточний час
                 MessageTime = DateTime.Now;
-                string time = Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ".");
+                string time = MessageTime.ToShortTimeString();//Convert.ToString(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ".");
                 AddPhoto(bitmap, time, PictureMessage.MessageType.Out);
                 //teststuff
                 //Globals.mainForm.contactList1.AddContact(3, "test", bitmap);
@@ -132,11 +131,12 @@ namespace Askhole
         {
             PictureMessage msg = new PictureMessage(img, time, mt);
             msg.Location = messageBox1.Location;
-            msg.Size = messageBox1.Size;
+            //msg.Size = messageBox1.Size;
             msg.Anchor = messageBox1.Anchor;
             msg.Top = lastmessagepos.bottom + 10;
             //Якщо це твоє повідомлення, то зміщуємо його в протележну сторону
             // msg.Left = (Size.Width) - 370;
+            //msg.AdjustSize();
             if (mt == PictureMessage.MessageType.Out)
                 msg.Left = (Size.Width - msg.MessageWidth) - 40;
             panel2.Controls.Add(msg);
