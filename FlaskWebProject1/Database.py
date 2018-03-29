@@ -12,6 +12,10 @@ def SignIn(cursor, email, password):
     query = 'exec SignIn \''+email+'\', \''+password+'\''
     return DBWork (cursor, query)  
 
+def NewUser(cursor, username, password, email):
+    query = "exec AddUser '" + username + "', '" + password + "', '" + email + "', null"
+    return DBWork (cursor, query)
+
 def DBWork (cursor, query):
     try:       
         cursor.execute(query)       

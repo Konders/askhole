@@ -59,7 +59,15 @@ def signup():
         username = request.form['inputUsername']
         email = request.form['inputEmail']
         password = request.form['inputPassword']
-        return render_template('signinsuccessful.html',title='MainForm', em = email, pas = password)
+        confirmPass = request.form['inputConfirmPassword']
+        if (password != confirmPass):
+            return render_template('signup.html',title='Sign up', Error = "Passwords are not similar")
+        else:
+            cursor = DB.Connect()
+            if (DB.NewUser(cursor, username, password, email) == 1):
+                return render_template('signinsuccessful.html',title='MainForm', em = email, pas = password)
+            else:
+                return render_template('signup.html',title='Sign up', Error = "Username already in use")
     elif request.method == 'GET':
         return render_template('signup.html',title='Sign up')
 
