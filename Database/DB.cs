@@ -9,6 +9,41 @@ using System.Threading;
 
 namespace Database
 {
+    public enum Status
+    {
+        Loading,
+        Finished_True,
+        Finished_False
+    }
+    public class QueryStatus
+    {
+        public string query;
+        public object container;
+        public Status status;
+        public QueryStatus()
+        {
+            query = "";
+            container = null;
+            status = Status.Loading;
+        }
+        public QueryStatus(string query)
+        {
+            this.query = query;
+            container = null;
+            status = Status.Loading;
+        }
+        public bool BoolStatus()
+        {
+            switch(status)
+            {
+                case Status.Finished_True: return true;
+                    break;
+                case Status.Finished_False: return false;
+                    break;
+                default: return false;
+            }
+        }
+    }
     public class ConnectionCMD
     {
         public SqlConnection cn ;
@@ -61,24 +96,21 @@ namespace Database
         /// </summary>
         /// <param name="str">запит</param>
         /// <returns></returns>
-        static private bool DBWork(string query)
+        static private void DBWork(object qs)
         {
+            ConnectionCMD cn = new ConnectionCMD();
             try
             {
-                Thread DatabaseThread = new Thread(new ParameterizedThreadStart(Execute));
-                ConnectionCMD cn = new ConnectionCMD();
-
-                //cn.Open(); // запит до бд
-                cn.cmd.CommandText = Convert.ToString(query);
-                DatabaseThread.Start(cn);
-                //cmd.ExecuteNonQuery();
-                //cn.Close();
-                return true;
+                cn.cn.Open(); // запит до бд
+                cn.cmd.CommandText = (qs as QueryStatus).query;
+                cn.cmd.ExecuteNonQuery();
+                cn.cn.Close();
+                (qs as QueryStatus).status = Status.Finished_True;
             }
             catch (Exception e)
             {
-                //cn.Close();
-                return false;
+                cn.cn.Close();
+                (qs as QueryStatus).status = Status.Finished_False;
             }
         }
 
@@ -87,25 +119,25 @@ namespace Database
         /// </summary>
         /// <param name="query">запит</param>
         /// <returns>зміну типу sql</returns>
-        static private object ReturnMethods(string query)
+        static private void ReturnMethods(object qs)
         {
             ConnectionCMD cn = new ConnectionCMD();
             try
             {
-                object returns = null;
                 
                 cn.cn.Open();
-                cn.cmd.CommandText = Convert.ToString(query);
+                cn.cmd.CommandText = (qs as QueryStatus).query;
                 SqlDataReader reader = cn.cmd.ExecuteReader();
                 while (reader.Read())
-                    returns = reader[0];
+                    (qs as QueryStatus).container = reader[0];
                 cn.cn.Close();
-                return returns;
+                (qs as QueryStatus).status = Status.Finished_True;
             }
             catch (SqlException ex)
             {
                 cn.cn.Close();
-                return null;
+                (qs as QueryStatus).container = null;
+                (qs as QueryStatus).status = Status.Finished_False;;
             }
         }
 
@@ -114,15 +146,14 @@ namespace Database
         /// </summary>
         /// <param name="query">запит</param>
         /// <returns></returns>
-        static private List<Lib.User> UsersInfo (string query)
+        static private/* List<Lib.User>*/ void UsersInfo (object qs)
         {
             List<Lib.User> list = new List<Lib.User>();
             ConnectionCMD cn = new ConnectionCMD();
             try
             {
-                object returns = null;
                 cn.cn.Open();
-                cn.cmd.CommandText = Convert.ToString(query);
+                cn.cmd.CommandText = (qs as QueryStatus).query;
                 SqlDataReader reader = cn.cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -133,14 +164,16 @@ namespace Database
                     temp.birthDate = Convert.ToDateTime(reader[5]);
                     temp.online = Convert.ToBoolean(reader[6]);
                 }
-                    returns = reader[0];
+                    (qs as QueryStatus).container = reader[0];
                 cn.cn.Close();
-                return list;
+                (qs as QueryStatus).status = Status.Finished_True;
+                //return list;
             }
             catch (SqlException ex)
             {
                 cn.cn.Close();
-                return null;
+                (qs as QueryStatus).container = null;
+                (qs as QueryStatus).status = Status.Finished_False;
             }
         }
 
@@ -156,13 +189,20 @@ namespace Database
         }
         static public void DeleteProfile()
         {
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(DBWork));
             StringBuilder query = new StringBuilder("exec DeleteProfile  '" + user.email);
-            DBWork(query.ToString());
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            /*while (qs.status == Status.Loading)
+                //loading
+                continue;*/
         }
         static public void LogOut()
         {
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(DBWork));
             StringBuilder query = new StringBuilder("exec LogOut  '" + user.email );
-            DBWork(query.ToString());
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
         }
         /// <summary>
         /// Вхід в систему
@@ -172,9 +212,15 @@ namespace Database
         /// <returns></returns>
         static public bool SignIn(string email, string password)
         {
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(DBWork));
             StringBuilder query = new StringBuilder("exec SignIn '" + email + "', '" +
                                                        password + "'");
-            return DBWork(query.ToString());
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            return qs.BoolStatus();
         }
 
         /// <summary>
@@ -184,9 +230,11 @@ namespace Database
         /// <param name="time">час</param>
         static public void AddMessageText(string text, DateTime time)
         {
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(DBWork));
             StringBuilder query = new StringBuilder("exec AddingMessage  '" + user.username + "', '" +
                                       reciever.username + "', '" + text + "', '" + time + "'");
-            DBWork(query.ToString());
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
         }
 
         /// <summary>
@@ -199,9 +247,15 @@ namespace Database
         /// <returns></returns>
         static public bool NewUser(string userName, string password, string email, DateTime birthDay)
         {
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(DBWork));
             StringBuilder query = new StringBuilder("exec AddUser '" + userName + "', '" +
                              password + "', '" + email + "', '" + birthDay + "'");
-            return DBWork(query.ToString());
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            return qs.BoolStatus();
         }
 
         /// <summary>
@@ -212,9 +266,14 @@ namespace Database
         static public int IdPicker(string email)
         {
             StringBuilder query = new StringBuilder("select dbo.ID('"+email+"')");
-            var result = ReturnMethods(query.ToString());
-            if (result != null)
-                return Convert.ToInt32(result);
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(ReturnMethods));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            if (qs.container != null)
+                return Convert.ToInt32(qs.container);
             else return -1;
         }
 
@@ -226,7 +285,13 @@ namespace Database
         static public string NamePicker(string email)
         {
             StringBuilder query = new StringBuilder("select dbo.ReturnName('" + email + "')");
-            return Convert.ToString(ReturnMethods(query.ToString()));
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(ReturnMethods));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            return Convert.ToString(qs.container.ToString());
         }
 
         /// <summary>
@@ -235,9 +300,14 @@ namespace Database
         static public DateTime BirthDatePicker(int id)
         {
             StringBuilder query = new StringBuilder("select dbo.ReturnBirthDay(" + id + ")");
-            var result = ReturnMethods(query.ToString());
-            if (result != null)
-                return Convert.ToDateTime(result);
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(ReturnMethods));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            if (qs.container != null)
+                return Convert.ToDateTime(qs.container);
             else return DateTime.Now;          
         }
 
@@ -271,7 +341,13 @@ namespace Database
         {
             StringBuilder query = new StringBuilder("exec ToResetPassword '" + username + "', '" +
                                                        email + "', '" + newPassword + "'");
-            return DBWork(query.ToString());
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(DBWork));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading bar
+                continue;
+            return qs.BoolStatus();
         }
 
         /// <summary>
@@ -281,7 +357,13 @@ namespace Database
         static public List<Lib.User>  SearchByName(string name)
         {
             StringBuilder query = new StringBuilder("exec SearchByName  '" + name + "'");
-            if (query.Length > 0) return UsersInfo(query.ToString());
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(UsersInfo));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            if (query.Length > 0) return qs.container as List<Lib.User>;
             else return null;
         }
 
@@ -292,7 +374,13 @@ namespace Database
         static public List<Lib.User> SearchByEmail(string email)
         {
             StringBuilder query = new StringBuilder("exec SearchByEmail  '" + email + "'");
-            if (query.Length > 0) return UsersInfo(query.ToString());
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(UsersInfo));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            if (query.Length > 0) return qs.container as List<Lib.User>;
             else return null;
         }
 
@@ -304,8 +392,13 @@ namespace Database
                 emailAdress = true;
             if (emailAdress) query = new StringBuilder("exec SearchByEmail  '" + findString + "'");
             else query = new StringBuilder("exec SearchNewContact '" + findString + "'");
-            
-            if (query.Length > 0) return UsersInfo(query.ToString());
+            Thread DatabaseThread = new Thread(new ParameterizedThreadStart(UsersInfo));
+            QueryStatus qs = new QueryStatus(query.ToString());
+            DatabaseThread.Start(qs);
+            while (qs.status == Status.Loading)
+                //loading
+                continue;
+            if (query.Length > 0) return qs.container as List<Lib.User>;
             else return null;
         }
     }
