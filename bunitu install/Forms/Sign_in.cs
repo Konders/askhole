@@ -38,7 +38,7 @@ namespace Askhole
 
             timer.Interval = 2000; // таймер для зображень
             timer.Elapsed += ChangePictures;
-            timer.Start();
+            //timer.Start();
         }
         #endregion
 
@@ -62,7 +62,7 @@ namespace Askhole
                 Globals.mainForm.Show();
                 DB.UsersData(email);
               
-                timer.Stop();
+                //timer.Stop();
                 Error.Hide(); // вертаємо колір помилки
             }
             else Error.Show(); // вертаємо колір помилки          

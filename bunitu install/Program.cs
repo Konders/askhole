@@ -33,7 +33,7 @@ namespace Askhole
         }
         public static void Run()
         {
-            Application.Run(Globals.mainForm);
+            Application.Run(/*Globals.mainForm*/new Sign_in());
         }
     }
 }

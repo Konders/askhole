@@ -48,10 +48,12 @@ namespace Database
                 temp.cn.Open();
                 temp.cmd.ExecuteNonQuery();
                 temp.cn.Close();
+                
             }
             catch (SqlException ex)
             {
                 temp.cn.Close();
+                throw;
             }
         }
         /// <summary>
@@ -73,7 +75,7 @@ namespace Database
                 //cn.Close();
                 return true;
             }
-            catch (SqlException ex)
+            catch (Exception e)
             {
                 //cn.Close();
                 return false;
